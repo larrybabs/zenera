@@ -4,10 +4,12 @@ import { Insights } from "./pages/culture/OurInsights";
 import { Lifestyle } from "./pages/culture/OurLifestyle";
 import { People } from "./pages/culture/OurPeople";
 import { Recognitions } from "./pages/culture/OurRecognition";
+import { Health } from "./pages/healthAndWellness/health";
 import { Home } from "./pages/home/Home";
 import { Leadership } from "./pages/leadership/Leadership";
 import { Reports } from "./pages/ReportsDownload/ReportsDownload";
 import { Services } from "./pages/services/Services";
+import { Sports } from "./pages/sports/sports";
 
 
 const { Routes, Route } = require("react-router-dom");
@@ -26,6 +28,8 @@ function App() {
           <Route path="/our-lifestyle" element={<Lifestyle />} />
           <Route path="/our-insights" element={<Insights />} />
           <Route path="/reports" element={<Reports />} />
+          <Route path="/sustainability/health" element={<Health />} />
+          <Route path="/sustainability/sports" element={<Sports />} />
           {/* <Route path="/about" element={<Aboutus />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/transfers" element={<Transfers />} />

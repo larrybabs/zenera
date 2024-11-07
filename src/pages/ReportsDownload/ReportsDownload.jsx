@@ -100,7 +100,7 @@ export const Reports = () => {
               name="email"
               value={formData.email}
               onChange={handleInputChange}
-              className="w-full border p-2 rounded focus:outline-none focus:ring-2 focus:ring-primary"
+              className="w-full border p-2 focus:outline-none focus:ring-2 focus:ring-primary"
               placeholder="Email"
               required
             />
