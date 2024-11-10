@@ -1,3 +1,4 @@
+import { About } from "./pages/aboutUs/about";
 import { Culture } from "./pages/culture/Culture";
 import { Brand } from "./pages/culture/OurBrand";
 import { Insights } from "./pages/culture/OurInsights";
@@ -22,6 +23,7 @@ function App() {
           <Route path="/services" element={<Services />} />
           <Route path="/sustainability/leadership" element={<Leadership />} />
           <Route path="/culture" element={<Culture />} />
+          <Route path="/about" element={<About />} />
           <Route path="/our-brand" element={<Brand />} />
           <Route path="/our-people" element={<People />} />
           <Route path="/our-recognitions" element={<Recognitions />} />

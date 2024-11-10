@@ -2,13 +2,26 @@ import React, { useState } from "react";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 import Leader from "../../assets/img/leader.png";
+import Leader2 from "../../assets/leadershipImg/Leader2.jpeg";
+import imc1 from "../../assets/leadershipImg/imc1.jpeg";
+import Sitei1 from "../../assets/leadershipImg/sitei1.JPG";
+import earthW1 from "../../assets/leadershipImg/earthWomen1.jpg";
+import TLP1 from "../../assets/leadershipImg/TLP1.JPG";
+import PLI1 from "../../assets/leadershipImg/PLI1.jpeg";
+import SEV1 from "../../assets/leadershipImg/SEV1.jpeg";
 import IMCH from "../../assets/img/imcH.png";
 import IMC1 from "../../assets/img/imc1.png";
+import ImageSlider from "../../components/ImageSlider";
+import { importImagesFromContext } from "../../utils/imageLoader";
 
 export const Leadership = () => {
   const [hoveredIndex, setHoveredIndex] = useState(null);
 
   const [isExpanded, setIsExpanded] = useState(false);
+
+  const images = importImagesFromContext(
+    require.context("../../assets/leadershipImg", false, /\.(png|jpe?g|JPG)$/)
+  );
 
   const handleReadMore = () => {
     setIsExpanded(!isExpanded);
@@ -18,7 +31,7 @@ export const Leadership = () => {
     <div>
       <Navbar />
       <div className="hidden md:block bg-[#F7F7F7] h-[80px]"></div>
-      <div className="container mx-auto px-4 py-12 flex">
+      <div className="container mx-auto px-4 py-12 flex flex-col md:flex-row">
         <div>
           <h2 className="text-[#8B1818] text-6xl font-bold mb-4">Leadership</h2>
           <p className="text-2xl mb-12">
@@ -26,7 +39,15 @@ export const Leadership = () => {
           </p>
         </div>
 
-        <div className="flex gap-4 ms-16 h-[500px] items-center justify-center">
+        <div className="md:hidden">
+          <img
+            src={Leader}
+            alt="Profita Event"
+            className="w-full h-full rounded-2xl"
+          />
+        </div>
+
+        <div className="hidden md:flex gap-4 md:ms-16 h-[500px] items-center justify-center">
           <div
             className={`relative overflow-hidden rounded-2xl transition-all duration-500 ease-in-out cursor-pointer
             ${
@@ -52,9 +73,9 @@ export const Leadership = () => {
             <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300">
               <div className="absolute bottom-0 left-0 p-4 text-white">
                 <h3 className="text-xl font-semibold">
-                  Global Leadership Network
+                  The Leadership Project
                 </h3>
-                <p className="text-sm">PROFITA Conference 2023</p>
+                {/* <p className="text-sm">PROFITA Conference 2023</p> */}
               </div>
             </div>
           </div>
@@ -70,21 +91,23 @@ export const Leadership = () => {
             ${hoveredIndex === 1 ? "scale-100" : "scale-150 translate-y-1/4"}`}
             >
               <img
-                src={Leader}
+                src={Leader2}
                 alt="Speaker Event"
                 className="w-full h-full object-cover"
               />
             </div>
             <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300">
               <div className="absolute bottom-0 left-0 p-4 text-white">
-                <h3 className="text-xl font-semibold">Industry Speaking</h3>
-                <p className="text-sm">Leadership Conference 2023</p>
+                <h3 className="text-xl font-semibold">
+                  Innovation Makers Challenge 2023
+                </h3>
+                {/* <p className="text-sm">Leadership Conference 2023</p> */}
               </div>
             </div>
           </div>
 
           <div
-            className={`relative overflow-hidden rounded-2xl transition-all duration-500 ease-in-out cursor-pointer
+            className={`relative hidden md:block overflow-hidden rounded-2xl transition-all duration-500 ease-in-out cursor-pointer
             ${hoveredIndex === 2 ? "w-2/4" : "w-1/4"}`}
             onMouseEnter={() => setHoveredIndex(2)}
             onMouseLeave={() => setHoveredIndex(null)}
@@ -112,20 +135,20 @@ export const Leadership = () => {
       <div className="container mx-auto p-6 mt-40">
         <div className="relative">
           <img
-            src={IMCH}
+            src={imc1}
             alt="Innovation Makers Challenge"
-            className="w-[460px]  object-cover "
+            className="md:w-[460px] h-[178px] object-cover "
           />
           <div className="absolute inset-0 flex items-center justify-center">
-            <div className="bg-[#5d0a07] px-10 py-3  text-white text-3xl">
+            <div className="bg-[#5d0a07] px-10 py-3  text-white md:text-3xl">
               Innovation Makers Challenge 2023
             </div>
           </div>
         </div>
 
         {/* Description Section */}
-        <div className="mt-6 my-24 mx-24 px-4 md:px-8">
-          <p className="text-gray-700 mt-24 text-lg leading-relaxed">
+        <div className="mt-6 my-24 md:mx-24 px-4 md:px-8">
+          <p className="text-gray-700 mt-24 md:text-lg leading-relaxed">
             At Zenera, we believe in igniting the spark of innovation,
             especially in the minds of young Nigerians. That's why we proudly
             partnered with the Innovation Makers Challenge (IMC), an initiative
@@ -169,29 +192,25 @@ export const Leadership = () => {
         </div>
 
         {/* Gallery Section */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8 ">
-          <img src={IMC1} alt="Event  1" className="w-80 h-80 object-cover" />
-          <img src={IMC1} alt="Event  2" className="w-80 h-80 object-cover" />
-          <img src={IMC1} alt="Event  3" className="w-80 h-80 object-cover" />
-        </div>
+        <ImageSlider images={images.imc} />
       </div>
 
       <div className="container mx-auto p-6 mt-40">
         <div className="relative flex justify-end">
           <img
-            src={IMCH}
+            src={Sitei1}
             alt="Innovation Makers Challenge"
-            className="w-[460px]  object-cover "
+            className="w-[460px] h-[178px] object-cover "
           />
           <div className="absolute inset-0 flex items-center justify-center">
-            <div className="bg-[#5d0a07] px-10 py-3  text-white text-3xl">
+            <div className="bg-[#5d0a07] px-10 py-3  text-white md:text-3xl">
               Sustainability In the Extractive Industries (SITEI) Conference
             </div>
           </div>
         </div>
 
         {/* Description Section */}
-        <div className="mt-6 my-24 mx-24 px-4 md:px-8">
+        <div className="mt-6 my-24 mx:mx-24 px-4 md:px-8">
           <p className="text-gray-700 mt-24 text-lg leading-relaxed">
             Despite Nigeria’s abundant extractive wealth, local communities
             encounter significant challenges, such as human suffering and
@@ -237,28 +256,24 @@ export const Leadership = () => {
         </div>
 
         {/* Gallery Section */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8 ">
-          <img src={IMC1} alt="Event  1" className="w-80 h-80 object-cover" />
-          <img src={IMC1} alt="Event  2" className="w-80 h-80 object-cover" />
-          <img src={IMC1} alt="Event  3" className="w-80 h-80 object-cover" />
-        </div>
+        <ImageSlider images={images.sitei} />
       </div>
       <div className="container mx-auto p-6 mt-40">
         <div className="relative">
           <img
-            src={IMCH}
+            src={earthW1}
             alt="Innovation Makers Challenge"
-            className="w-[460px]  object-cover "
+            className="w-[460px] h-[178px] object-cover "
           />
           <div className="absolute inset-0 flex items-center justify-center">
-            <div className="bg-[#5d0a07] px-10 py-3  text-white text-3xl">
+            <div className="bg-[#5d0a07] px-10 py-3  text-white md:text-3xl">
               'Earth Women' Docudrama
             </div>
           </div>
         </div>
 
         {/* Description Section */}
-        <div className="mt-6 my-24 mx-24 px-4 md:px-8">
+        <div className="mt-6 my-24 md:mx-24 px-4 md:px-8">
           <p className="text-gray-700 mt-24 text-lg leading-relaxed">
             Consistent with our commitment to promoting gender equality and
             women’s empowerment in Nigeria, we are proud to have supported the
@@ -306,29 +321,25 @@ export const Leadership = () => {
         </div>
 
         {/* Gallery Section */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8 ">
-          <img src={IMC1} alt="Event  1" className="w-80 h-80 object-cover" />
-          <img src={IMC1} alt="Event  2" className="w-80 h-80 object-cover" />
-          <img src={IMC1} alt="Event  3" className="w-80 h-80 object-cover" />
-        </div>
+        <ImageSlider images={images.earthwomen} />
       </div>
 
       <div className="container mx-auto p-6 mt-40">
         <div className="relative flex justify-end">
           <img
-            src={IMCH}
+            src={TLP1}
             alt="Innovation Makers Challenge"
-            className="w-[460px]  object-cover "
+            className="w-[460px] h-[178px] object-cover "
           />
           <div className="absolute inset-0 flex items-center justify-center">
-            <div className="bg-[#5d0a07] px-14 py-3  text-white text-3xl">
+            <div className="bg-[#5d0a07] px-14 py-3  text-white md:text-3xl">
               The Leadership Project
             </div>
           </div>
         </div>
 
         {/* Description Section */}
-        <div className="mt-6 my-24 mx-24 px-4 md:px-8">
+        <div className="mt-6 my-24 md:mx-24 px-4 md:px-8">
           <p className="text-gray-700 mt-24 text-lg leading-relaxed">
             In early 2020, one of our business mentors advised us to team up
             with GLS4Business to enhance leadership development in corporate
@@ -375,28 +386,24 @@ export const Leadership = () => {
         </div>
 
         {/* Gallery Section */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8 ">
-          <img src={IMC1} alt="Event  1" className="w-80 h-80 object-cover" />
-          <img src={IMC1} alt="Event  2" className="w-80 h-80 object-cover" />
-          <img src={IMC1} alt="Event  3" className="w-80 h-80 object-cover" />
-        </div>
+        <ImageSlider images={images.tlp} />
       </div>
       <div className="container mx-auto p-6 mt-40">
         <div className="relative">
           <img
-            src={IMCH}
+            src={PLI1}
             alt="Innovation Makers Challenge"
-            className="w-[460px]  object-cover "
+            className="w-[460px] h-[178px] object-cover "
           />
           <div className="absolute inset-0 flex items-center justify-center">
-            <div className="bg-[#5d0a07] px-14 py-3  text-white text-3xl">
+            <div className="bg-[#5d0a07] px-14 py-3  text-white md:text-3xl">
               Project Light International
             </div>
           </div>
         </div>
 
         {/* Description Section */}
-        <div className="mt-6 my-24 mx-24 px-4 md:px-8">
+        <div className="mt-6 my-24 md:mx-24 px-4 md:px-8">
           <p className="text-gray-700 mt-24 text-lg leading-relaxed">
             To address the challenge of low employment in Nigeria and empower
             women to develop profitable enterprises, Zenera Consulting partners
@@ -436,11 +443,7 @@ export const Leadership = () => {
         </div>
 
         {/* Gallery Section */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8 ">
-          <img src={IMC1} alt="Event  1" className="w-80 h-80 object-cover" />
-          <img src={IMC1} alt="Event  2" className="w-80 h-80 object-cover" />
-          <img src={IMC1} alt="Event  3" className="w-80 h-80 object-cover" />
-        </div>
+        <ImageSlider images={images.pli} />
       </div>
 
       <div className="container mx-auto p-6 mt-40">
@@ -451,14 +454,14 @@ export const Leadership = () => {
             className="w-[460px]  object-cover "
           />
           <div className="absolute inset-0 flex items-center justify-center">
-            <div className="bg-[#5d0a07] px-14 py-3  text-white text-3xl">
+            <div className="bg-[#5d0a07] px-14 py-3  text-white md:text-3xl">
               Better Half Program
             </div>
           </div>
         </div>
 
         {/* Description Section */}
-        <div className="mt-6 my-24 mx-24 px-4 md:px-8">
+        <div className="mt-6 my-24 md:mx-24 px-4 md:px-8">
           <p className="text-gray-700 mt-24 text-lg leading-relaxed">
             Recognizing the critical role healthy families play in fostering a
             robust society, Zenera Consulting proudly partnered with renowned
@@ -512,19 +515,19 @@ export const Leadership = () => {
       <div className="container mx-auto p-6 mt-40">
         <div className="relative">
           <img
-            src={IMCH}
+            src={SEV1}
             alt="Innovation Makers Challenge"
-            className="w-[460px]  object-cover "
+            className="w-[460px] h-[178px] object-cover "
           />
           <div className="absolute inset-0 flex items-center justify-center">
-            <div className="bg-[#5d0a07] px-14 py-3  text-white text-3xl">
+            <div className="bg-[#5d0a07] px-14 py-3  text-white md:text-3xl">
               Supporting Entrepreneurial Ventures
             </div>
           </div>
         </div>
 
         {/* Description Section */}
-        <div className="mt-6 my-24 mx-24 px-4 md:px-8">
+        <div className="mt-6 my-24 md:mx-24 px-4 md:px-8">
           <p className="text-gray-700 mt-24 text-lg leading-relaxed">
             As part of our commitment to fostering indigenous entrepreneurship,
             we partnered with Nutraboom, a health food production company
@@ -567,11 +570,7 @@ export const Leadership = () => {
         </div>
 
         {/* Gallery Section */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8 ">
-          <img src={IMC1} alt="Event  1" className="w-80 h-80 object-cover" />
-          <img src={IMC1} alt="Event  2" className="w-80 h-80 object-cover" />
-          <img src={IMC1} alt="Event  3" className="w-80 h-80 object-cover" />
-        </div>
+        <ImageSlider images={images.sev} />
       </div>
       <Footer />
     </div>

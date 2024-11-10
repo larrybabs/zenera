@@ -12,9 +12,16 @@ body {
     font-family: 'satoshi', sans-serif;;
   }
 
-.bg-img{
-    background-image: url(./assets/img/bg-img.png);
+.zen-hero1{
+    background-image: url(./assets/img/zenHero1.png);
   }
+.zen-hero2{
+    background-image: url(./assets/img/zenHero2.png);
+  }
+.zen-hero3{
+    background-image: url(./assets/img/zenHero3.png);
+  }
+
 .bg-service{
     background-image: url(./assets/img/zenServ.png);
   }

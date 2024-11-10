@@ -33,37 +33,63 @@ export const Reports = () => {
     e.preventDefault();
     setIsLoading(true);
     setError('');
-
+  
+    if (!isFormValid()) {
+      setIsLoading(false);
+      return;
+    }
+  
     try {
-      // Send form data to your backend API
-    //   const response = await fetch('/api/submit-form', {
-    //     method: 'POST',
-    //     headers: {
-    //       'Content-Type': 'application/json',
-    //     },
-    //     body: JSON.stringify({
-    //       name: formData.name,
-    //       email: formData.email,
-    //       // Add any additional data you want to send
-    //     }),
-    //   });
+      const payload = {
+        fields: [
+          {
+            name: "firstname",
+            value: formData.name
+          },
+          {
+            name: "email",
+            value: formData.email
+          }
+        ],
+        context: {
+          pageUri: window.location.href,
+          pageName: document.title
+        },
+        skipValidation: true
+      };
 
-    //   if (!response.ok) {
-    //     throw new Error('Form submission failed');
-    //   }
+      const response = await fetch(
+        `https://api.hsforms.com/submissions/v3/integration/submit/48051081/536477f0-de22-4f0a-8028-0d58ab417fd3`,
+        {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+          },
+          body: JSON.stringify(payload)
+        }
+      );
+
+      const result = await response.json();
+      
+      if (!response.ok) {
+        throw new Error(result.message || 'Form submission failed');
+      }
 
       // Trigger PDF download
-      const pdfUrl = '/pdf/ZeneraMap.pdf'; 
+      const pdfUrl = '/pdf/ZENERA SOCIAL INVESTMENT REPORT LANDSCAPE NEW 02.pdf';
       const link = document.createElement('a');
       link.href = pdfUrl;
-      link.download = 'report.pdf'; // Replace with desired filename
+      link.download = 'ZENERA SOCIAL INVESTMENT REPORT LANDSCAPE NEW 02.pdf';
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);
 
       // Reset form
       setFormData({ name: '', email: '' });
+      
     } catch (err) {
+      console.error('Submission error:', err);
       setError('An error occurred. Please try again.');
     } finally {
       setIsLoading(false);

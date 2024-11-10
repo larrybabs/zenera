@@ -5,7 +5,10 @@ import Footer from "../../components/Footer";
 import IMCH from "../../assets/img/imcH.png";
 import IMC1 from "../../assets/img/imc1.png";
 import ImageSlider from "../../components/ImageSlider";
-import Leader from "../../assets/img/leader.png";
+import Spartan1 from "../../assets/sportsImg/spartan1.png";
+import Series1 from "../../assets/sportsImg/series1.jpeg";
+import JuniorGolf1 from "../../assets/sportsImg/juniorGolf1.jpeg";
+import { importImagesFromContext } from "../../utils/imageLoader";
 
 export const Sports = () => {
   const [isExpanded, setIsExpanded] = useState(false);
@@ -14,17 +17,9 @@ export const Sports = () => {
     setIsExpanded(!isExpanded);
   };
 
-  const images = [
-    IMC1,
-    Leader,
-    IMC1,
-    Leader,
-    IMC1,
-    Leader,
-    IMC1,
-   
-    // Add more image URLs here
-  ];
+  const images = importImagesFromContext(
+    require.context("../../assets/sportsImg", false, /\.(png|jpe?g|JPG)$/)
+  );
 
   return (
     <div>
@@ -41,9 +36,9 @@ export const Sports = () => {
       <div className="container mx-auto p-6 mt-40">
         <div className="relative">
           <img
-            src={IMCH}
+            src={Spartan1}
             alt="Innovation Makers Challenge"
-            className="w-[460px]  object-cover "
+            className="w-[460px] h-[178px] object-cover "
           />
           <div className="absolute inset-0 flex items-center justify-center">
             <div className="bg-[#5d0a07] px-10 py-3  text-white text-3xl">
@@ -93,19 +88,15 @@ export const Sports = () => {
         </div>
 
         {/* Gallery Section */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8 ">
-          <img src={IMC1} alt="Event  1" className="w-80 h-80 object-cover" />
-          <img src={IMC1} alt="Event  2" className="w-80 h-80 object-cover" />
-          <img src={IMC1} alt="Event  3" className="w-80 h-80 object-cover" />
-        </div>
+        <ImageSlider images={images.spartan} />
       </div>
 
       <div className="container mx-auto p-6 mt-40">
         <div className="relative flex justify-end">
           <img
-            src={IMCH}
+            src={Series1}
             alt="Innovation Makers Challenge"
-            className="w-[460px]  object-cover "
+            className="w-[460px] h-[178px] object-cover "
           />
           <div className="absolute inset-0 flex items-center justify-center">
             <div className="bg-[#5d0a07] px-10 py-3  text-white text-3xl">
@@ -148,18 +139,14 @@ export const Sports = () => {
         </div>
 
         {/* Gallery Section */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8 ">
-          <img src={IMC1} alt="Event  1" className="w-80 h-80 object-cover" />
-          <img src={IMC1} alt="Event  2" className="w-80 h-80 object-cover" />
-          <img src={IMC1} alt="Event  3" className="w-80 h-80 object-cover" />
-        </div>
+        <ImageSlider images={images.series} />
       </div>
       <div className="container mx-auto p-6 mt-40">
         <div className="relative">
           <img
-            src={IMCH}
+            src={JuniorGolf1}
             alt="Innovation Makers Challenge"
-            className="w-[460px]  object-cover "
+            className="w-[460px] h-[178px] object-cover "
           />
           <div className="absolute inset-0 flex items-center justify-center">
             <div className="bg-[#5d0a07] px-10 py-3  text-white text-3xl">
@@ -203,12 +190,7 @@ export const Sports = () => {
         </div>
 
         {/* Gallery Section */}
-        <ImageSlider images={images} />
-        {/* <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8 ">
-          <img src={IMC1} alt="Event  1" className="w-80 h-80 object-cover" />
-          <img src={IMC1} alt="Event  2" className="w-80 h-80 object-cover" />
-          <img src={IMC1} alt="Event  3" className="w-80 h-80 object-cover" />
-        </div> */}
+        <ImageSlider images={images.juniorgolf} />
       </div>
 
       <div className="container mx-auto p-6 mt-40">

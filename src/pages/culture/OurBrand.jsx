@@ -18,12 +18,12 @@ export const Brand = () => {
       <section>
         <div className="relative min-h-screen container mx-auto ">
           <SideNavigation />
-          <div className="-mt-64">
-          <div className="flex">
-            <div className="w-2/5"></div>
+          <div className="md:-mt-64">
+          <div className="flex p-4">
+            <div className="hidden md:block w-2/5"></div>
             <div>
               <h2 className="text-5xl">Vision & Mission</h2>
-              <p className="mt-8 mb-14 w-[877px]">
+              <p className="mt-8 mb-14 md:w-[877px]">
                 Despite Nigeria’s abundant extractive wealth, local communities
                 encounter significant challenges, such as human suffering and
                 environmental degradation. Launched 13 years ago in
@@ -31,20 +31,20 @@ export const Brand = () => {
                 SITEI Conference addresses critical issues within Nigeria’s
                 extractive industry with practical solutions.
               </p>
-              <img src={VisionImg} alt="" />
+              <img src={VisionImg} alt="" className="w-100"/>
             </div>
           </div>
 
-          <div className="flex mt-24">
-            <div className="w-2/5"></div>
+          <div className="flex mt-24 p-4">
+            <div className="hidden md:block w-2/5"></div>
             <div>
               <h2 className="text-5xl">Core Values</h2>
-              <p className="mt-8 mb-14 w-[877px]">
+              <p className="mt-8 mb-14 md:w-[877px]">
                 At Zenera Consulting, our core values guide the work we do. We
                 push boundaries daily, celebrate wins, and enjoy the journey
                 together.
               </p>
-              <div className="text-white flex justify-between w-full max-w-[877px]">
+              <div className="text-white flex flex-wrap md:flex-row gap-3 md:justify-between w-full max-w-[877px]">
                 <div className="bg-primary shadow-lg w-[168px] h-[147px] flex flex-col items-center justify-center">
                   <svg
                     width="70"
@@ -122,7 +122,7 @@ export const Brand = () => {
                 </div>
               </div>
 
-              <div className="text-white mt-14 flex justify-between w-full max-w-[877px]">
+              <div className="text-white mt-3 md:mt-14 flex flex-wrap md:flex-row gap-3 md:justify-between w-full max-w-[877px]">
                 <div className="bg-primary shadow-lg w-[168px] h-[147px] flex flex-col items-center justify-center">
                   <svg
                     width="60"
@@ -175,27 +175,27 @@ export const Brand = () => {
               </div>
             </div>
           </div>
-          <div className="flex mt-24">
-            <div className="w-2/5"></div>
+          <div className="flex mt-24 p-4">
+            <div className="hidden md:block w-2/5"></div>
             <div>
               <h2 className="text-5xl">Logo & Brand Story</h2>
-              <p className="mt-8 mb-14 w-[877px]">
+              <p className="mt-8 mb-14 md:w-[877px]">
               Despite Nigeria’s abundant extractive wealth, local communities encounter 
               significant challenges, such as human suffering and
                environmental degradation. Launched 13 years ago in collaboration
               </p>
-              <div className="text-white flex justify-between w-full max-w-[877px]">
-                <div className="bg-[#666662] shadow-lg w-[258px] h-[194px] flex flex-col items-center justify-center">
+              <div className="text-white flex flex-col gap-3 md:flex-row justify-between w-full max-w-[877px]">
+                <div className="bg-[#666662] shadow-lg w-full md:w-[258px] h-[194px] flex flex-col items-center justify-center">
                   <span className="mt-4">placeholder</span>
                 </div>
-                <div className="bg-[#666662] shadow-lg w-[258px] h-[194px] flex flex-col items-center justify-center">
+                <div className="bg-[#666662] shadow-lg w-full md:w-[258px] h-[194px] flex flex-col items-center justify-center">
                   <span className="mt-4">placeholder</span>
                 </div>
-                <div className="bg-[#666662] shadow-lg w-[258px] h-[194px] flex flex-col items-center justify-center">
+                <div className="bg-[#666662] shadow-lg w-full md:w-[258px] h-[194px] flex flex-col items-center justify-center">
                   <span className="mt-4">placeholder</span>
                 </div>
               </div>
-              <p className="my-14 w-[877px]">
+              <p className="my-14 md:w-[877px]">
               Despite Nigeria’s abundant extractive wealth, local communities encounter 
               significant challenges, such as human suffering and
                environmental degradation. Launched 13 years ago in collaboration
@@ -205,11 +205,11 @@ export const Brand = () => {
                 </div>
             </div>
           </div>
-          <div className="flex mt-24">
-            <div className="w-2/5"></div>
+          <div className="flex mt-24 p-4">
+            <div className="hidden md:block w-2/5"></div>
             <div>
               <h2 className="text-5xl">Social Responsibility</h2>
-              <p className="my-12 w-[877px]">
+              <p className="my-12 md:w-[877px]">
               Despite Nigeria’s abundant extractive wealth, local communities encounter 
               significant challenges, such as human suffering and
                environmental degradation. Launched 13 years ago in collaboration

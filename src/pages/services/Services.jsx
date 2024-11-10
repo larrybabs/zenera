@@ -1,6 +1,8 @@
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
-import ServiceImage from "../../assets/img/service1.png"; // Sample image
+import Service1 from "../../assets/img/cs1.png"; 
+import Service2 from "../../assets/img/cs2.png"; 
+import Service3 from "../../assets/img/cs3.png"; 
 // import Accordion from "../../components/Accordion";
 
 // Array of service data
@@ -10,42 +12,42 @@ const servicesData = [
     title: "Communications Advisory & Change Management",
     description:
       "Corporate and public communications play a critical role in how critical stakeholders—government, customers, investors and the public—receive brands and programs. We design and execute deliberate and research-driven communication strategies.",
-    imgSrc: ServiceImage,
+    imgSrc: Service1,
   },
   {
     id: 2,
     title: "Sustainability Strategy",
     description:
       "We help to clearly define areas of focus, map out measurable metrics before implementation, provide clear data collation processes, and then handhold through the culminating documentation, analysis and reporting process.",
-    imgSrc: ServiceImage,
+    imgSrc: Service2,
   },
   {
     id: 3,
     title: "Stakeholder and Community Engagement",
     description:
       "We gather, dissect, and analyse data, which helps us to determine and deploy strategies that work for each sub-group whether within communities or in business value chains.",
-    imgSrc: ServiceImage,
+    imgSrc: Service3
   },
   {
     id: 4,
     title: "Advertising",
     description:
       "We employ the best resources to achieve deeply resonating advertising campaigns for our clients. We leverage existing key relationships to strategically target our clients’ key audiences.",
-    imgSrc: ServiceImage,
+    imgSrc: Service3,
   },
   {
     id: 5,
     title: "Public Relations",
     description:
       "We provide winning public relations services to our client base spanning across Nigeria and beyond. With a robust wealth of experience and deep media competencies, we deliver impactful results.",
-    imgSrc: ServiceImage,
+    imgSrc: Service3,
   },
   {
     id: 6,
     title: "Investor Relations",
     description:
       "Our mission is to help clients connect with financial audiences in a way that's engaging, credible, and informative. We provide high-level strategic investor relations services.",
-    imgSrc: ServiceImage,
+    imgSrc: Service3,
   },
 ];
 
@@ -60,7 +62,7 @@ export const Services = () => {
         </div>
       </div>
       <section>
-        <h2 className="text-primary text-center capitalize text-4xl w-3/5 mx-auto my-28 leading-normal">
+        <h2 className="px-2 text-primary text-center capitalize text-2xl md:text-4xl md:w-3/5 mx-auto md:my-28 leading-normal">
           Driving business growth through strategic branding and stakeholder engagement.
         </h2>
         <div className="container mx-auto px-4 py-12">
@@ -68,7 +70,7 @@ export const Services = () => {
             {servicesData.map((service) => (
               <div
                 key={service.id}
-                className="relative overflow-hidden flex justify-end items-end w-80 h-[490px] group cursor-pointer bg-cover bg-center"
+                className="relative overflow-hidden flex justify-end items-end md:w-80 h-[490px] group cursor-pointer bg-cover bg-center"
                 style={{ backgroundImage: `url(${service.imgSrc})` }}
               >
                 {/* Overlay and Content */}
