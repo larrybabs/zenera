@@ -18,7 +18,7 @@ export const Insights = () => {
       <section>
         <div className="relative min-h-screen container mx-auto ">
           <SideNavigation />
-          <div className="mt-6 md:-mt-64">
+          <div className="mt-6 md:-mt-80">
           <div className="flex">
               <div className="hidden md:block w-2/5"></div>
               <div className="container mx-auto p-4">

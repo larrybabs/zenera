@@ -18,7 +18,7 @@ export const Brand = () => {
       <section>
         <div className="relative min-h-screen container mx-auto ">
           <SideNavigation />
-          <div className="md:-mt-64">
+          <div className="md:-mt-80">
           <div className="flex p-4">
             <div className="hidden md:block w-2/5"></div>
             <div>
