@@ -1,47 +1,45 @@
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 import SideNavigation from "../../components/SideNav";
-import BlogImg from "../../assets/img/zenBlog.png"
+import BlogImg from "../../assets/img/zenBlog.png";
 
 export const Insights = () => {
   return (
     <div>
       <Navbar />
       <div className="hidden md:block bg-[#F7F7F7] h-[80px]"></div>
-      <div className="bg-service w-screen h-[280px] md:h-[345px] bg-contain bg-no-repeat lg:bg-cover flex justify-center items-center">
-        <div className="text-center p-2 text-white">
-          <h2 className="text-2xl md:text-4xl lg:text-7xl lg:w-[1100px]">
-            Our Insights
-          </h2>
-        </div>
+      <div className="bg-service h-[80px] md:h-[300px] bg-contain bg-no-repeat md:bg-cover flex flex-col justify-center items-center">
+        <h2 className="text-center mx-auto text-white text-2xl md:text-6xl ">
+          Our Insights
+        </h2>
       </div>
       <section>
         <div className="relative min-h-screen container mx-auto ">
           <SideNavigation />
-          <div className="-mt-64">
+          <div className="mt-6 md:-mt-64">
             <div className="flex">
-              <div className="w-2/5"></div>
-              <div>
+              <div className="hidden md:block w-2/5"></div>
+              <div className="container mx-auto p-4">
                 <h2 className="text-5xl">Blogs</h2>
-                <p className="mt-8 mb-14 w-[877px]">
+                <p className="mt-8 mb-14 md:w-[877px]">
                   We Enjoy the Journey Together
                 </p>
                 <div className=" flex justify-between items-end w-full max-w-[877px]">
                   <a href="/" className="w-[276px]">
                     <img src={BlogImg} alt="blog post" />
-                  <label>
-                    Zenera Consulting Joins Association of Advertising Agencies
-                    of Nigeria
-                  </label>
+                    <label>
+                      Zenera Consulting Joins Association of Advertising
+                      Agencies of Nigeria
+                    </label>
                   </a>
                   <a href="/" className="w-[276px]">
                     <img src={BlogImg} alt="blog post" />
-                  <label>
-                    Zenera Consulting Joins Association of Advertising Agencies
-                    of Nigeria
-                  </label>
+                    <label>
+                      Zenera Consulting Joins Association of Advertising
+                      Agencies of Nigeria
+                    </label>
                   </a>
-                  
+
                   <a href="/" className="underline text-blue-600 text-xl flex">
                     View more{" "}
                     <svg
@@ -61,10 +59,10 @@ export const Insights = () => {
               </div>
             </div>
             <div className="flex mt-24">
-              <div className="w-2/5"></div>
-              <div>
+              <div className="hidden md:block w-2/5"></div>
+              <div className="container mx-auto p-4">
                 <h2 className="text-5xl">Webinars</h2>
-                <p className="mt-8 mb-14 w-[877px]">
+                <p className="mt-8 mb-14 md:w-[877px]">
                   At Zenera Consulting, our core values guide the work we do. We
                   push boundaries daily, celebrate wins, and enjoy the journey
                   together.
@@ -73,7 +71,6 @@ export const Insights = () => {
                   <div className="bg-[#666662] shadow-lg w-full h-[384px] flex flex-col items-center justify-center">
                     <span className="mt-4">placeholder</span>
                   </div>
-                  
                 </div>
               </div>
             </div>

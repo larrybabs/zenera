@@ -3,6 +3,8 @@ import Footer from "../../components/Footer";
 import Service1 from "../../assets/img/cs1.png"; 
 import Service2 from "../../assets/img/cs2.png"; 
 import Service3 from "../../assets/img/cs3.png"; 
+import Service4 from "../../assets/healthImg/ubomi2.jpeg"; 
+import Service5 from "../../assets/healthImg/ubomi7.jpeg"; 
 // import Accordion from "../../components/Accordion";
 
 // Array of service data
@@ -33,21 +35,21 @@ const servicesData = [
     title: "Advertising",
     description:
       "We employ the best resources to achieve deeply resonating advertising campaigns for our clients. We leverage existing key relationships to strategically target our clients’ key audiences.",
-    imgSrc: Service3,
+    imgSrc: Service4,
   },
   {
     id: 5,
     title: "Public Relations",
     description:
       "We provide winning public relations services to our client base spanning across Nigeria and beyond. With a robust wealth of experience and deep media competencies, we deliver impactful results.",
-    imgSrc: Service3,
+    imgSrc: Service5,
   },
   {
     id: 6,
     title: "Investor Relations",
     description:
       "Our mission is to help clients connect with financial audiences in a way that's engaging, credible, and informative. We provide high-level strategic investor relations services.",
-    imgSrc: Service3,
+    imgSrc: Service1,
   },
 ];
 
@@ -56,10 +58,10 @@ export const Services = () => {
     <div>
       <Navbar />
       <div className="hidden md:block bg-[#F7F7F7] h-[80px]"></div>
-      <div className="bg-service w-screen h-[280px] md:h-[345px] bg-contain bg-no-repeat lg:bg-cover flex justify-center items-center">
-        <div className="text-center p-2 text-white">
-          <h2 className="text-2xl md:text-4xl lg:text-7xl lg:w-[1100px]">Our Services</h2>
-        </div>
+      <div className="bg-service h-[80px] md:h-[300px] bg-contain bg-no-repeat md:bg-cover flex flex-col justify-center items-center">
+        <h2 className="text-center mx-auto text-white text-2xl md:text-6xl ">
+        Our Services
+        </h2>
       </div>
       <section>
         <h2 className="px-2 text-primary text-center capitalize text-2xl md:text-4xl md:w-3/5 mx-auto md:my-28 leading-normal">

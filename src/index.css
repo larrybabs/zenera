@@ -25,6 +25,9 @@ body {
 .bg-service{
     background-image: url(./assets/img/zenServ.png);
   }
+.bg-about{
+    background-image: url(./assets/img/bg-about.png);
+  }
 
   .service{
     background-image: url(./assets/img/service1.png);

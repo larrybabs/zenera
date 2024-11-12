@@ -2,24 +2,29 @@ import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 import SideNavigation from "../../components/SideNav";
 import BlogImg from "../../assets/img/zenBlog.png";
+import EX from "../../assets/img/ex.png";
 import MP from "../../assets/img/mp.jpeg";
+import Quote from "../../assets/img/Quote.svg";
 // import TgifPoster from "../../assets/img/tgifPoster.png";
 import videoFile from "../../assets/videos/TheLeadershipProject.mp4";
-import Tgif1 from "../../assets/videos/tgif1.MOV";
+import Tgif1 from "../../assets/videos/tgif2.mp4";
 // import Tgif2 from "../../assets/videos/tgif2.MOV";
 import { VideoPlayer } from "../../components/VideoPlayer";
+import ImageSlider from "../../components/ImageSlider";
+import { importImagesFromContext } from "../../utils/imageLoader";
 
 export const People = () => {
+  const images = importImagesFromContext(
+    require.context("../../assets/leadershipImg", false, /\.(png|jpe?g|JPG)$/)
+  );
   return (
     <div>
       <Navbar />
       <div className="hidden md:block bg-[#F7F7F7] h-[80px]"></div>
-      <div className="bg-service w-screen h-[280px] md:h-[345px] bg-contain bg-no-repeat lg:bg-cover flex justify-center items-center">
-        <div className="text-center p-2 text-white">
-          <h2 className="text-2xl md:text-4xl lg:text-7xl lg:w-[1100px]">
-            Our People
-          </h2>
-        </div>
+      <div className="bg-service h-[80px] md:h-[300px] bg-contain bg-no-repeat md:bg-cover flex flex-col justify-center items-center">
+        <h2 className="text-center mx-auto text-white text-2xl md:text-6xl ">
+          Our People
+        </h2>
       </div>
       <section>
         <div className="relative min-h-screen container mx-auto ">
@@ -48,7 +53,7 @@ export const People = () => {
                     <label>TGIF</label>
                   </div>
                   <a href="/" className="w-full md:w-[276px]">
-                    <img src={BlogImg} alt="blog post" />
+                    <img src={BlogImg} alt="blog post" loading="lazy" />
                     <label>TGIF</label>
                   </a>
 
@@ -63,23 +68,29 @@ export const People = () => {
               <div>
                 <h2 className="text-5xl">Manpower development</h2>
                 <p className="mt-8 mb-14 md:w-[877px]">
-                  Some short copy about socials... Despite Nigeria’s abundant
-                  extractive wealth, local communities encounter significant
-                  challenges, such as human suffering
+                How we build our team
                 </p>
                 <div className="flex flex-col md:flex-row justify-between items-start w-full max-w-[877px]">
-                  <a href="/" className="w-full md:w-[276px]">
-                    <img src={BlogImg} alt="blog post" />
-                  </a>
+                  <div className="w-full text-center max-w-[300px] p-4">
+                    <VideoPlayer
+                      src={Tgif1}
+                      poster={MP}
+                      className="h-full shadow-lg"
+                      autoPlay={false}
+                      muted={true}
+                      loop={false}
+                      onEnded={() => console.log("Video finished")}
+                    />
+                  </div>
                   <div className="md:w-[510px]">
                     <p>
                       Some short copy about Manpower development:... Despite
                       Nigeria’s abundant extractive wealth, local communities
                       encounter significant challenges, such{" "}
                     </p>
-                    <a href="/" className="mt-5 underline flex">
+                    {/* <a href="/" className="mt-5 underline flex">
                       View more
-                    </a>
+                    </a> */}
                   </div>
                 </div>
               </div>
@@ -94,7 +105,43 @@ export const People = () => {
                   challenges, such as human suffering
                 </p>
                 <div className="text-center flex flex-col md:flex-row gap-2  md:justify-between w-full max-w-[877px]">
-                  <a href="/" className="w-full md:w-[246px]">
+                  <div className="w-full max-w-[300px] p-4">
+                    <VideoPlayer
+                      src={Tgif1}
+                      // poster={TgifPoster}
+                      className="h-full shadow-lg"
+                      autoPlay={false}
+                      muted={true}
+                      loop={false}
+                      onEnded={() => console.log("Video finished")}
+                    />
+                    <label>Employee</label>
+                  </div>
+                  <div className="w-full max-w-[300px] p-4">
+                    <VideoPlayer
+                      src={Tgif1}
+                      // poster={TgifPoster}
+                      className="h-full shadow-lg"
+                      autoPlay={false}
+                      muted={true}
+                      loop={false}
+                      onEnded={() => console.log("Video finished")}
+                    />
+                    <label>Employee</label>
+                  </div>
+                  <div className="w-full max-w-[300px] p-4">
+                    <VideoPlayer
+                      src={Tgif1}
+                      // poster={TgifPoster}
+                      className="h-full shadow-lg"
+                      autoPlay={false}
+                      muted={true}
+                      loop={false}
+                      onEnded={() => console.log("Video finished")}
+                    />
+                    <label>Employee</label>
+                  </div>
+                  {/* <a href="/" className="w-full md:w-[246px]">
                     <img src={BlogImg} alt="blog post" />
                     <label>Samson Adegoke - IT</label>
                   </a>
@@ -105,7 +152,7 @@ export const People = () => {
                   <a href="/" className="w-full md:w-[246px]">
                     <img src={BlogImg} alt="blog post" />
                     <label>Samson Adegoke - IT</label>
-                  </a>
+                  </a> */}
                 </div>
               </div>
             </div>
@@ -138,19 +185,8 @@ export const People = () => {
                 <p className="mt-8 mb-14 md:w-[877px]">
                   Our staff recognition{" "}
                 </p>
-                <div className="text-center flex flex-col md:flex-row gap-2 justify-between w-full max-w-[877px]">
-                  <a href="/" className="w-full md:w-[276px]">
-                    <img src={BlogImg} alt="blog post" />
-                    <label>TGIF</label>
-                  </a>
-                  <a href="/" className="w-full md:w-[276px]">
-                    <img src={BlogImg} alt="blog post" />
-                    <label>TGIF</label>
-                  </a>
-
-                  <a href="/" className="mb-4 underline flex">
-                    View more
-                  </a>
+                <div className=" max-w-[877px]">
+                  <ImageSlider images={images.staff} />
                 </div>
               </div>
             </div>
@@ -161,19 +197,67 @@ export const People = () => {
                 <p className="mt-8 mb-14 md:w-[877px]">
                   A message from our alumni{" "}
                 </p>
-                <div className="text-center flex flex-col md:flex-row gap-2 justify-between w-full max-w-[877px]">
-                  <a href="/" className="w-full md:w-[246px]">
-                    <img src={BlogImg} alt="blog post" />
-                    <label>Samson Adegoke - IT</label>
-                  </a>
-                  <a href="/" className="w-full md:w-[246px]">
-                    <img src={BlogImg} alt="blog post" />
-                    <label>Samson Adegoke - IT</label>
-                  </a>
-                  <a href="/" className="w-full md:w-[246px]">
-                    <img src={BlogImg} alt="blog post" />
-                    <label>Samson Adegoke - IT</label>
-                  </a>
+                <div className=" flex flex-col md:flex-row gap-2 justify-between w-full max-w-[877px]">
+                  <div className="w-full md:w-[260px] shadow-lg p-5">
+                    <img
+                      src={Quote}
+                      alt="zenera ex employee"
+                      className="opacity-10"
+                    />
+                    <p className="text-sm">
+                      Some short copy about socials... Despite Nigeria’s
+                      abundant extractive wealth, local communities encounter
+                      significant challenges, such as human suffering
+                    </p>
+                    <hr className="opacity-10 my-3" />
+                    <div className="flex gap-2">
+                      <img src={EX} alt="zenera ex employee" />
+                      <div>
+                        <h2 className="font-semibold">Samson Adegoke</h2>
+                        <p className="text-sm opacity-60">Ex Zenera</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="w-full md:w-[260px] shadow-lg p-5">
+                    <img
+                      src={Quote}
+                      alt="zenera ex employee"
+                      className="opacity-10"
+                    />
+                    <p className="text-sm">
+                      Some short copy about socials... Despite Nigeria’s
+                      abundant extractive wealth, local communities encounter
+                      significant challenges, such as human suffering
+                    </p>
+                    <hr className="opacity-10 my-3" />
+                    <div className="flex gap-2">
+                      <img src={EX} alt="zenera ex employee" />
+                      <div>
+                        <h2 className="font-semibold">Samson Adegoke</h2>
+                        <p className="text-sm opacity-60">Ex Zenera</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="w-full md:w-[260px] shadow-lg p-5">
+                    <img
+                      src={Quote}
+                      alt="zenera ex employee"
+                      className="opacity-10"
+                    />
+                    <p className="text-sm">
+                      Some short copy about socials... Despite Nigeria’s
+                      abundant extractive wealth, local communities encounter
+                      significant challenges, such as human suffering
+                    </p>
+                    <hr className="opacity-10 my-3" />
+                    <div className="flex gap-2">
+                      <img src={EX} alt="zenera ex employee" />
+                      <div>
+                        <h2 className="font-semibold">Samson Adegoke</h2>
+                        <p className="text-sm opacity-60">Ex Zenera</p>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>

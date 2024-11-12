@@ -5,12 +5,11 @@ import Leader from "../../assets/img/leader.png";
 import Leader2 from "../../assets/leadershipImg/Leader2.jpeg";
 import imc1 from "../../assets/leadershipImg/imc1.jpeg";
 import Sitei1 from "../../assets/leadershipImg/sitei1.JPG";
+import Sitei3 from "../../assets/leadershipImg/sitei3.png";
 import earthW1 from "../../assets/leadershipImg/earthWomen1.jpg";
 import TLP1 from "../../assets/leadershipImg/TLP1.JPG";
 import PLI1 from "../../assets/leadershipImg/PLI1.jpeg";
 import SEV1 from "../../assets/leadershipImg/SEV1.jpeg";
-import IMCH from "../../assets/img/imcH.png";
-import IMC1 from "../../assets/img/imc1.png";
 import ImageSlider from "../../components/ImageSlider";
 import { importImagesFromContext } from "../../utils/imageLoader";
 
@@ -117,15 +116,15 @@ export const Leadership = () => {
             ${hoveredIndex === 2 ? "scale-100" : "scale-150 -translate-x-1/4"}`}
             >
               <img
-                src={Leader}
+                src={Sitei3}
                 alt="Casual Event"
                 className="w-full h-full object-cover"
               />
             </div>
             <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300">
               <div className="absolute bottom-0 left-0 p-4 text-white">
-                <h3 className="text-xl font-semibold">Community Engagement</h3>
-                <p className="text-sm">Local Leadership Initiative</p>
+                <h3 className="text-xl font-semibold">Sustainability In the Extractive Industries (SITEI) Conference</h3>
+                {/* <p className="text-sm">Local Leadership Initiative</p> */}
               </div>
             </div>
           </div>
@@ -449,9 +448,9 @@ export const Leadership = () => {
       <div className="container mx-auto p-6 mt-40">
         <div className="relative flex justify-end">
           <img
-            src={IMCH}
+            src={imc1}
             alt="Innovation Makers Challenge"
-            className="w-[460px]  object-cover "
+            className="w-[460px] h-[178px] object-cover "
           />
           <div className="absolute inset-0 flex items-center justify-center">
             <div className="bg-[#5d0a07] px-14 py-3  text-white md:text-3xl">
@@ -505,11 +504,7 @@ export const Leadership = () => {
         </div>
 
         {/* Gallery Section */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8 ">
-          <img src={IMC1} alt="Event  1" className="w-80 h-80 object-cover" />
-          <img src={IMC1} alt="Event  2" className="w-80 h-80 object-cover" />
-          <img src={IMC1} alt="Event  3" className="w-80 h-80 object-cover" />
-        </div>
+        <ImageSlider images={images.earthwomen} />
       </div>
 
       <div className="container mx-auto p-6 mt-40">

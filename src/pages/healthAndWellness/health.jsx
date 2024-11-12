@@ -23,15 +23,13 @@ export const Health = () => {
     <div>
       <Navbar />
       <div className="hidden md:block bg-[#F7F7F7] h-[80px]"></div>
-      <div className="bg-service w-screen h-[280px] md:h-[345px] bg-contain bg-no-repeat lg:bg-cover flex justify-center items-center">
-        <div className="text-center p-2 text-white">
-          <h2 className="text-2xl md:text-4xl lg:text-7xl lg:w-[1100px]">
-            Health and Wellness
-          </h2>
-        </div>
+      <div className="bg-service h-[80px] md:h-[300px] bg-contain bg-no-repeat md:bg-cover flex flex-col justify-center items-center">
+        <h2 className="text-center mx-auto text-white text-2xl md:text-6xl ">
+          Health and Wellness
+        </h2>
       </div>
 
-      <div className="container mx-auto p-6 mt-40">
+      <div className="container mx-auto p-4 mt-8 md:mt-40">
         <div className="relative">
           <img
             src={HBC1}
@@ -46,7 +44,7 @@ export const Health = () => {
         </div>
 
         {/* Description Section */}
-        <div className="mt-6 my-24 mx-24 px-4 md:px-8">
+        <div className="mt-6 my-24 md:mx-24 md:px-8">
           <p className="text-gray-700 mt-24 text-lg leading-relaxed">
             In December 2018, we commemorated our fifth anniversary with the
             ‘Hope Beats Cancer’ awareness walk. This event sought to demystify
@@ -91,7 +89,7 @@ export const Health = () => {
         <ImageSlider images={images.hbc} />
       </div>
 
-      <div className="container mx-auto p-6 mt-40">
+      <div className="container mx-auto p-4 mt-40">
         <div className="relative flex justify-end">
           <img
             src={Ubomi1}
@@ -106,7 +104,7 @@ export const Health = () => {
         </div>
 
         {/* Description Section */}
-        <div className="mt-6 my-24 mx-24 px-4 md:px-8">
+        <div className="mt-6 my-24 md:mx-24 md:px-8">
           <p className="text-gray-700 mt-24 text-lg leading-relaxed">
             As a media partner of the PISTIS Foundation, we have been privileged
             to bring hope and healthcare to underserved communities through the
@@ -158,7 +156,7 @@ export const Health = () => {
         {/* Gallery Section */}
         <ImageSlider images={images.ubomi} />
       </div>
-      <div className="container mx-auto p-6 mt-40">
+      <div className="container mx-auto p-4 mt-40">
         <div className="relative">
           <img
             src={Asido1}
@@ -173,7 +171,7 @@ export const Health = () => {
         </div>
 
         {/* Description Section */}
-        <div className="mt-6 my-24 mx-24 px-4 md:px-8">
+        <div className="mt-6 my-24 md:mx-24 md:px-8">
           <p className="text-gray-700 mt-24 text-lg leading-relaxed">
             Concerned about the rising threat of drug abuse on university
             campuses, Zenera Consulting actively responded to the call for
@@ -217,7 +215,7 @@ export const Health = () => {
         <ImageSlider images={images.asido} />
       </div>
 
-      <div className="container mx-auto p-6 mt-40">
+      <div className="container mx-auto p-4 mt-40">
         <div className="relative flex justify-end">
           <img
             src={Cada}
@@ -232,7 +230,7 @@ export const Health = () => {
         </div>
 
         {/* Description Section */}
-        <div className="mt-6 my-24 mx-24 px-4 md:px-8">
+        <div className="mt-6 my-24 md:mx-24 md:px-8">
           <p className="text-gray-700 mt-24 text-lg leading-relaxed">
             Recognising the significance of mental wellbeing and its
             far-reaching impact on individuals, communities, and society at

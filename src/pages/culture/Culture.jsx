@@ -6,16 +6,9 @@ export const Culture = () => {
     <div>
       <Navbar />
       <div className="hidden md:block bg-[#F7F7F7] h-[80px]"></div>
-      {/* <div className="bg-service w-screen h-[120px] md:h-[345px] bg-contain bg-no-repeat lg:bg-cover flex justify-center items-center">
-        <div className="text-center p-2 text-white">
-          <h2 className="text-2xl md:text-4xl lg:text-7xl lg:w-[1100px]">
-            Our Culture
-          </h2>
-        </div>
-      </div> */}
-      <div className="bg-service h-[120px] md:h-[396px] bg-contain bg-no-repeat md:bg-cover flex flex-col justify-center">
-        <h2 className="text-center mx-auto text-white  text-2xl md:text-6xl ">
-          Contact Us
+      <div className="bg-about h-[80px] md:h-[300px] bg-contain bg-no-repeat md:bg-cover flex flex-col justify-center items-center">
+        <h2 className="text-center mx-auto text-white text-2xl md:text-6xl ">
+        Our Culture
         </h2>
       </div>
       <div className="text-center md:my-32">

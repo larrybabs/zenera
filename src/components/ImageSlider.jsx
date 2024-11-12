@@ -104,6 +104,7 @@ const ImageSlider = ({ images }) => {
           >
             <div className="relative h-64 md:h-80 overflow-hidden">
               <img
+              loading="lazy"
                 src={image.src}
                 alt={`Slide ${index}`}
                 className="w-full h-full object-cover cursor-pointer hover:scale-105 transition-transform duration-300"
@@ -123,6 +124,7 @@ const ImageSlider = ({ images }) => {
         >
           <div className="relative w-full h-full max-w-6xl max-h-[90vh] p-4">
             <img
+            loading="lazy"
               src={images[currentIndex].src}
               alt={`Slide ${currentIndex}`}
               className="w-full h-full object-contain"

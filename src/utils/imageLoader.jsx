@@ -12,6 +12,9 @@ const IMAGE_CATEGORIES = {
     SPARTAN: 'spartan',
     SERIES: 'series',
     JUNIOR_GOLF: 'juniorgolf',
+    AWD: 'awd',
+    ZCUL: 'zcul',
+    STAFF: 'staff',
   };
   
   export const importImagesFromContext = (context) => {

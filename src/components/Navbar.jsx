@@ -20,8 +20,8 @@ const Navbar = () => {
       title: "Press",
       url: "/press",
       submenu: [
-        { title: "Press releases", url: "/press/press-releases" },
-        { title: "Articles", url: "/press/articles" },
+        { title: "Press releases", url: "https://zenera.zeneraprojects.com/press/press-releases/" },
+        { title: "Articles", url: "https://zenera.zeneraprojects.com/press/articles/" },
       ]
     },
     { title: "Culture", url: "/culture" }

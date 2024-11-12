@@ -20,14 +20,14 @@ export const Home = () => {
         <div>
           <div className="zen-hero1 w-screen h-[280px] md:h-[520px] lg:h-screen bg-contain bg-no-repeat lg:bg-cover flex flex-col justify-center md:justify-end">
             <div className="text-start p-2 md:p-14 text-white flex md:items-end">
-              <h1 className="font-bold text-2xl md:text-4xl lg:text-5xl w-full lg:w-[860px] lg:leading-normal">
+              <h1 className="font-bold md:text-4xl lg:text-5xl w-full lg:w-[860px] lg:leading-normal">
                 Transforming communities through impactful contributions
               </h1>
 
               <a href="/reports">
                 <div className="bg-primary ms-8 md:ms-32 rounded-full text-white ">
                   
-                    <img src={Arrow} alt="arrow" />
+                    <img src={Arrow} alt="arrow" className="max-w-24 md:max-w-full"/>
                   
                 </div>
               </a>

@@ -2,8 +2,6 @@ import React, { useState } from "react";
 
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
-import IMCH from "../../assets/img/imcH.png";
-import IMC1 from "../../assets/img/imc1.png";
 import ImageSlider from "../../components/ImageSlider";
 import Spartan1 from "../../assets/sportsImg/spartan1.png";
 import Series1 from "../../assets/sportsImg/series1.jpeg";
@@ -25,17 +23,16 @@ export const Sports = () => {
     <div>
       <Navbar />
       <div className="hidden md:block bg-[#F7F7F7] h-[80px]"></div>
-      <div className="bg-service w-screen h-[280px] md:h-[345px] bg-contain bg-no-repeat lg:bg-cover flex justify-center items-center">
-        <div className="text-center p-2 text-white">
-          <h2 className="text-2xl md:text-4xl lg:text-7xl lg:w-[1100px]">
-            Sports
-          </h2>
-        </div>
+      <div className="bg-service h-[80px] md:h-[300px] bg-contain bg-no-repeat md:bg-cover flex flex-col justify-center items-center">
+        <h2 className="text-center mx-auto text-white text-2xl md:text-6xl ">
+          Sports
+        </h2>
       </div>
 
-      <div className="container mx-auto p-6 mt-40">
+      <div className="container mx-auto p-4 mt-8 md:mt-40">
         <div className="relative">
           <img
+            loading="lazy"
             src={Spartan1}
             alt="Innovation Makers Challenge"
             className="w-[460px] h-[178px] object-cover "
@@ -48,7 +45,7 @@ export const Sports = () => {
         </div>
 
         {/* Description Section */}
-        <div className="mt-6 my-24 mx-24 px-4 md:px-8">
+        <div className="mt-6 my-24 md:mx-24 md:px-8">
           <p className="text-gray-700 mt-24 text-lg leading-relaxed">
             We demonstrated our commitment to grassroots sports development by
             sponsoring The Spartan Warriors, a local football club in Lekki,
@@ -91,7 +88,7 @@ export const Sports = () => {
         <ImageSlider images={images.spartan} />
       </div>
 
-      <div className="container mx-auto p-6 mt-40">
+      <div className="container mx-auto p-4 mt-40">
         <div className="relative flex justify-end">
           <img
             src={Series1}
@@ -106,7 +103,7 @@ export const Sports = () => {
         </div>
 
         {/* Description Section */}
-        <div className="mt-6 my-24 mx-24 px-4 md:px-8">
+        <div className="mt-6 my-24 md:mx-24 md:px-8">
           <p className="text-gray-700 mt-24 text-lg leading-relaxed">
             Aimed at supporting professional golfers while enabling amateur
             golfers to improve their game, Zenera Consulting sponsored the
@@ -141,7 +138,7 @@ export const Sports = () => {
         {/* Gallery Section */}
         <ImageSlider images={images.series} />
       </div>
-      <div className="container mx-auto p-6 mt-40">
+      <div className="container mx-auto p-4 mt-40">
         <div className="relative">
           <img
             src={JuniorGolf1}
@@ -156,7 +153,7 @@ export const Sports = () => {
         </div>
 
         {/* Description Section */}
-        <div className="mt-6 my-24 mx-24 px-4 md:px-8">
+        <div className="mt-6 my-24 md:mx-24 md:px-8">
           <p className="text-gray-700 mt-24 text-lg leading-relaxed">
             Recognising the critical role of child development in shaping the
             future, we sponsored the Ikoyi Club 2024 Junior Golf Development
@@ -193,12 +190,12 @@ export const Sports = () => {
         <ImageSlider images={images.juniorgolf} />
       </div>
 
-      <div className="container mx-auto p-6 mt-40">
+      <div className="container mx-auto p-4 mt-40">
         <div className="relative flex justify-end">
           <img
-            src={IMCH}
+            src={JuniorGolf1}
             alt="Innovation Makers Challenge"
-            className="w-[460px]  object-cover "
+            className="w-[460px] h-[178px] object-cover "
           />
           <div className="absolute inset-0 flex items-center justify-center">
             <div className="bg-[#5d0a07] px-10 py-3  text-white text-3xl">
@@ -208,7 +205,7 @@ export const Sports = () => {
         </div>
 
         {/* Description Section */}
-        <div className="mt-6 my-24 mx-24 px-4 md:px-8">
+        <div className="mt-6 my-24 md:mx-24 md:px-8">
           <p className="text-gray-700 mt-24 text-lg leading-relaxed">
             Empowering young talent to reach their full potential is a key
             driver of progress and growth. One of the dividends of our
@@ -247,11 +244,7 @@ export const Sports = () => {
         </div>
 
         {/* Gallery Section */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8 ">
-          <img src={IMC1} alt="Event  1" className="w-80 h-80 object-cover" />
-          <img src={IMC1} alt="Event  2" className="w-80 h-80 object-cover" />
-          <img src={IMC1} alt="Event  3" className="w-80 h-80 object-cover" />
-        </div>
+        <ImageSlider images={images.juniorgolf} />
       </div>
 
       <Footer />
