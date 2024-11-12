@@ -2,6 +2,8 @@ import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 import SideNavigation from "../../components/SideNav";
 import VisionImg from "../../assets/img/zeneragr.png";
+import Logo from "../../assets/img/zenLogo.svg";
+import Logop from "../../assets/img/zenLogop.svg";
 
 export const Brand = () => {
   return (
@@ -183,14 +185,15 @@ export const Brand = () => {
                environmental degradation. Launched 13 years ago in collaboration
               </p>
               <div className="text-white flex flex-col gap-3 md:flex-row justify-between w-full max-w-[877px]">
-                <div className="bg-[#666662] shadow-lg w-full md:w-[258px] h-[194px] flex flex-col items-center justify-center">
-                  <span className="mt-4">placeholder</span>
+                <div className=" shadow-lg w-full md:w-[258px] h-[194px] flex flex-col items-center justify-center">
+                  {/* <span className="mt-4">placeholder</span> */}
+                  <img src={Logo} alt="zenera logo" className="w-[230px]"/>
                 </div>
-                <div className="bg-[#666662] shadow-lg w-full md:w-[258px] h-[194px] flex flex-col items-center justify-center">
-                  <span className="mt-4">placeholder</span>
+                <div className="shadow-lg w-full md:w-[258px] h-[194px] flex flex-col items-center justify-center">
+                <img src={Logop} alt="zenera logo" className="w-[230px]"/>
                 </div>
-                <div className="bg-[#666662] shadow-lg w-full md:w-[258px] h-[194px] flex flex-col items-center justify-center">
-                  <span className="mt-4">placeholder</span>
+                <div className="shadow-lg w-full md:w-[258px] h-[194px] flex flex-col items-center justify-center">
+                <img src={Logo} alt="zenera logo" className="w-[230px]"/>
                 </div>
               </div>
               <p className="my-14 md:w-[877px]">
@@ -199,7 +202,7 @@ export const Brand = () => {
                environmental degradation. Launched 13 years ago in collaboration
               </p>
               <div className="bg-[#666662] shadow-lg w-full h-[194px] flex flex-col items-center justify-center">
-                  <span className="mt-4">placeholder</span>
+                  <span className="mt-4 text-white">Video/Image on brand story</span>
                 </div>
             </div>
           </div>

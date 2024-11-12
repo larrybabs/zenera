@@ -2,6 +2,8 @@ import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 import SideNavigation from "../../components/SideNav";
 import BlogImg from "../../assets/img/zenBlog.png";
+import { VideoPlayer } from "../../components/VideoPlayer";
+import YES from "../../assets/videos/YES.mp4"
 
 export const Insights = () => {
   return (
@@ -17,7 +19,36 @@ export const Insights = () => {
         <div className="relative min-h-screen container mx-auto ">
           <SideNavigation />
           <div className="mt-6 md:-mt-64">
-            <div className="flex">
+          <div className="flex">
+              <div className="hidden md:block w-2/5"></div>
+              <div className="container mx-auto p-4">
+                <h2 className="text-5xl">Webinars</h2>
+                <p className="mt-8 mb-14 md:w-[877px]">
+                  At Zenera Consulting, our core values guide the work we do. We
+                  push boundaries daily, celebrate wins, and enjoy the journey
+                  together.
+                </p>
+                {/* <div className="text-white flex justify-between w-full max-w-[877px] ">
+                  <div className="bg-[#666662] shadow-lg w-full h-[384px] flex flex-col items-center justify-center">
+                    <span className="mt-4">placeholder</span>
+                  </div>
+                </div> */}
+                <div className="text-white flex justify-between w-full max-w-[877px] ">
+                  <div className="w-full mx-auto ">
+                    <VideoPlayer
+                      src={YES}
+                      // poster={MP}
+                      className="max-h-[350px] shadow-lg"
+                      autoPlay={false}
+                      muted={false}
+                      loop={false}
+                      onEnded={() => console.log("Video finished")}
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="flex mt-24">
               <div className="hidden md:block w-2/5"></div>
               <div className="container mx-auto p-4">
                 <h2 className="text-5xl">Blogs</h2>
@@ -25,22 +56,22 @@ export const Insights = () => {
                   We Enjoy the Journey Together
                 </p>
                 <div className=" flex justify-between items-end w-full max-w-[877px]">
-                  <a href="/" className="w-[276px]">
-                    <img src={BlogImg} alt="blog post" />
+                  <div className="w-[276px]">
+                    <img src={BlogImg} alt="blog post" className="pb-3"/>
                     <label>
                       Zenera Consulting Joins Association of Advertising
                       Agencies of Nigeria
                     </label>
-                  </a>
-                  <a href="/" className="w-[276px]">
-                    <img src={BlogImg} alt="blog post" />
+                  </div>
+                  <div className="w-[276px]">
+                    <img src={BlogImg} alt="blog post" className="pb-3"/>
                     <label>
                       Zenera Consulting Joins Association of Advertising
                       Agencies of Nigeria
                     </label>
-                  </a>
+                  </div>
 
-                  <a href="/" className="underline text-blue-600 text-xl flex">
+                  <a href="https://zenera.zeneraprojects.com/press/press-releases/" className="underline text-blue-600 text-xl flex">
                     View more{" "}
                     <svg
                       width="34"
@@ -58,22 +89,7 @@ export const Insights = () => {
                 </div>
               </div>
             </div>
-            <div className="flex mt-24">
-              <div className="hidden md:block w-2/5"></div>
-              <div className="container mx-auto p-4">
-                <h2 className="text-5xl">Webinars</h2>
-                <p className="mt-8 mb-14 md:w-[877px]">
-                  At Zenera Consulting, our core values guide the work we do. We
-                  push boundaries daily, celebrate wins, and enjoy the journey
-                  together.
-                </p>
-                <div className="text-white flex justify-between w-full max-w-[877px] ">
-                  <div className="bg-[#666662] shadow-lg w-full h-[384px] flex flex-col items-center justify-center">
-                    <span className="mt-4">placeholder</span>
-                  </div>
-                </div>
-              </div>
-            </div>
+            
           </div>
         </div>
       </section>

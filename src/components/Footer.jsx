@@ -1,4 +1,4 @@
-import Logo from "../assets/img/zeneraL.png";
+import Logo from "../assets/img/zenLogo.svg";
 
 const Footer = () => {
   return (
@@ -48,43 +48,43 @@ const Footer = () => {
         <div className="flex mt-12 lg:mt-0">
           <div className="mx-10 flex flex-col">
             <h5 className="font-bold">Quick Links</h5>
-            <a href="/about" className="opacity-90 mt-8 mb-4">
+            <a href="/about" className="opacity-70 mt-8 mb-4">
               Our Story
             </a>
-            <a href="/" className="opacity-90 mb-4">
+            <a href="/services" className="opacity-70 mb-4">
               Our Services
             </a>
-            <a href="/faq" className="opacity-90 mb-4">
+            <a href="/faq" className="opacity-70 mb-4">
               Sustainability Report
             </a>
-            <a href="/contact" className="opacity-90">
+            <a href="/sustainability/leadership" className="opacity-70">
               Leadership
             </a>
-            <a href="/contact" className="opacity-90">
+            <a href="/health" className="opacity-70">
               Health and wellness
             </a>
           </div>
-          <div className="mx-20 flex flex-col">
+          <div className="mx-20 mt-14 flex flex-col">
             {/* <h5 className="font-bold">Socials</h5> */}
             {/* <a href="/" className="opacity-90 mb-4">
                 hello@zenera.com
               </a> */}
-            <a href="/" className="opacity-90 mb-4">
+            <a href="/culture" className="opacity-70 mb-4">
               Culture
             </a>
-            <a href="/" className="opacity-90 mb-4">
+            <a href="/" className="opacity-70 mb-4">
               Press Release
             </a>
           </div>
           <div className="mx-10 flex flex-col">
             <h5 className="font-bold">Socials</h5>
-            <a href="/" className="opacity-90 mt-8 mb-4">
+            <a href="/" className="opacity-70 mt-8 mb-4">
               Linkedin
             </a>
-            <a href="/" className="opacity-90 mb-4">
+            <a href="/" className="opacity-70 mb-4">
               Twitter
             </a>
-            <a href="/" className="opacity-90 mb-4">
+            <a href="/" className="opacity-70 mb-4">
               Instagram
             </a>
           </div>
@@ -100,17 +100,20 @@ const Footer = () => {
         <div className="flex ">
           <div className="m-5 flex flex-col">
             <h5 className="font-bold">Company</h5>
-            <a href="/about" className="opacity-90 mt-8 mb-2">
-              About
+            <a href="/about" className="opacity-90 mt-8 mb-4">
+              Our Story
             </a>
-            <a href="/about" className="opacity-90 mb-2">
-              Our team
+            <a href="/services" className="opacity-90 mb-4">
+              Our Services
             </a>
-            <a href="/contact" className="opacity-90 mb-2">
-              Contact us
+            <a href="/faq" className="opacity-90 mb-4">
+              Sustainability Report
             </a>
-            <a href="/faq" className="opacity-90">
-              FAQs
+            <a href="/sustainability/leadership" className="opacity-90">
+              Leadership
+            </a>
+            <a href="/health" className="opacity-90">
+              Health and wellness
             </a>
           </div>
           <div className="m-5 flex flex-col">
@@ -129,7 +132,7 @@ const Footer = () => {
         <div className="m-5 flex flex-col">
           {/* <h5 className="font-bold">Company</h5> */}
           <a href="/" className="opacity-90 mt-8 mb-2">
-            hello@xenera.com
+            hello@zenera.com
           </a>
           <a href="/" className="opacity-90 mb-2">
             +234 654 654 3532

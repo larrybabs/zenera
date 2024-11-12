@@ -29,18 +29,18 @@ export const People = () => {
       <section>
         <div className="relative min-h-screen container mx-auto ">
           <SideNavigation />
-          <div className="md:-mt-64">
+          <div className="mt-10 md:-mt-64">
             <div className="flex">
               <div className="hidden md:block w-2/5"></div>
-              <div>
-                <h2 className="text-5xl">Socials</h2>
-                <p className="mt-8 mb-14 md:w-[877px]">
+              <div className="container mx-auto p-4">
+                <h2 className="text-3xl md:text-5xl">Socials</h2>
+                <p className="mt-4 md:mt-8 mb-14 md:w-[877px]">
                   Some short copy about socials... Despite Nigeria’s abundant
                   extractive wealth, local communities encounter significant
                   challenges, such as human suffering
                 </p>
                 <div className="text-center flex flex-col md:flex-row gap-2  justify-between  w-full max-w-[877px]">
-                  <div className="w-full max-w-[300px] p-4">
+                  <div className="w-full max-w-[300px]">
                     <VideoPlayer
                       src={Tgif1}
                       // poster={TgifPoster}
@@ -65,9 +65,9 @@ export const People = () => {
             </div>
             <div className="flex mt-24">
               <div className="hidden md:block w-2/5"></div>
-              <div>
-                <h2 className="text-5xl">Manpower development</h2>
-                <p className="mt-8 mb-14 md:w-[877px]">
+              <div className="container mx-auto p-4">
+                <h2 className="text-3xl md:text-5xl">Manpower development</h2>
+                <p className="mt-4 md:mt-8 mb-14 md:w-[877px]">
                 How we build our team
                 </p>
                 <div className="flex flex-col md:flex-row justify-between items-start w-full max-w-[877px]">
@@ -97,15 +97,15 @@ export const People = () => {
             </div>
             <div className="flex mt-24 p-4">
               <div className="hidden md:block w-2/5"></div>
-              <div>
-                <h2 className="text-5xl">Employee Stories</h2>
+              <div className="container mx-auto p-4">
+                <h2 className="text-3xl md:text-5xl">Employee Stories</h2>
                 <p className="mt-8 mb-14 md:w-[877px]">
                   Some short copy about socials... Despite Nigeria’s abundant
                   extractive wealth, local communities encounter significant
                   challenges, such as human suffering
                 </p>
                 <div className="text-center flex flex-col md:flex-row gap-2  md:justify-between w-full max-w-[877px]">
-                  <div className="w-full max-w-[300px] p-4">
+                  <div className="w-full max-w-[300px]">
                     <VideoPlayer
                       src={Tgif1}
                       // poster={TgifPoster}
@@ -117,7 +117,7 @@ export const People = () => {
                     />
                     <label>Employee</label>
                   </div>
-                  <div className="w-full max-w-[300px] p-4">
+                  <div className="w-full max-w-[300px] ">
                     <VideoPlayer
                       src={Tgif1}
                       // poster={TgifPoster}
@@ -129,7 +129,7 @@ export const People = () => {
                     />
                     <label>Employee</label>
                   </div>
-                  <div className="w-full max-w-[300px] p-4">
+                  <div className="w-full max-w-[300px] ">
                     <VideoPlayer
                       src={Tgif1}
                       // poster={TgifPoster}
@@ -158,13 +158,13 @@ export const People = () => {
             </div>
             <div className="flex mt-24 p-4">
               <div className="hidden md:block w-2/5"></div>
-              <div>
-                <h2 className="text-5xl">MP’s message</h2>
-                <p className="mt-8 mb-14 md:w-[877px]">
+              <div className="container mx-auto">
+                <h2 className="text-3xl md:text-5xl">MP’s message</h2>
+                <p className="mt-4 md:mt-8 mb-14 md:w-[877px]">
                   Hear directly from our MP.
                 </p>
                 <div className="text-white flex justify-between w-full max-w-[877px] ">
-                  <div className="w-full mx-auto p-4">
+                  <div className="w-full mx-auto ">
                     <VideoPlayer
                       src={videoFile}
                       poster={MP}
@@ -181,8 +181,8 @@ export const People = () => {
             <div className="flex mt-24 p-4">
               <div className="hidden md:block w-2/5"></div>
               <div>
-                <h2 className="text-5xl">Staff recognition</h2>
-                <p className="mt-8 mb-14 md:w-[877px]">
+                <h2 className="text-3xl md:text-5xl">Staff recognition</h2>
+                <p className="mt-4 md:mt-8 mb-14 md:w-[877px]">
                   Our staff recognition{" "}
                 </p>
                 <div className=" max-w-[877px]">
@@ -193,8 +193,8 @@ export const People = () => {
             <div className="flex mt-24 p-4">
               <div className="hidden md:block w-2/5"></div>
               <div>
-                <h2 className="text-5xl">Alumni</h2>
-                <p className="mt-8 mb-14 md:w-[877px]">
+                <h2 className="text-3xl md:text-5xl">Alumni</h2>
+                <p className="mt-4 md:mt-8 mb-14 md:w-[877px]">
                   A message from our alumni{" "}
                 </p>
                 <div className=" flex flex-col md:flex-row gap-2 justify-between w-full max-w-[877px]">
