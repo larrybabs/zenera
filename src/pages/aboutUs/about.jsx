@@ -28,7 +28,7 @@ export const About = () => {
         </div>
 
         <div className="m-4 md:mx-24 py-8 md:py-24 flex flex-col md:flex-row items-center justify-between gap-12">
-          <img src={TEAM} alt="zenera" className="w-full max-w-[586px]"/>
+          <img loading="lazy" src={TEAM} alt="zenera" className="w-full max-w-[586px]"/>
           <div className="">
             <h2 className="text-4xl">Meet the Zenera Group</h2>
             <p className="my-5 opacity-50 w-full">
@@ -53,7 +53,7 @@ export const About = () => {
 With core competency in the development and execution of tailored and strategic stakeholder communications, we help our clients establish and maintain close relations with their key stakeholders, most importantly the media.
             </p>
           </div>
-          <img src={TEAM2} alt="zenera" className="w-full max-w-[586px]"/>
+          <img loading="lazy" src={TEAM2} alt="zenera" className="w-full max-w-[586px]"/>
         </div>
 
         <div className="text-center md:my-32">

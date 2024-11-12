@@ -25,7 +25,7 @@ export const Recognitions = () => {
               <div className="hidden md:block w-2/5"></div>
               <div className="container mx-auto p-4">
                 <h2 className="text-3xl md:text-5xl">Awards & Certifications</h2>
-                <p className="mt-2 md:mt-8 mb-14 w-[877px]">
+                <p className="mt-2 md:mt-8 mb-14 md:w-[877px]">
                   We Enjoy the Journey Together
                 </p>
                 <div className= "md:max-w-[877px]">
