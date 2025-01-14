@@ -6,6 +6,7 @@ import { Insights } from "./pages/culture/OurInsights";
 import { Lifestyle } from "./pages/culture/OurLifestyle";
 import { People } from "./pages/culture/OurPeople";
 import { Recognitions } from "./pages/culture/OurRecognition";
+import Gallery from "./pages/gallery/Gallery";
 import { Health } from "./pages/healthAndWellness/health";
 import { Home } from "./pages/home/Home";
 import { Leadership } from "./pages/leadership/Leadership";
@@ -39,6 +40,7 @@ function App() {
           <Route path="/press" element={<Press />} />
           <Route path="/press-releases" element={<Press />} />
           <Route path="/press/:id" element={<PostDetailsComponent />} />
+          <Route path="/gallery" element={<Gallery />} />
           {/* <Route path="/about" element={<Aboutus />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/transfers" element={<Transfers />} />
