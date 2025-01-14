@@ -5,6 +5,7 @@ import close from "../assets/img/X.svg";
 
 const Navbar = () => {
   const navBar = [
+    { title: "Home", url: "/" },
     { title: "About", url: "/about" },
     { title: "Services", url: "/services" },
     {
@@ -20,8 +21,8 @@ const Navbar = () => {
       title: "Press",
       url: "/press",
       submenu: [
-        { title: "Press releases", url: "https://zenera.zeneraprojects.com/press/press-releases/" },
-        { title: "Articles", url: "https://zenera.zeneraprojects.com/press/articles/" },
+        { title: "Press releases", url: "/press-releases" },
+        { title: "Articles", url: "/press-releases" },
       ]
     },
     { title: "Culture", url: "/culture" }
@@ -85,9 +86,10 @@ const Navbar = () => {
                   onMouseLeave={handleMouseLeave}
                 >
                   <a
-                    href={item.submenu ? "/" : item.url}
+                    href={item.submenu ? item.url : item.url}
                     className="mx-3 hover:opacity-70 flex items-center py-4"
-                    onClick={(e) => item.submenu && e.preventDefault()}
+                    onClick={(e) => item.submenu}
+                    // onClick={(e) => item.submenu && e.preventDefault()}
                   >
                     {item.title}
                     {item.submenu && (

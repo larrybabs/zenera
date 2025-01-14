@@ -10,27 +10,6 @@ import Service5 from "../../assets/healthImg/ubomi7.jpeg";
 // Array of service data
 const servicesData = [
   {
-    id: 1,
-    title: "Communications Advisory & Change Management",
-    description:
-      "Corporate and public communications play a critical role in how critical stakeholders—government, customers, investors and the public—receive brands and programs. We design and execute deliberate and research-driven communication strategies.",
-    imgSrc: Service1,
-  },
-  {
-    id: 2,
-    title: "Sustainability Strategy",
-    description:
-      "We help to clearly define areas of focus, map out measurable metrics before implementation, provide clear data collation processes, and then handhold through the culminating documentation, analysis and reporting process.",
-    imgSrc: Service2,
-  },
-  {
-    id: 3,
-    title: "Stakeholder and Community Engagement",
-    description:
-      "We gather, dissect, and analyse data, which helps us to determine and deploy strategies that work for each sub-group whether within communities or in business value chains.",
-    imgSrc: Service3
-  },
-  {
     id: 4,
     title: "Advertising",
     description:
@@ -51,6 +30,28 @@ const servicesData = [
       "Our mission is to help clients connect with financial audiences in a way that's engaging, credible, and informative. We provide high-level strategic investor relations services.",
     imgSrc: Service1,
   },
+  {
+    id: 1,
+    title: "Communications Advisory & Change Management",
+    description:
+      "Corporate and public communications play a critical role in how critical stakeholders—government, customers, investors and the public—receive brands and programs. We design and execute deliberate and research-driven communication strategies.",
+    imgSrc: Service1,
+  },
+  {
+    id: 2,
+    title: "Sustainable Brand Strategy",
+    description:
+      "We help to clearly define areas of focus, map out measurable metrics before implementation, provide clear data collation processes, and then handhold through the culminating documentation, analysis and reporting process.",
+    imgSrc: Service2,
+  },
+  {
+    id: 3,
+    title: "Stakeholder and Community Engagement",
+    description:
+      "We gather, dissect, and analyse data, which helps us to determine and deploy strategies that work for each sub-group whether within communities or in business value chains.",
+    imgSrc: Service3
+  },
+ 
 ];
 
 export const Services = () => {

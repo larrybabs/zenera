@@ -8,11 +8,11 @@ const Footer = () => {
           <div className="flex p-4">
             <div className="text-white p-0 md:p-8 mt-8">
               <h2 className="text-2xl md:text-4xl font-bold">
-                Signup for newsletter
+              Sign up for Newsletter
               </h2>
-              <p className="mt-4 text-base">
+              {/* <p className="mt-4 text-base">
                 Sign up today for hints, tips and the latest product news
-              </p>
+              </p> */}
               <form className="mt-16 mb-8 md:mb-0 flex">
                 <input
                   type="email"

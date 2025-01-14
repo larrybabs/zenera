@@ -6,8 +6,8 @@ const SideNavigation = () => {
   const currentPath = location.pathname;
   
   const menuItems = [
-    { id: 'brand', label: 'Our Brand', path: '/our-brand' },
     { id: 'people', label: 'Our People', path: '/our-people' },
+    { id: 'brand', label: 'Our Brand', path: '/our-brand' },
     { id: 'lifestyle', label: 'Our Lifestyle', path: '/our-lifestyle' },
     { id: 'recognitions', label: 'Our Recognitions', path: '/our-recognitions' },
     { id: 'insights', label: 'Our Insights', path: '/our-insights' }

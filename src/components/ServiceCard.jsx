@@ -31,11 +31,11 @@ const ServiceCards = () => {
       image: Service1
     },
     {
-      title: 'Sustainability Strategy',
+      title: 'Sustainable Brand Strategy',
       image: Service2
     },
     {
-      title: 'Stakeholder and Community Engagement',
+      title: 'Marketing and Consumer Activation',
       image: Service3
     },
   ];
