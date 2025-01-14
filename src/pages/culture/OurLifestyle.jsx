@@ -2,7 +2,7 @@ import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 import SideNavigation from "../../components/SideNav";
 import { VideoPlayer } from "../../components/VideoPlayer";
-import Tgif1 from "../../assets/videos/tgif2.mp4";
+// import Tgif1 from "../../assets/videos/tgif2.mp4";
 import ImageSlider from "../../components/ImageSlider";
 import { importImagesFromContext } from "../../utils/imageLoader";
 
@@ -45,7 +45,7 @@ export const Lifestyle = () => {
                 </div>
                 <div className="md:max-w-[950px] my-16">
                   <VideoPlayer
-                    src={Tgif1}
+                    src="https://res.cloudinary.com/dxrjjhk9o/video/upload/v1736886809/tgif1_vxvonu.mov"
                     // poster={TgifPoster}
                     className="md:h-[300px] shadow-lg"
                     autoPlay={false}

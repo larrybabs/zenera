@@ -6,8 +6,8 @@ import EX from "../../assets/img/ex.png";
 import MP from "../../assets/img/mp.jpeg";
 import Quote from "../../assets/img/Quote.svg";
 // import TgifPoster from "../../assets/img/tgifPoster.png";
-import videoFile from "../../assets/videos/TheLeadershipProject.mp4";
-import Tgif1 from "../../assets/videos/tgif2.mp4";
+// import videoFile from "../../assets/videos/TheLeadershipProject.mp4";
+// import Tgif1 from "../../assets/videos/tgif2.mp4";
 // import Tgif2 from "../../assets/videos/tgif2.MOV";
 import { VideoPlayer } from "../../components/VideoPlayer";
 import ImageSlider from "../../components/ImageSlider";
@@ -17,6 +17,8 @@ export const People = () => {
   const images = importImagesFromContext(
     require.context("../../assets/leadershipImg", false, /\.(png|jpe?g|JPG)$/)
   );
+
+  const Tgif1 = "https://res.cloudinary.com/dxrjjhk9o/video/upload/v1736886832/tgif2_jsyjjd.mp4"
   return (
     <div>
       <Navbar />
@@ -166,7 +168,7 @@ export const People = () => {
                 <div className="text-white flex justify-between w-full max-w-[877px] ">
                   <div className="w-full mx-auto ">
                     <VideoPlayer
-                      src={videoFile}
+                      src="https://res.cloudinary.com/dxrjjhk9o/video/upload/v1736886813/TheLeadershipProject_plzwp7.mp4"
                       poster={MP}
                       className="max-h-[350px] shadow-lg"
                       autoPlay={false}

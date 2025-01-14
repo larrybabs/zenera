@@ -92,7 +92,7 @@ export const About = () => {
               <span className="text-2xl mt-4">PROFILES</span>
             </div>
             </a>
-            <a href="/">
+            <a href="/gallery">
             <div className="border border-gray shadow-lg w-[279px] h-[238px] mx-auto flex flex-col items-center justify-center hover:scale-105 duration-500">
               <svg
                 width="70"

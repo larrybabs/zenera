@@ -3,7 +3,7 @@ import Footer from "../../components/Footer";
 import SideNavigation from "../../components/SideNav";
 import BlogImg from "../../assets/img/zenBlog.png";
 import { VideoPlayer } from "../../components/VideoPlayer";
-import YES from "../../assets/videos/YES.mp4"
+// import YES from "../../assets/videos/YES.mp4"
 
 export const Insights = () => {
   return (
@@ -36,7 +36,7 @@ export const Insights = () => {
                 <div className="text-white flex justify-between w-full max-w-[877px] ">
                   <div className="w-full mx-auto ">
                     <VideoPlayer
-                      src={YES}
+                      src="https://res.cloudinary.com/dxrjjhk9o/video/upload/v1736886830/YES_geaobj.mp4"
                       // poster={MP}
                       className="max-h-[350px] shadow-lg"
                       autoPlay={false}
