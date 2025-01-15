@@ -38,7 +38,7 @@ export const Home = () => {
               Outstanding PR Agency of the Decade
               </h1>
 
-              <a href="/press-releases" className="uppercase text-primary bg-white py-3 px-10 text-xl hover:bg-gray">
+              <a href="/press-releases" className="uppercase text-primary bg-white py-3 px-4 md:px-10 text-xl hover:bg-gray">
                     Read more
                   </a>
             </div>
@@ -81,7 +81,7 @@ export const Home = () => {
               Inspiring agency of the year
               </h1>
 
-              <a href="/press-releases" className="uppercase text-primary bg-white py-3 px-10 text-xl hover:bg-gray">
+              <a href="/press-releases" className="uppercase text-primary bg-white py-3 px-4 md:px-10 text-xl hover:bg-gray">
               Click here to read more
                   </a>
             </div>
@@ -142,7 +142,7 @@ export const Home = () => {
         </div>
         <div className="container mx-auto py-36 w-full flex justify-center max-w-1xl p-4">
           <iframe
-            className="w-3/4 h-[550px] rounded-3xl shadow-lg"
+            className="md:w-3/4 h-[550px] rounded-3xl shadow-lg"
             src="https://www.youtube.com/embed/Uc_IeSgP_w4"
             title="Zenera Wins Marketing Edge 2024: Outstanding PR Agency of the Decade!"
             frameborder="0"

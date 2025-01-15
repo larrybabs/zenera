@@ -15,7 +15,7 @@ const Gallery = () => {
           Gallery
         </h2>
       </div>
-      <div className='mt-36'>
+      <div className='mt-10 md:mt-36'>
       <ImageGallery />
       </div>
       

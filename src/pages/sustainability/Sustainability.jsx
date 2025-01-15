@@ -12,7 +12,7 @@ export const Sustainability = () => {
         </h2>
       </div>
       <div className="m-4 md:m-24 flex flex-col md:flex-row justify-between items-end gap-12">
-        <h2 className="font-bold text-4xl md:text-6xl text-primary min-w-[500px]">
+        <h2 className="font-bold text-4xl md:text-6xl text-primary md:min-w-[500px]">
           We drive positive change in the
           <span className="text-primary/40"> communities we serve.</span>{" "}
         </h2>
@@ -20,10 +20,10 @@ export const Sustainability = () => {
         At Zenera Consulting, we are deeply committed to harnessing our success to drive positive change in the communities we serve. As a leading branding and corporate communications firm, we recognise the profound impact our business has on society and the environment. This report showcases our dedication to Corporate Social Responsibility (CSR) and highlights our concerted efforts to make a meaningful difference in the lives of our stakeholders, including our employees, clients, and the wider community.
         </p>
       </div>
-      <div className=" md:my-36 container mx-auto">
-        <h2 className="text-4xl text-primary mb-12">Our CSR Focus Areas</h2>
-        <div className="md:mb-32 flex flex-wrap justify-between text-primary ">
-          <div className="w-[285px]">
+      <div className="mt-14 md:my-36 container mx-auto">
+        <h2 className="text-4xl text-primary mb-12 px-4">Our CSR Focus Areas</h2>
+        <div className="md:mb-32 flex flex-wrap justify-center md:justify-between text-primary ">
+          <div className="w-[285px] mb-8">
             <a
               href="/sustainability/leadership"
               className="text-center hover:bg-primary hover:text-white group duration-500 shadow-lg  h-[238px] mx-auto flex flex-col items-center justify-center"
@@ -53,7 +53,7 @@ export const Sustainability = () => {
               EXPLORE MORE
             </a>
           </div>
-          <div className="w-[285px]">
+          <div className="w-[285px] mb-8">
             <a
               href="/sustainability/health"
               className="hover:bg-primary hover:text-white group duration-500 shadow-lg w-[279px] h-[238px] mx-auto flex flex-col items-center justify-center"
@@ -86,7 +86,7 @@ export const Sustainability = () => {
             </a>
           </div>
 
-          <div className="w-[285px]">
+          <div className="w-[285px] mb-8">
             <a
               href="/sustainability/sports"
               className="hover:bg-primary hover:text-white group duration-500 shadow-lg w-[279px] h-[238px] mx-auto flex flex-col items-center justify-center"

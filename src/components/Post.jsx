@@ -48,8 +48,8 @@ const PostsComponent = () => {
   }
 
   return (
-    <div className="container mx-auto pt-40">
-      <div className="flex flex-wrap gap-8 justify-between px-12">
+    <div className="container mx-auto pt-10 md:pt-40">
+      <div className="flex flex-wrap gap-8 justify-between px-4 md:px-12">
         {posts.map((post) => (
           <div key={post.id} className="h-[450px] md:w-[320px]">
             <div className="relative w-full h-[300px] md:h-[280px] overflow-hidden group">
