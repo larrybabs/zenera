@@ -25,7 +25,7 @@ export const Sustainability = () => {
         <div className="md:mb-32 flex flex-wrap justify-between text-primary ">
           <div className="w-[285px]">
             <a
-              href="/leadership"
+              href="/sustainability/leadership"
               className="text-center hover:bg-primary hover:text-white group duration-500 shadow-lg  h-[238px] mx-auto flex flex-col items-center justify-center"
             >
               <svg
@@ -49,13 +49,13 @@ export const Sustainability = () => {
               Civic Centre, Victoria Island, Lagos.
             </p>
             <br />
-            <a href="/leadership" className="pt-4 text-sm hover:opacity-80">
+            <a href="/sustainability/leadership" className="pt-4 text-sm hover:opacity-80">
               EXPLORE MORE
             </a>
           </div>
           <div className="w-[285px]">
             <a
-              href="/health"
+              href="/sustainability/health"
               className="hover:bg-primary hover:text-white group duration-500 shadow-lg w-[279px] h-[238px] mx-auto flex flex-col items-center justify-center"
             >
               <svg
@@ -81,14 +81,14 @@ export const Sustainability = () => {
               large.
             </p>
             <br />
-            <a href="/health" className="pt-4 text-sm hover:opacity-80">
+            <a href="/sustainability/health" className="pt-4 text-sm hover:opacity-80">
               EXPLORE MORE
             </a>
           </div>
 
           <div className="w-[285px]">
             <a
-              href="/sports"
+              href="/sustainability/sports"
               className="hover:bg-primary hover:text-white group duration-500 shadow-lg w-[279px] h-[238px] mx-auto flex flex-col items-center justify-center"
             >
               <svg
@@ -119,7 +119,7 @@ export const Sustainability = () => {
               sponsoring The Spartan Warriors.
             </p>
             <br />
-            <a href="/sports" className="pt-4 text-sm hover:opacity-80">
+            <a href="/sustainability/sports" className="pt-4 text-sm hover:opacity-80">
               EXPLORE MORE
             </a>
           </div>

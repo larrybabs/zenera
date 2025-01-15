@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 import BlogImg from "../assets/img/zenBlog.png";
+import MinimalLoader from "./Loader";
 
 const PostDetailsComponent = () => {
   const { id } = useParams();
@@ -57,9 +58,7 @@ const PostDetailsComponent = () => {
   if (loading) {
     return (
       <div>
-        <Navbar />
-        <div className="h-full">Loading...</div>
-        <Footer />
+        <MinimalLoader />
       </div>
     );
   }
@@ -71,7 +70,7 @@ const PostDetailsComponent = () => {
   return (
     <div>
       <Navbar />
-      <div className="hidden md:block bg-[#FFF] h-[100px]"></div>
+      <div className="hidden md:block bg-[#FFF] h-[90px]"></div>
       <div>
         <img
           src={
@@ -89,7 +88,7 @@ const PostDetailsComponent = () => {
         <a href="/" className="text-blue-900">Home</a> / <a href="/press-releases" className=" text-blue-900">Press Releases</a> / <span className="opacity-60">In The News</span>
       </div>
       <div className="container mx-auto mt-6 md:mt-24 max-w-5xl px-4">
-        <h2 className="text-primary capitalize text-2xl md:text-5xl md:w-3/5 md:my-28 leading-normal">
+        <h2 className="text-primary capitalize text-2xl md:text-5xl md:w-4/5 md:my-28 leading-normal">
           {post.title.rendered}
         </h2>
         <div
@@ -121,7 +120,7 @@ const PostDetailsComponent = () => {
               type="text"
               value={newComment.name}
               onChange={(e) => setNewComment({ ...newComment, name: e.target.value })}
-              className="w-full p-2 border "
+              className="w-full p-2 border border-neutral-400 outline-none"
               placeholder="Enter name"
               required
             />
@@ -132,7 +131,7 @@ const PostDetailsComponent = () => {
               type="email"
               value={newComment.email}
               onChange={(e) => setNewComment({ ...newComment, email: e.target.value })}
-              className="w-full p-2 border "
+              className="w-full p-2 border border-neutral-400 outline-none"
               placeholder="Enter email"
               required
             />
@@ -142,8 +141,8 @@ const PostDetailsComponent = () => {
             <textarea
               value={newComment.content}
               onChange={(e) => setNewComment({ ...newComment, content: e.target.value })}
-              className="w-full p-2 border"
-              rows="4"
+              className="w-full p-2 border border-neutral-400 outline-none"
+              rows="6"
               required
               placeholder="Your comment"
             ></textarea>

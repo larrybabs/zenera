@@ -10,6 +10,7 @@ import Gallery from "./pages/gallery/Gallery";
 import { Health } from "./pages/healthAndWellness/health";
 import { Home } from "./pages/home/Home";
 import { Leadership } from "./pages/leadership/Leadership";
+import NotFound from "./pages/notFound/NotFound";
 import { Press } from "./pages/press/Press";
 import { Reports } from "./pages/ReportsDownload/ReportsDownload";
 import { Services } from "./pages/services/Services";
@@ -41,6 +42,7 @@ function App() {
           <Route path="/press-releases" element={<Press />} />
           <Route path="/press/:id" element={<PostDetailsComponent />} />
           <Route path="/gallery" element={<Gallery />} />
+          <Route path="*" element={<NotFound />} />
           {/* <Route path="/about" element={<Aboutus />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/transfers" element={<Transfers />} />

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import BlogImg from "../assets/img/zenBlog.png";
 import { useNavigate } from "react-router-dom";
+import MinimalLoader from "./Loader";
 
 const PostsComponent = () => {
   const [posts, setPosts] = useState([]);
@@ -41,7 +42,7 @@ const PostsComponent = () => {
   if (loading) {
     return (
       <div className="container mx-auto flex justify-center items-center">
-        Loading...
+       <MinimalLoader />
       </div>
     );
   }
@@ -53,6 +54,7 @@ const PostsComponent = () => {
           <div key={post.id} className="h-[450px] md:w-[320px]">
             <div className="relative w-full h-[300px] md:h-[280px] overflow-hidden group">
               <img
+              onClick={() => navigate(`/press/${post.id}`)}
                 src={
                   post._embedded &&
                   post._embedded["wp:featuredmedia"] &&
@@ -61,7 +63,7 @@ const PostsComponent = () => {
                     : BlogImg
                 }
                 alt={post.title.rendered}
-                className="min-w-[320px] min-h-[300px] object-cover transition-transform duration-700 group-hover:scale-105"
+                className="min-w-[320px] min-h-[300px] object-cover transition-transform duration-700 group-hover:scale-105 cursor-pointer"
               />
             </div>
             <div>
