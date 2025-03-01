@@ -3,6 +3,7 @@ import Footer from "../../components/Footer";
 import SideNavigation from "../../components/SideNav";
 import ImageSlider from "../../components/ImageSlider";
 import { importImagesFromContext } from "../../utils/imageLoader";
+import RecognitionBg from "../../assets/img/RecognitionHeader.jpeg";
 
 export const Recognitions = () => {
   const images = importImagesFromContext(
@@ -11,12 +12,27 @@ export const Recognitions = () => {
   return (
     <div>
       <Navbar />
-      <div className="hidden md:block bg-[#F7F7F7] h-[80px]"></div>
-      <div className="bg-service h-[80px] md:h-[300px] bg-contain bg-no-repeat md:bg-cover flex flex-col justify-center items-center">
+      <div className="hidden md:block bg-[#FFFFFF] h-[80px]"></div>
+      {/* <div className="bg-service h-[80px] md:h-[300px] bg-contain bg-no-repeat md:bg-cover flex flex-col justify-center items-center">
         <h2 className="text-center mx-auto text-white text-2xl md:text-6xl ">
           Our Recognitions
         </h2>
+      </div> */}
+
+      <div className="relative w-full h-[200px] md:h-[350px] overflow-hidden group ">
+        <img
+          src={RecognitionBg}
+          alt="Background"
+          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+        />
+
+        <div className="absolute inset-0 flex items-center justify-center">
+          {/* <h1 className="text-white text-4xl md:text-6xl font-bold text-center">
+            Our Recognitions
+            </h1> */}
+        </div>
       </div>
+
       <section>
         <div className="relative min-h-screen container mx-auto ">
           <SideNavigation />
@@ -24,11 +40,15 @@ export const Recognitions = () => {
             <div className="flex">
               <div className="hidden md:block w-2/5"></div>
               <div className="container mx-auto p-4">
-                <h2 className="text-3xl md:text-5xl">Awards & Certifications</h2>
+                <h2 className="text-3xl md:text-5xl">
+                  Awards and Recognitions
+                </h2>
                 <p className="mt-2 md:mt-8 mb-14 md:w-[877px]">
-                  We Enjoy the Journey Together
+                  Excellence is our standard, and the world has taken notice.
+                  Our industry accolades reflect our commitment to innovation,
+                  impact, and unparalleled service delivery.
                 </p>
-                <div className= "md:max-w-[877px]">
+                <div className="md:max-w-[877px]">
                   <ImageSlider images={images.awd} />
                   {/* <div className="bg-[#666662] shadow-lg w-[258px] h-[194px] flex flex-col items-center justify-center">
                   <span className="mt-4">placeholder</span>
@@ -57,15 +77,21 @@ export const Recognitions = () => {
                     allowfullscreen
                   ></iframe>
                 </div>
-                
               </div>
             </div>
             <div className="flex mt-24">
               <div className="hidden md:block w-2/5"></div>
               <div className="container mx-auto p-4">
                 <h2 className="text-3xl md:text-5xl">Media Mentions</h2>
-                <p className="my-4 md:my-12 md:w-[877px]">Here are some social proofs</p>
-                <a href="/https://zenera.zeneraprojects.com/press/press-releases/" className="underline text-blue-600 text-2xl flex">
+                <p className="my-4 md:my-12 md:w-[877px]">
+                  From top-tier publications to influential platforms, our work
+                  and expertise continue to shape conversations, earning us
+                  recognition as a thought leader in the industry.
+                </p>
+                <a
+                  href="/press"
+                  className="underline text-blue-600 text-2xl flex"
+                >
                   Link to press{" "}
                   <svg
                     width="34"

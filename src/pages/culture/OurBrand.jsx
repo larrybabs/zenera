@@ -24,12 +24,7 @@ export const Brand = () => {
             <div>
               <h2 className="text-5xl">Vision & Mission</h2>
               <p className="mt-8 mb-14 md:w-[877px]">
-                Despite Nigeria’s abundant extractive wealth, local communities
-                encounter significant challenges, such as human suffering and
-                environmental degradation. Launched 13 years ago in
-                collaboration with the Deputy High Commissioner of Canada, the
-                SITEI Conference addresses critical issues within Nigeria’s
-                extractive industry with practical solutions.
+              At Zenera Consulting, our vision is to redefine excellence in strategic communications, creating impactful narratives that shape industries and inspire progress. Our mission is to deliver bespoke, results-driven solutions that elevate brands and drive sustainable growth.
               </p>
               <img src={VisionImg} alt="" className="w-100"/>
             </div>
@@ -40,9 +35,7 @@ export const Brand = () => {
             <div>
               <h2 className="text-5xl">Core Values</h2>
               <p className="mt-8 mb-14 md:w-[877px]">
-                At Zenera Consulting, our core values guide the work we do. We
-                push boundaries daily, celebrate wins, and enjoy the journey
-                together.
+              We are anchored on a  <b>BOLD  SPIRIT</b> which shape our work ethic, fuel our creativity, and ensure we consistently exceed expectations.
               </p>
               <div className="text-white flex flex-wrap md:flex-row gap-3 md:justify-between w-full max-w-[877px]">
                 <div className="bg-primary shadow-lg w-[168px] h-[147px] flex flex-col items-center justify-center">
@@ -180,9 +173,7 @@ export const Brand = () => {
             <div>
               <h2 className="text-5xl">Logo & Brand Story</h2>
               <p className="mt-8 mb-14 md:w-[877px]">
-              Despite Nigeria’s abundant extractive wealth, local communities encounter 
-              significant challenges, such as human suffering and
-               environmental degradation. Launched 13 years ago in collaboration
+              Our brand identity is a symbol of trust, expertise, and distinction. Every element of our logo reflects our commitment to precision, influence, and transformative storytelling that positions our clients as industry leaders.
               </p>
               <div className="text-white flex flex-col gap-3 md:flex-row justify-between w-full max-w-[877px]">
                 <div className=" shadow-lg w-full md:w-[258px] h-[194px] flex flex-col items-center justify-center">
@@ -201,9 +192,9 @@ export const Brand = () => {
               significant challenges, such as human suffering and
                environmental degradation. Launched 13 years ago in collaboration
               </p>
-              <div className="bg-[#666662] shadow-lg w-full h-[194px] flex flex-col items-center justify-center">
+              {/* <div className="bg-[#666662] shadow-lg w-full h-[194px] flex flex-col items-center justify-center">
                   <span className="mt-4 text-white">Video/Image on brand story</span>
-                </div>
+                </div> */}
             </div>
           </div>
           <div className="flex mt-24 p-4">
@@ -211,9 +202,7 @@ export const Brand = () => {
             <div>
               <h2 className="text-5xl">Social Responsibility</h2>
               <p className="my-12 md:w-[877px]">
-              Despite Nigeria’s abundant extractive wealth, local communities encounter 
-              significant challenges, such as human suffering and
-               environmental degradation. Launched 13 years ago in collaboration
+              Beyond business, we are committed to building a better world through sustainability-driven initiatives that empower communities, drive social impact, and foster inclusive growth. <b>Download our Investment Report to see how we are making a difference.</b>
               </p>
              <a href="/sustainability" className="underline text-blue-600 text-2xl flex">Sustainability <svg width="34" height="35" viewBox="0 0 34 35" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M9.85452 23.436L22.6809 14.5813L21.3321 21.9442C21.3069 22.074 21.3076 22.2076 21.3343 22.3371C21.361 22.4666 21.4131 22.5896 21.4877 22.6989C21.5622 22.8081 21.6577 22.9015 21.7686 22.9736C21.8794 23.0457 22.0035 23.0951 22.1336 23.1189C22.2637 23.1427 22.3973 23.1405 22.5265 23.1124C22.6557 23.0842 22.7781 23.0307 22.8865 22.955C22.9949 22.8792 23.0872 22.7827 23.1581 22.671C23.229 22.5593 23.277 22.4347 23.2993 22.3044L25.0831 12.5669C25.1308 12.3061 25.073 12.0369 24.9223 11.8187C24.7717 11.6005 24.5405 11.4511 24.2797 11.4032L14.5423 9.61951C14.4131 9.59568 14.2804 9.5976 14.152 9.62517C14.0235 9.65275 13.9018 9.70543 13.7938 9.7802C13.6311 9.89258 13.5053 10.0507 13.4324 10.2345C13.3596 10.4183 13.3428 10.6197 13.3844 10.813C13.4259 11.0063 13.5238 11.183 13.6657 11.3207C13.8077 11.4584 13.9872 11.551 14.1817 11.5866L21.5447 12.9354L8.71827 21.7902C8.50001 21.9408 8.35055 22.172 8.30276 22.4329C8.25497 22.6938 8.31277 22.963 8.46345 23.1812C8.61413 23.3995 8.84533 23.549 9.10621 23.5967C9.36708 23.6445 9.63626 23.5867 9.85452 23.436Z" fill="#5129EE"/>

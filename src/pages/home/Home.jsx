@@ -34,9 +34,9 @@ export const Home = () => {
         <div>
           <div className="zen-hero5 w-screen h-[280px] md:h-[520px] lg:h-screen bg-contain bg-no-repeat lg:bg-cover flex justify-center items-end">
           <div className=" p-2 md:p-14 text-white mx-auto text-center">
-              <h1 className="font-bold text-2xl md:text-4xl lg:text-5xl w-full lg:w-[860px] mb-12 lg:leading-normal">
+              {/* <h1 className="font-bold text-2xl md:text-4xl lg:text-5xl w-full lg:w-[860px] mb-12 lg:leading-normal">
               Outstanding PR Agency of the Decade
-              </h1>
+              </h1> */}
 
               <a href="/press-releases" className="uppercase text-primary bg-white py-3 px-4 md:px-10 text-xl hover:bg-gray">
                     Read more
@@ -77,9 +77,9 @@ export const Home = () => {
         <div>
           <div className="zen-hero1 w-screen h-[280px] md:h-[520px] lg:h-screen bg-contain bg-no-repeat lg:bg-cover flex justify-center items-end">
           <div className=" p-2 md:p-14 text-white mx-auto text-center">
-              <h1 className="font-bold text-2xl md:text-4xl lg:text-5xl w-full lg:w-[860px] mb-12 lg:leading-normal">
+              {/* <h1 className="font-bold text-2xl md:text-4xl lg:text-5xl w-full lg:w-[860px] mb-12 lg:leading-normal">
               Inspiring agency of the year
-              </h1>
+              </h1> */}
 
               <a href="/press-releases" className="uppercase text-primary bg-white py-3 px-4 md:px-10 text-xl hover:bg-gray">
               Click here to read more

@@ -1,10 +1,11 @@
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
-import Service1 from "../../assets/img/cs1.png"; 
-import Service2 from "../../assets/img/cs2.png"; 
-import Service3 from "../../assets/img/cs3.png"; 
-import Service4 from "../../assets/healthImg/ubomi2.jpeg"; 
-import Service5 from "../../assets/healthImg/ubomi7.jpeg"; 
+import Service1 from "../../assets/img/INVESTOR-RELATIONS.jpg";
+import Service2 from "../../assets/img/SUSTAINABLE-BRANDING.jpg";
+import Service3 from "../../assets/img/COMMUNITY-ENGAGEMENT.jpg";
+import Service4 from "../../assets/img/ADVERTISING.jpg";
+import Service5 from "../../assets/img/PUBLIC-RELATIONS.jpg";
+import Service6 from "../../assets/img/COMMUNICATION-ADVISORY.jpg";
 // import Accordion from "../../components/Accordion";
 
 // Array of service data
@@ -32,10 +33,10 @@ const servicesData = [
   },
   {
     id: 1,
-    title: "Communications Advisory & Change Management",
+    title: "Communications Advisory and Change Management",
     description:
       "Corporate and public communications play a critical role in how critical stakeholders—government, customers, investors and the public—receive brands and programs. We design and execute deliberate and research-driven communication strategies.",
-    imgSrc: Service1,
+    imgSrc: Service6,
   },
   {
     id: 2,
@@ -49,9 +50,8 @@ const servicesData = [
     title: "Stakeholder and Community Engagement",
     description:
       "We gather, dissect, and analyse data, which helps us to determine and deploy strategies that work for each sub-group whether within communities or in business value chains.",
-    imgSrc: Service3
+    imgSrc: Service3,
   },
- 
 ];
 
 export const Services = () => {
@@ -61,25 +61,28 @@ export const Services = () => {
       <div className="hidden md:block bg-[#F7F7F7] h-[80px]"></div>
       <div className="bg-service h-[80px] md:h-[300px] bg-contain bg-no-repeat md:bg-cover flex flex-col justify-center items-center">
         <h2 className="text-center mx-auto text-white text-2xl md:text-6xl ">
-        Our Services
+          Our Services
         </h2>
       </div>
       <section>
         <h2 className="px-2 text-primary text-center capitalize text-2xl md:text-4xl md:w-3/5 mx-auto md:my-28 leading-normal">
-          Driving business growth through strategic branding and stakeholder engagement.
+          Driving business growth through strategic branding and stakeholder
+          engagement.
         </h2>
         <div className="container mx-auto px-4 py-12">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 place-items-center">
             {servicesData.map((service) => (
               <div
                 key={service.id}
-                className="relative overflow-hidden flex justify-end items-end md:w-80 h-[490px] group cursor-pointer bg-cover bg-center"
+                className="relative overflow-hidden flex justify-end items-end md:w-80 h-[490px] group bg-cover bg-center"
                 style={{ backgroundImage: `url(${service.imgSrc})` }}
               >
                 {/* Overlay and Content */}
-                <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-red-900/90" />
+                <div className="" />
                 <div className="relative bg-white h-80 p-6  m-4 shadow-lg">
-                  <h3 className="text-xl font-semibold text-black mb-4">{service.title}</h3>
+                  <h3 className="text-xl font-semibold text-black mb-4">
+                    {service.title}
+                  </h3>
                   <p className="text-black">{service.description}</p>
                 </div>
               </div>

@@ -13,13 +13,13 @@ body {
   }
 
 .zen-hero1{
-    background-image: url(./assets/img/zenHero1.png);
+    background-image: url(./assets/img/Zen-hero1.jpg);
   }
 .zen-hero2{
     background-image: url(./assets/img/zenHero2.png);
   }
 .zen-hero5{
-    background-image: url(./assets/img/ZenHero5.png);
+    background-image: url(./assets/img/Zen-hero5.jpg);
   }
 .zen-hero3{
     background-image: url(./assets/img/zenHero3.png);
@@ -34,9 +34,5 @@ body {
 
   .service{
     background-image: url(./assets/img/service1.png);
-
-  }
-  .zen-news{
-    background-image: url(./assets/img/zeneraNews.png);
 
   }

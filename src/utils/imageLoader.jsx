@@ -15,6 +15,7 @@ const IMAGE_CATEGORIES = {
     AWD: 'awd',
     ZCUL: 'zcul',
     STAFF: 'staff',
+    REQ: 'req',
   };
   
   export const importImagesFromContext = (context) => {

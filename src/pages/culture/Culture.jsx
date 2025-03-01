@@ -1,16 +1,30 @@
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
+import CultureBg from "../../assets/img/CultureBg.jpg";
 
 export const Culture = () => {
   return (
     <div>
       <Navbar />
-      <div className="hidden md:block bg-[#F7F7F7] h-[80px]"></div>
-      <div className="bg-about h-[80px] md:h-[300px] bg-contain bg-no-repeat md:bg-cover flex flex-col justify-center items-center">
+      <div className="hidden md:block bg-[#FFF] h-[90px]"></div>
+      {/* <div className="bg-about h-[80px] md:h-[300px] bg-contain bg-no-repeat md:bg-cover flex flex-col justify-center items-center">
         <h2 className="text-center mx-auto text-white text-2xl md:text-6xl ">
         Our Culture
         </h2>
-      </div>
+      </div> */}
+         <div className="relative w-full h-[200px] md:h-[580px] overflow-hidden group ">
+                <img
+                  src={CultureBg}
+                  alt="Background"
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                />
+      
+                <div className="absolute inset-0 flex bg-primary bg-opacity-60 items-center justify-center group-hover:bg-opacity-15 duration-500">
+                  <h1 className="text-white text-4xl md:text-6xl font-bold text-center group-hover:text-primary duration-500">
+                  Our Culture
+                  </h1>
+                </div>
+              </div>
       <div className="text-center md:my-32">
         <h2 className="text-2xl md:text-5xl mb-4">Learn about our culture and the people</h2>
         <div className="md:my-32 flex flex-wrap text-primary">

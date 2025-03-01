@@ -1,9 +1,12 @@
 import { useState, useRef, useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import Logo from "../assets/img/zenLogo.svg";
 import hamburger from "../assets/img/hamburger.svg";
 import close from "../assets/img/X.svg";
 
 const Navbar = () => {
+  const location = useLocation();
+  
   const navBar = [
     { title: "Home", url: "/" },
     { title: "About", url: "/about" },
@@ -66,6 +69,13 @@ const Navbar = () => {
     };
   }, []);
 
+  const isActive = (itemUrl, submenuItems) => {
+    if (submenuItems) {
+      return submenuItems.some(subItem => location.pathname === subItem.url) || location.pathname === itemUrl;
+    }
+    return location.pathname === itemUrl;
+  };
+
   return (
     <div>
       {/* Desktop Navigation */}
@@ -87,8 +97,9 @@ const Navbar = () => {
                 >
                   <a
                     href={item.submenu ? item.url : item.url}
-                    className="mx-3 hover:opacity-70 flex items-center py-4"
-                    onClick={(e) => item.submenu}
+                    className={`mx-3 hover:opacity-70 flex items-center py-4 ${
+                      isActive(item.url, item.submenu) ? 'text-primary font-semibold' : ''
+                    }`}
                     // onClick={(e) => item.submenu && e.preventDefault()}
                   >
                     {item.title}
@@ -124,7 +135,9 @@ const Navbar = () => {
                         <a
                           key={subIdx}
                           href={subItem.url}
-                          className="block px-4 py-3 text-black hover:bg-gray-100 transition-colors duration-200"
+                          className={`block px-4 py-3 text-black hover:bg-gray-100 transition-colors duration-200 ${
+                            location.pathname === subItem.url ? 'text-primary font-semibold bg-gray-50' : ''
+                          }`}
                         >
                           {subItem.title}
                         </a>
@@ -139,7 +152,7 @@ const Navbar = () => {
       </div>
 
       {/* Mobile Navigation */}
-      <div className="container mx-auto vh-10 flex md:hidden items-center justify-between px-3">
+      <div className={`container mx-auto vh-10 flex md:hidden items-center justify-between px-3 ${ nav ? 'fixed z-30' : ''}`}>
         <div className="p-3 z-30">
           <a href="/" className="font-bold text-3xl">
             <img src={Logo} alt="Zenera Logo" />
@@ -159,7 +172,7 @@ const Navbar = () => {
         className={
           !nav
             ? "hidden"
-            : "absolute top-0 left-0 bg-white w-full h-screen flex flex-col justify-center items-center z-20"
+            : "fixed top-0 left-0 bg-white w-full h-screen flex flex-col justify-center items-center z-20"
         }
       >
         <ul className="text-3xl font-bold text-center w-full">
@@ -169,7 +182,9 @@ const Navbar = () => {
                 <div>
                   <button
                     onClick={() => toggleSubmenu(idx)}
-                    className="flex items-center justify-center w-full"
+                    className={`flex items-center justify-center w-full ${
+                      isActive(item.url, item.submenu) ? 'text-primary' : ''
+                    }`}
                   >
                     {item.title}
                     <svg
@@ -199,7 +214,9 @@ const Navbar = () => {
                           key={subIdx}
                           href={subItem.url}
                           onClick={handleClick}
-                          className="block text-xl font-normal hover:bg-gray-100 py-2 transition-colors duration-200"
+                          className={`block text-xl font-normal hover:bg-gray-100 py-2 transition-colors duration-200 ${
+                            location.pathname === subItem.url ? 'text-primary font-semibold' : ''
+                          }`}
                         >
                           {subItem.title}
                         </a>
@@ -208,7 +225,11 @@ const Navbar = () => {
                   </div>
                 </div>
               ) : (
-                <a href={item.url} onClick={handleClick}>
+                <a 
+                  href={item.url} 
+                  onClick={handleClick}
+                  className={`block ${location.pathname === item.url ? 'text-primary font-semibold' : ''}`}
+                >
                   {item.title}
                 </a>
               )}

@@ -2,8 +2,6 @@ import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 import SideNavigation from "../../components/SideNav";
 import BlogImg from "../../assets/img/zenBlog.png";
-import { VideoPlayer } from "../../components/VideoPlayer";
-// import YES from "../../assets/videos/YES.mp4"
 
 export const Insights = () => {
   return (
@@ -22,29 +20,23 @@ export const Insights = () => {
           <div className="flex">
               <div className="hidden md:block w-2/5"></div>
               <div className="container mx-auto p-4">
-                <h2 className="text-5xl">Webinars</h2>
+                <h2 className="text-5xl">Thought Leadership</h2>
                 <p className="mt-8 mb-14 md:w-[877px]">
-                  At Zenera Consulting, our core values guide the work we do. We
-                  push boundaries daily, celebrate wins, and enjoy the journey
-                  together.
+                We don’t just follow trends—we set them. Through cutting-edge insights and strategic perspectives, we drive conversations that shape industries and redefine possibilities.
                 </p>
-                {/* <div className="text-white flex justify-between w-full max-w-[877px] ">
-                  <div className="bg-[#666662] shadow-lg w-full h-[384px] flex flex-col items-center justify-center">
-                    <span className="mt-4">placeholder</span>
-                  </div>
-                </div> */}
                 <div className="text-white flex justify-between w-full max-w-[877px] ">
-                  <div className="w-full mx-auto ">
-                    <VideoPlayer
-                      src="https://res.cloudinary.com/dxrjjhk9o/video/upload/v1736886830/YES_geaobj.mp4"
-                      // poster={MP}
-                      className="max-h-[350px] shadow-lg"
-                      autoPlay={false}
-                      muted={false}
-                      loop={false}
-                      onEnded={() => console.log("Video finished")}
-                    />
-                  </div>
+                  <div className="container mx-auto mt-10 w-full md:max-w-1xl">
+                  <iframe
+                    className="w-full h-[400px] shadow-lg"
+                    src="https://www.youtube.com/embed/-0tsR7mLzpc"
+                    title="Zenera Wins Marketing Edge 2024: Outstanding PR Agency of the Decade!"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen
+                  ></iframe>
+                  
+                </div>
                 </div>
               </div>
             </div>
@@ -53,7 +45,7 @@ export const Insights = () => {
               <div className="container mx-auto p-4">
                 <h2 className="text-5xl">Blogs</h2>
                 <p className="mt-8 mb-14 md:w-[877px]">
-                  We Enjoy the Journey Together
+                A hub of knowledge, offering valuable perspectives, industry trends, and expert analyses to keep you informed and ahead of the curve.
                 </p>
                 <div className=" flex justify-between items-end w-full max-w-[877px]">
                   <div className="w-[276px]">
@@ -71,7 +63,7 @@ export const Insights = () => {
                     </label>
                   </div>
 
-                  <a href="https://zenera.zeneraprojects.com/press/press-releases/" className="underline text-blue-600 text-xl flex">
+                  <a href="/press" className="underline text-blue-600 text-xl flex">
                     View more{" "}
                     <svg
                       width="34"

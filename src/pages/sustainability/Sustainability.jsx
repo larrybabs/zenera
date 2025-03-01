@@ -1,17 +1,31 @@
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
+import SustainabilityBg from "../../assets/leadershipImg/earthWomen1.jpg"
 
 export const Sustainability = () => {
   return (
     <div>
       <Navbar />
       <div className="hidden md:block bg-[#F7F7F7] h-[80px]"></div>
-      <div className="bg-about h-[80px] md:h-[300px] bg-contain bg-no-repeat md:bg-cover flex flex-col justify-center items-center">
+      {/* <div className="bg-about h-[80px] md:h-[300px] bg-contain bg-no-repeat md:bg-cover flex flex-col justify-center items-center">
         <h2 className="text-center mx-auto text-white text-2xl md:text-6xl ">
           Sustainability
         </h2>
+      </div> */}
+      <div className="relative w-full h-[200px] md:h-[480px] overflow-hidden group ">
+        <img
+          src={SustainabilityBg}
+          alt="Background"
+          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+        />
+
+        <div className="absolute inset-0 flex bg-primary bg-opacity-60 items-center justify-center group-hover:bg-opacity-15 duration-500">
+          <h1 className="text-white text-4xl md:text-6xl font-bold text-center">
+          Sustainability
+          </h1>
+        </div>
       </div>
-      <div className="m-4 md:m-24 flex flex-col md:flex-row justify-between items-end gap-12">
+      <div className="m-4 md:my-24 container mx-auto flex flex-col md:flex-row justify-between items-end gap-12">
         <h2 className="font-bold text-4xl md:text-6xl text-primary md:min-w-[500px]">
           We drive positive change in the
           <span className="text-primary/40"> communities we serve.</span>{" "}
