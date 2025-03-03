@@ -1,81 +1,114 @@
+import React, { useState, useRef, useEffect } from "react";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
-// import TEAM from "../../assets/leadershipImg/TLP1.JPG";
-// import TEAM2 from "../../assets/img/zenHero2.png";
+import Facebook from "../../assets/img/Facebook.svg";
+import Instagram from "../../assets/img/instagram.svg";
+import Linkedin from "../../assets/img/linkedin.svg";
+import Download from "../../assets/img/download.svg";
+import X from "../../assets/img/twitter.svg";
+import RecognitionBg from "../../assets/img/RecognitionHeader.jpeg";
 
 export const About = () => {
+ 
+
+  const [isProfileOpen, setIsProfileOpen] = useState(false);
+  const [isSocialOpen, setIsSocialOpen] = useState(false);
+  
+  const profileDropdownRef = useRef(null);
+  const socialDropdownRef = useRef(null);
+
+  const profiles = [
+    {
+      name: "Abridged Profile",
+      url: "https://drive.google.com/file/d/1_m9OhHtjuu-Neam394VhZ79Mh9-srg9O/view?usp=drive_link",
+    },
+    {
+      name: "Zenera Consulting Profile",
+      url: "https://drive.google.com/file/d/1zzdKis5cUDJMtvLnCkusxnCkrecqmeLe/view?usp=drive_link",
+    },
+    { name: "Zenera Group Profile", url: "https://drive.google.com/file/d/1BptQ29xT0SHziIMb2RgaUrIKdherXbUD/view?usp=sharing",},
+  ];
+
+  // Social media links
+  const socialMediaLinks = [
+    {
+      name: "Instagram",
+      url: "https://www.instagram.com/lezenera/?hl=en",
+      icon: Instagram,
+    },
+    {
+      name: "Facebook",
+      url: "https://web.facebook.com/zeneraconsulting",
+      icon: Facebook,
+    },
+    { name: "X", url: "https://x.com/LeZenera", icon: X },
+    {
+      name: "LinkedIn",
+      url: "https://www.linkedin.com/company/zenera-consulting/",
+      icon: Linkedin,
+    },
+  ];
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (
+        profileDropdownRef.current && !profileDropdownRef.current.contains(event.target)
+      ) {
+        setIsProfileOpen(false);
+      }
+      if (
+        socialDropdownRef.current && !socialDropdownRef.current.contains(event.target)
+      ) {
+        setIsSocialOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
+
+ 
+
   return (
     <div>
       <Navbar />
       <div className="hidden md:block bg-[#F7F7F7] h-[80px]"></div>
-      <div className="bg-about h-[80px] md:h-[300px] bg-contain bg-no-repeat md:bg-cover flex flex-col justify-center items-center">
-        <h2 className="text-center mx-auto text-white text-2xl md:text-6xl ">
-          About Us
-        </h2>
+       <div className="relative w-full h-[200px] md:h-[350px] overflow-hidden group ">
+        <img
+          src={RecognitionBg}
+          alt="Background"
+          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+        />
+
+        <div className="absolute inset-0 flex items-center justify-center">
+          {/* <h1 className="text-white text-4xl md:text-6xl font-bold text-center">
+           About Us
+            </h1> */}
+        </div>
       </div>
       <div className="">
-        <div className="m-4 md:m-24 flex flex-col md:flex-row justify-between md:items-end gap-12">
+        <div className="px-4 mt-8 md:m-24 flex flex-col md:flex-row justify-between md:items-end gap-12">
           <h2 className="font-bold text-4xl md:text-6xl md:w-2/5 text-primary">
             We are a sustainability-focused
             <span className="text-primary/40"> agency.</span>{" "}
           </h2>
-          {/* <p className=" font-medium text-2xl opacity-50">
-            with a foremost sustainability consulting practice. We help our
-            clients to constantly engage their audiences to achieve
-            communications objectives.
-          </p> */}
+         
         </div>
 
-        {/* <div className="m-4 md:mx-24 py-8 md:py-24 flex flex-col md:flex-row items-center justify-between gap-12">
-          <img
-            loading="lazy"
-            src={TEAM}
-            alt="zenera"
-            className="w-full max-w-[586px]"
-          />
-          <div className="">
-            <h2 className="text-4xl">Meet the Zenera Group</h2>
-            <p className="my-5 opacity-50 w-full">
-              We help our clients to constantly engage their audiences to
-              achieve communications objectives. The group is primarily made up
-              of CSR-in-Action and Zenera Consulting.
-            </p>
-            <button className="uppercase bg-primary text-white py-3 px-8">
-              our story
-            </button>
-          </div>
-        </div>
-
-        <div className="m-4 md:mx-24 py-24 flex flex-col md:flex-row items-center justify-between gap-12">
-          <div className="">
-            <h2 className="text-4xl">Zenera Consulting</h2>
-            <p className="my-5 opacity-50">
-              Zenera Consulting is a full-service Branding and Public Relations
-              (PR) firm in Nigeria offering integrated communications advisory,
-              including media relations, marketing communications and crisis
-              communications services.
-              <br />
-              <br />
-              With core competency in the development and execution of tailored
-              and strategic stakeholder communications, we help our clients
-              establish and maintain close relations with their key
-              stakeholders, most importantly the media.
-            </p>
-          </div>
-          <img
-            loading="lazy"
-            src={TEAM2}
-            alt="zenera"
-            className="w-full max-w-[586px]"
-          />
-        </div> */}
+       
 
         <div className="text-center mt-14 md:my-32">
           {/* <h2 className="text-2xl md:text-5xl mb-4">Industry We Serve</h2> */}
-          <div className="md:my-32 flex flex-wrap justify-around gap-20 px-14 text-primary">
-            <a href="/sustainability">
-              <div className="border border-gray shadow-lg w-[279px] h-[238px] mx-auto flex flex-col items-center justify-center hover:scale-105 duration-500">
-                <svg
+          <div className="md:my-32 flex flex-wrap justify-around gap-20 px-14 md:pb-36 text-primary">
+            <div className="relative inline-block" ref={profileDropdownRef}>
+              {/* Main Button */}
+              <div
+                onClick={() => setIsProfileOpen(!isProfileOpen)}
+                className="border border-gray shadow-lg w-[279px] h-[238px] mx-auto flex flex-col items-center justify-center hover:scale-105 duration-500 cursor-pointer"
+              >
+                 <svg
                   width="70"
                   height="70"
                   viewBox="0 0 70 70"
@@ -90,8 +123,44 @@ export const About = () => {
                 </svg>
 
                 <span className="text-2xl mt-4">PROFILES</span>
+
+                {/* Add down arrow icon */}
+                <div className="mt-2">
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="#77090A"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    className={`transform transition-transform duration-300 ${
+                      isProfileOpen ? "rotate-180" : ""
+                    }`}
+                  >
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                  </svg>
+                </div>
               </div>
-            </a>
+
+              {/* Dropdown Menu */}
+              {isProfileOpen && (
+                <div className="absolute left-0 -mt-2 w-[279px] bg-white border border-gray shadow-lg z-10">
+                  {profiles.map((profile, index) => (
+                    <a
+                      key={index}
+                      href={profile.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="gap-2 px-4 py-3 hover:bg-gray-100 font-bold flex items-center"
+                    >
+                      <img src={Download} alt="" /> {profile.name}
+                    </a>
+                  ))}
+                </div>
+              )}
+            </div>
             <a href="/gallery">
               <div className="border border-gray shadow-lg w-[279px] h-[238px] mx-auto flex flex-col items-center justify-center hover:scale-105 duration-500">
                 <svg
@@ -136,7 +205,11 @@ export const About = () => {
                 <span className="text-2xl mt-4">IMPACT REPORT</span>
               </div>
             </a>
-            <a href="/">
+            <a
+              href="https://drive.google.com/file/d/1BptQ29xT0SHziIMb2RgaUrIKdherXbUD/view?usp=drive_link"
+              target="_blank"
+              rel="noreferrer"
+            >
               <div className="border border-gray shadow-lg w-[279px] h-[238px] mx-auto flex flex-col items-center justify-center hover:scale-105 duration-500">
                 <svg
                   width="70"
@@ -194,8 +267,12 @@ export const About = () => {
                 <span className="text-2xl mt-4">INSIGHTS</span>
               </div>
             </a>
-            <a href="/">
-              <div className="border border-gray shadow-lg w-[279px] h-[238px] mx-auto flex flex-col items-center justify-center hover:scale-105 duration-500">
+            <div className="relative inline-block" ref={socialDropdownRef}>
+              {/* Main Button */}
+              <div
+                onClick={() => setIsSocialOpen(!isSocialOpen)}
+                className="border border-gray shadow-lg w-[279px] h-[238px] mx-auto flex flex-col items-center justify-center hover:scale-105 duration-500 cursor-pointer"
+              >
                 <svg
                   width="70"
                   height="70"
@@ -203,7 +280,7 @@ export const About = () => {
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
                 >
-                  <g clip-path="url(#clip0_373_8)">
+                  <g clipPath="url(#clip0_373_8)">
                     <path
                       d="M29.1667 23.3333V5.83333C29.1667 4.28624 28.5521 2.80251 27.4581 1.70854C26.3642 0.614582 24.8804 0 23.3333 0L5.83333 0C4.28624 0 2.80251 0.614582 1.70854 1.70854C0.614582 2.80251 0 4.28624 0 5.83333L0 23.3333C0 24.8804 0.614582 26.3642 1.70854 27.4581C2.80251 28.5521 4.28624 29.1667 5.83333 29.1667H23.3333C24.8804 29.1667 26.3642 28.5521 27.4581 27.4581C28.5521 26.3642 29.1667 24.8804 29.1667 23.3333ZM2.91667 23.3333V5.83333C2.91667 5.05979 3.22396 4.31792 3.77094 3.77094C4.31792 3.22396 5.05979 2.91667 5.83333 2.91667H23.3333C24.1069 2.91667 24.8487 3.22396 25.3957 3.77094C25.9427 4.31792 26.25 5.05979 26.25 5.83333V23.3333C26.25 24.1069 25.9427 24.8487 25.3957 25.3957C24.8487 25.9427 24.1069 26.25 23.3333 26.25H5.83333C5.05979 26.25 4.31792 25.9427 3.77094 25.3957C3.22396 24.8487 2.91667 24.1069 2.91667 23.3333ZM64.1667 0H46.6667C45.1196 0 43.6358 0.614582 42.5419 1.70854C41.4479 2.80251 40.8333 4.28624 40.8333 5.83333V23.3333C40.8333 24.8804 41.4479 26.3642 42.5419 27.4581C43.6358 28.5521 45.1196 29.1667 46.6667 29.1667H64.1667C65.7138 29.1667 67.1975 28.5521 68.2915 27.4581C69.3854 26.3642 70 24.8804 70 23.3333V5.83333C70 4.28624 69.3854 2.80251 68.2915 1.70854C67.1975 0.614582 65.7138 0 64.1667 0ZM67.0833 23.3333C67.0833 24.1069 66.776 24.8487 66.2291 25.3957C65.6821 25.9427 64.9402 26.25 64.1667 26.25H46.6667C45.8931 26.25 45.1513 25.9427 44.6043 25.3957C44.0573 24.8487 43.75 24.1069 43.75 23.3333V5.83333C43.75 5.05979 44.0573 4.31792 44.6043 3.77094C45.1513 3.22396 45.8931 2.91667 46.6667 2.91667H64.1667C64.9402 2.91667 65.6821 3.22396 66.2291 3.77094C66.776 4.31792 67.0833 5.05979 67.0833 5.83333V23.3333ZM54.8333 50.2688C55.2066 49.6046 55.4001 48.8546 55.3945 48.0928C55.3889 47.3309 55.1844 46.5838 54.8014 45.9252C54.4183 45.2667 53.87 44.7196 53.2105 44.3381C52.5511 43.9566 51.8035 43.7538 51.0417 43.75H39.8563C41.1979 39.0542 43.2104 35 38.0771 31.1063C37.6362 30.7793 37.1274 30.5558 36.5883 30.4521C36.0493 30.3484 35.4939 30.3673 34.9631 30.5073C34.4324 30.6474 33.9399 30.905 33.5222 31.2611C33.1045 31.6172 32.7722 32.0627 32.55 32.5646C27.7083 43.2979 28.6563 42.2917 24.0771 45.7479C22.4438 43.2396 20.6063 43.75 13.125 43.75C12.7382 43.75 12.3673 43.9036 12.0938 44.1771C11.8203 44.4506 11.6667 44.8216 11.6667 45.2083V68.5417C11.6667 68.9284 11.8203 69.2994 12.0938 69.5729C12.3673 69.8464 12.7382 70 13.125 70H20.4167C21.1629 69.9984 21.8964 69.806 22.5473 69.4409C23.1982 69.0759 23.7449 68.5505 24.1354 67.9146C28.3062 70.7 28.3063 70 49.5833 70C50.3452 69.9962 51.0928 69.7934 51.7522 69.4119C52.4116 69.0304 52.96 68.4833 53.343 67.8248C53.7261 67.1662 53.9305 66.4191 53.9361 65.6573C53.9417 64.8954 53.7483 64.1454 53.375 63.4812C54.3175 62.8795 54.9939 61.9397 55.2651 60.8548C55.5363 59.77 55.3818 58.6224 54.8333 57.6479C55.4536 57.2526 55.9643 56.7073 56.318 56.0625C56.6718 55.4176 56.8572 54.6939 56.8572 53.9583C56.8572 53.2228 56.6718 52.4991 56.318 51.8542C55.9643 51.2093 55.4536 50.664 54.8333 50.2688ZM21.875 65.625C21.875 66.0118 21.7214 66.3827 21.4479 66.6562C21.1744 66.9297 20.8034 67.0833 20.4167 67.0833H14.5833V46.6667H20.4167C20.8034 46.6667 21.1744 46.8203 21.4479 47.0938C21.7214 47.3673 21.875 47.7382 21.875 48.125V65.625ZM49.5833 67.0833C26.425 67.0833 29.0354 67.6813 24.7917 64.8375V48.7958C27.7958 46.55 30.1146 45.15 31.7333 41.5042C35.525 32.9875 35.1896 32.5354 36.75 33.7021C37.4563 34.234 37.9848 34.9674 38.266 35.8057C38.5472 36.6439 38.5677 37.5477 38.325 38.3979L36.4583 44.8146C36.3961 45.0358 36.3871 45.2686 36.4319 45.494C36.4768 45.7194 36.5743 45.931 36.7164 46.1115C36.8586 46.2921 37.0414 46.4365 37.25 46.533C37.4586 46.6294 37.687 46.6752 37.9167 46.6667H51.0417C51.4284 46.6667 51.7994 46.8203 52.0729 47.0938C52.3464 47.3673 52.5 47.7382 52.5 48.125C52.5 48.5118 52.3464 48.8827 52.0729 49.1562C51.7994 49.4297 51.4284 49.5833 51.0417 49.5833H42.2917C41.9049 49.5833 41.534 49.737 41.2605 50.0105C40.987 50.284 40.8333 50.6549 40.8333 51.0417C40.8333 51.4284 40.987 51.7994 41.2605 52.0729C41.534 52.3464 41.9049 52.5 42.2917 52.5H52.5C52.8868 52.5 53.2577 52.6536 53.5312 52.9271C53.8047 53.2006 53.9583 53.5716 53.9583 53.9583C53.9583 54.3451 53.8047 54.716 53.5312 54.9895C53.2577 55.263 52.8868 55.4167 52.5 55.4167H42.2917C41.9049 55.4167 41.534 55.5703 41.2605 55.8438C40.987 56.1173 40.8333 56.4882 40.8333 56.875C40.8333 57.2618 40.987 57.6327 41.2605 57.9062C41.534 58.1797 41.9049 58.3333 42.2917 58.3333H51.0417C51.4284 58.3333 51.7994 58.487 52.0729 58.7605C52.3464 59.034 52.5 59.4049 52.5 59.7917C52.5 60.1784 52.3464 60.5494 52.0729 60.8229C51.7994 61.0964 51.4284 61.25 51.0417 61.25H42.2917C41.9049 61.25 41.534 61.4036 41.2605 61.6771C40.987 61.9506 40.8333 62.3216 40.8333 62.7083C40.8333 63.0951 40.987 63.466 41.2605 63.7395C41.534 64.013 41.9049 64.1667 42.2917 64.1667H49.5833C49.9701 64.1667 50.341 64.3203 50.6145 64.5938C50.888 64.8673 51.0417 65.2382 51.0417 65.625C51.0417 66.0118 50.888 66.3827 50.6145 66.6562C50.341 66.9297 49.9701 67.0833 49.5833 67.0833Z"
                       fill="#77090A"
@@ -221,8 +298,44 @@ export const About = () => {
                 </svg>
 
                 <span className="text-2xl mt-4">OUR SOCIAL MEDIA</span>
+
+                {/* Add down arrow icon */}
+                <div className="mt-2">
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="#77090A"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    className={`transform transition-transform duration-300 ${
+                      isSocialOpen ? "rotate-180" : ""
+                    }`}
+                  >
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                  </svg>
+                </div>
               </div>
-            </a>
+
+              {/* Dropdown Menu */}
+              {isSocialOpen && (
+                <div className="absolute left-0 -mt-2 w-[279px] bg-white border border-gray shadow-lg z-10">
+                  {socialMediaLinks.map((social, index) => (
+                    <a
+                      key={index}
+                      href={social.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="px-4 py-3 hover:bg-gray-100 font-bold flex items-center"
+                    >
+                    {social.name}
+                    </a>
+                  ))}
+                </div>
+              )}
+            </div>
           </div>
         </div>
       </div>

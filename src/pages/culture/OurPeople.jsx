@@ -1,30 +1,24 @@
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 import SideNavigation from "../../components/SideNav";
-import BlogImg from "../../assets/img/zenBlog.png";
 import EX from "../../assets/img/ex.png";
 import PeopleBg from "../../assets/img/PeopleBg.jpg";
 import Quote from "../../assets/img/Quote.svg";
-import { VideoPlayer } from "../../components/VideoPlayer";
 import ImageSlider from "../../components/ImageSlider";
 import { importImagesFromContext } from "../../utils/imageLoader";
 
 export const People = () => {
   const images = importImagesFromContext(
-    require.context("../../assets/leadershipImg", false, /\.(png|jpe?g|JPG)$/)
+    require.context("../../assets/galleryImg", false, /\.(png|jpe?g|JPG)$/),
+  );
+  const images2 = importImagesFromContext(
+    require.context("../../assets/leadershipImg", false, /\.(png|jpe?g|JPG)$/),
   );
 
-  const Tgif1 =
-    "https://res.cloudinary.com/dxrjjhk9o/video/upload/v1736886832/tgif2_jsyjjd.mp4";
   return (
     <div>
       <Navbar />
-      <div className="hidden md:block bg-[#FFF] h-[100px]"></div>
-      {/* <div className="bg-service h-[80px] md:h-[300px] bg-contain bg-no-repeat md:bg-cover flex flex-col justify-center items-center">
-        <h2 className="text-center mx-auto text-white text-2xl md:text-6xl ">
-          Our People
-        </h2>
-      </div> */}
+      <div className="hidden md:block bg-[#FFF] h-[90px]"></div>
       <div className="relative w-full h-[200px] md:h-[480px] overflow-hidden group ">
         <img
           src={PeopleBg}
@@ -51,7 +45,22 @@ export const People = () => {
                   vibrant social culture fosters camaraderie, teamwork, and a
                   shared spirit of excellence beyond the boardroom.
                 </p>
-                <div className="text-center flex flex-col md:flex-row gap-2  justify-between  w-full max-w-[877px]">
+                <div className=" max-w-[877px]">
+                  <ImageSlider images={images.socials} />
+                </div>
+                <div className="container mx-auto mt-12 w-full md:max-w-1xl">
+                    <iframe
+                      className="w-full h-[400px] shadow-lg"
+                      src="https://www.youtube.com/embed/3qyGsCWTElw"
+                      title="Zenera Wins Marketing Edge 2024: Outstanding PR Agency of the Decade!"
+                      frameborder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      referrerpolicy="strict-origin-when-cross-origin"
+                      allowfullscreen
+                    ></iframe>
+                  </div>
+                {/* <div className="text-center flex flex-col md:flex-row gap-2  justify-between  w-full max-w-[877px]">
+                  
                   <div className="w-full max-w-[300px]">
                     <VideoPlayer
                       src={Tgif1}
@@ -72,7 +81,7 @@ export const People = () => {
                   <a href="/" className="mb-4 underline flex">
                     View more
                   </a>
-                </div>
+                </div> */}
               </div>
             </div>
             <div className="flex mt-24">
@@ -97,16 +106,6 @@ export const People = () => {
                     />
                   </div> */}
 
-                  <div className="md:w-[510px]">
-                    {/* <p>
-                      Some short copy about Manpower development:... Despite
-                      Nigeria’s abundant extractive wealth, local communities
-                      encounter significant challenges, such{" "}
-                    </p> */}
-                    {/* <a href="/" className="mt-5 underline flex">
-                      View more
-                    </a> */}
-                  </div>
                 </div>
               </div>
             </div>
@@ -218,7 +217,7 @@ export const People = () => {
                   inspiring a relentless pursuit of greatness.
                 </p>
                 <div className=" max-w-[877px]">
-                  <ImageSlider images={images.req} />
+                  <ImageSlider images={images2.req} />
                 </div>
               </div>
             </div>

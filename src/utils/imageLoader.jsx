@@ -16,6 +16,7 @@ const IMAGE_CATEGORIES = {
     ZCUL: 'zcul',
     STAFF: 'staff',
     REQ: 'req',
+    SOCIALS: 'socials',
   };
   
   export const importImagesFromContext = (context) => {

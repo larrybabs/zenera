@@ -3,7 +3,9 @@ import { X, ChevronLeft, ChevronRight, ZoomIn, ZoomOut, Play, Pause } from 'luci
 
 // Image Categories Constants
 export const IMAGE_CATEGORIES = {
-  IMC: 'imc',
+  // IMC: 'imc',
+  Gallery: 'gallery',
+  REQ: 'req',
   SITEI: 'sitei',
   EARTH_WOMEN: 'earthwomen',
   TLP: 'tlp',
@@ -12,7 +14,7 @@ export const IMAGE_CATEGORIES = {
   HBC: 'hbc',
   UBOMI: 'ubomi',
   ASIDO: 'asido',
-  CADA: 'cada',
+  // CADA: 'cada',
   SPARTAN: 'spartan',
   SERIES: 'series',
   JUNIOR_GOLF: 'juniorgolf',
@@ -57,6 +59,7 @@ export const importImagesFromContext = (context) => {
 
 const ImageGallery = () => {
   const [selectedImage, setSelectedImage] = useState(null);
+  // eslint-disable-next-line
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [zoomLevel, setZoomLevel] = useState(1);
   const [isPlaying, setIsPlaying] = useState(false);
@@ -110,7 +113,7 @@ const ImageGallery = () => {
       {/* <div className="mb-6 flex flex-wrap gap-2">
         <button
           className={`px-4 py-2 rounded-lg ${
-            selectedCategory === 'all' ? 'bg-blue-500 text-white' : 'bg-gray-200'
+            selectedCategory === 'all' ? 'bg-primary text-white' : 'bg-gray-200'
           }`}
           onClick={() => setSelectedCategory('all')}
         >
@@ -120,7 +123,7 @@ const ImageGallery = () => {
           <button
             key={category}
             className={`px-4 py-2 rounded-lg ${
-              selectedCategory === category ? 'bg-blue-500 text-white' : 'bg-gray-200'
+              selectedCategory === category ? 'bg-primary text-white' : 'bg-gray-200'
             }`}
             onClick={() => setSelectedCategory(category)}
           >
@@ -196,7 +199,7 @@ const ImageGallery = () => {
             <img
               src={selectedImage.src}
               alt={selectedImage.name}
-              className="object-contain transition-transform duration-200"
+              className="object-contain h-screen transition-transform duration-200"
               style={{
                 transform: `scale(${zoomLevel})`,
                 cursor: zoomLevel > 1 ? 'move' : 'auto'

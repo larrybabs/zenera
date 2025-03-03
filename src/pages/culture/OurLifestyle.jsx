@@ -13,11 +13,6 @@ export const Lifestyle = () => {
     <div>
       <Navbar />
       <div className="hidden md:block bg-[#F7F7F7] h-[80px]"></div>
-      {/* <div className="bg-service h-[80px] md:h-[300px] bg-contain bg-no-repeat md:bg-cover flex flex-col justify-center items-center">
-        <h2 className="text-center mx-auto text-white text-2xl md:text-6xl ">
-          Our Lifestyle
-        </h2>
-      </div> */}
       <div className="relative w-full h-[200px] md:h-[350px] overflow-hidden group ">
           <img
             src={LifestyleBg}
@@ -68,15 +63,6 @@ export const Lifestyle = () => {
                 </p>
                 <div className=" max-w-[877px]">
                   <ImageSlider images={images.pli} />
-                  {/* <div className="bg-[#666662] shadow-lg w-[258px] h-[194px] flex flex-col items-center justify-center">
-                  <span className="mt-4">placeholder</span>
-                </div>
-                <div className="bg-[#666662] shadow-lg w-[258px] h-[194px] flex flex-col items-center justify-center">
-                  <span className="mt-4">placeholder</span>
-                </div>
-                <div className="bg-[#666662] shadow-lg w-[258px] h-[194px] flex flex-col items-center justify-center">
-                  <span className="mt-4">placeholder</span>
-                </div> */}
                 </div>
               </div>
             </div>

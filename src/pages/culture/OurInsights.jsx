@@ -1,9 +1,24 @@
+import { useEffect, useState } from "react";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 import SideNavigation from "../../components/SideNav";
 import BlogImg from "../../assets/img/zenBlog.png";
+import { useNavigate } from "react-router-dom";
 
 export const Insights = () => {
+  const [recentPosts, setRecentPosts] = useState([]);
+  const navigate = useNavigate();
+
+
+  useEffect(() => {
+    fetch("https://zenera.zeneraprojects.com/wp-json/wp/v2/posts?_embed&per_page=2")
+      .then((response) => response.json())
+      .then((data) => {
+        setRecentPosts(data);
+      })
+      .catch((error) => console.error("Error fetching recent posts:", error));
+  }, []);
+
   return (
     <div>
       <Navbar />
@@ -47,21 +62,25 @@ export const Insights = () => {
                 <p className="mt-8 mb-14 md:w-[877px]">
                 A hub of knowledge, offering valuable perspectives, industry trends, and expert analyses to keep you informed and ahead of the curve.
                 </p>
-                <div className=" flex justify-between items-end w-full max-w-[877px]">
-                  <div className="w-[276px]">
-                    <img src={BlogImg} alt="blog post" className="pb-3"/>
-                    <label>
-                      Zenera Consulting Joins Association of Advertising
-                      Agencies of Nigeria
-                    </label>
-                  </div>
-                  <div className="w-[276px]">
-                    <img src={BlogImg} alt="blog post" className="pb-3"/>
-                    <label>
-                      Zenera Consulting Joins Association of Advertising
-                      Agencies of Nigeria
-                    </label>
-                  </div>
+                <div className=" flex justify-between w-full max-w-[877px]">
+                {recentPosts.map((post) => (
+                    <div key={post.id} className="w-[276px] cursor-pointer" onClick={() => navigate(`/press/${post.id}`)}>
+                      <img
+                        src={
+                          post._embedded &&
+                          post._embedded["wp:featuredmedia"] &&
+                          post._embedded["wp:featuredmedia"][0].source_url
+                            ? post._embedded["wp:featuredmedia"][0].source_url
+                            : BlogImg
+                        }
+                        alt={post.title.rendered}
+                        className="pb-3 object-cover w-full h-[200px]"
+                      />
+                      <label className="block text-sm font-medium">
+                        {post.title.rendered}
+                      </label>
+                    </div>
+                  ))}
 
                   <a href="/press" className="underline text-blue-600 text-xl flex">
                     View more{" "}
