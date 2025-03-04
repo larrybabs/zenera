@@ -9,10 +9,10 @@ import { importImagesFromContext } from "../../utils/imageLoader";
 
 export const People = () => {
   const images = importImagesFromContext(
-    require.context("../../assets/galleryImg", false, /\.(png|jpe?g|JPG)$/),
+    require.context("../../assets/galleryImg", false, /\.(png|jpe?g|JPG)$/)
   );
   const images2 = importImagesFromContext(
-    require.context("../../assets/leadershipImg", false, /\.(png|jpe?g|JPG)$/),
+    require.context("../../assets/leadershipImg", false, /\.(png|jpe?g|JPG)$/)
   );
 
   return (
@@ -26,8 +26,8 @@ export const People = () => {
           className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
         />
 
-        <div className="absolute inset-0 flex bg-primary bg-opacity-60 items-center justify-center group-hover:bg-opacity-15 duration-500">
-          <h1 className="text-white text-4xl md:text-6xl font-bold text-center group-hover:text-primary duration-500">
+        <div className="absolute inset-0 flex bg-primary bg-opacity-60 items-center justify-center  duration-500">
+          <h1 className="text-white text-4xl md:text-6xl font-bold text-center duration-500">
             Our People
           </h1>
         </div>
@@ -49,16 +49,16 @@ export const People = () => {
                   <ImageSlider images={images.socials} />
                 </div>
                 <div className="container mx-auto mt-12 w-full md:max-w-1xl">
-                    <iframe
-                      className="w-full h-[400px] shadow-lg"
-                      src="https://www.youtube.com/embed/3qyGsCWTElw"
-                      title="Zenera Wins Marketing Edge 2024: Outstanding PR Agency of the Decade!"
-                      frameborder="0"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                      referrerpolicy="strict-origin-when-cross-origin"
-                      allowfullscreen
-                    ></iframe>
-                  </div>
+                  <iframe
+                    className="w-full h-[400px] shadow-lg"
+                    src="https://www.youtube.com/embed/nIY7tEZ4iVI"
+                    title="Zenera Wins Marketing Edge 2024: Outstanding PR Agency of the Decade!"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen
+                  ></iframe>
+                </div>
                 {/* <div className="text-center flex flex-col md:flex-row gap-2  justify-between  w-full max-w-[877px]">
                   
                   <div className="w-full max-w-[300px]">
@@ -87,12 +87,15 @@ export const People = () => {
             <div className="flex mt-24">
               <div className="hidden md:block w-2/5"></div>
               <div className="container mx-auto p-4">
-                <h2 className="text-3xl md:text-5xl">Manpower development</h2>
+                <h2 className="text-3xl md:text-5xl">Manpower Development</h2>
                 <p className="mt-4 md:mt-8 mb-14 md:w-[877px]">
                   At Zenera, growth is intentional. We invest in continuous
                   learning, equipping our people with cutting-edge skills to
                   lead, innovate, and excel in an evolving business landscape.
                 </p>
+                <div className=" max-w-[877px]">
+                  <ImageSlider images={images.vdfr} />
+                </div>
                 <div className="flex flex-col md:flex-row justify-between items-start w-full max-w-[877px]">
                   {/* <div className="w-full text-center max-w-[300px] p-4">
                     <VideoPlayer
@@ -105,7 +108,6 @@ export const People = () => {
                       onEnded={() => console.log("Video finished")}
                     />
                   </div> */}
-
                 </div>
               </div>
             </div>
@@ -119,65 +121,44 @@ export const People = () => {
                   our people and drive our collective success.
                 </p>
                 <div className="text-center flex flex-col md:flex-row gap-2  md:justify-between w-full max-w-[877px]">
-                  <div className="container mx-auto mt-12 w-full md:max-w-1xl">
-                    <iframe
-                      className="w-full h-[400px] shadow-lg"
-                      src="https://www.youtube.com/embed/3qyGsCWTElw"
-                      title="Zenera Wins Marketing Edge 2024: Outstanding PR Agency of the Decade!"
+                  <div className="flex gap-3 overflow-x-auto scrollbar-hide">
+                    <div className="flex-none mx-auto mt-2"> <iframe
+                      className="w-full h-[320px]"
+                      src="https://www.youtube.com/embed/BDilY15czsU"
+                      title="Dare Ayanfeso - Long Service Award Interview"
                       frameborder="0"
                       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                       referrerpolicy="strict-origin-when-cross-origin"
                       allowfullscreen
-                    ></iframe>
+                    ></iframe></div>
+                    <div className="flex-none mx-auto mt-2"> <iframe
+                      className="w-full h-[320px]"
+                      src="https://www.youtube.com/embed/GgPoswGZO-U"
+                      title="Folarin Isikalu - Long Service Award Interview!"
+                      frameborder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      referrerpolicy="strict-origin-when-cross-origin"
+                      allowfullscreen
+                    ></iframe></div>
+                    <div className="flex-none mx-auto mt-2"> <iframe
+                      className="w-full h-[320px]"
+                      src="https://www.youtube.com/embed/qoJaowmja3s"
+                      title="Godswill Samuel - Long Service Award Interview!"
+                      frameborder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      referrerpolicy="strict-origin-when-cross-origin"
+                      allowfullscreen
+                    ></iframe></div>
+                    <div className="flex-none mx-auto mt-2"> <iframe
+                      className="w-full h-[320px]"
+                      src="https://www.youtube.com/embed/uoU0XSXPHVE"
+                      title="Musa Oladipupo - Long Service Award Interview!"
+                      frameborder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      referrerpolicy="strict-origin-when-cross-origin"
+                      allowfullscreen
+                    ></iframe></div>
                   </div>
-                  {/* <div className="w-full max-w-[300px]">
-                    <VideoPlayer
-                      src={Tgif1}
-                      // poster={TgifPoster}
-                      className="h-full shadow-lg"
-                      autoPlay={false}
-                      muted={true}
-                      loop={false}
-                      onEnded={() => console.log("Video finished")}
-                    />
-                    <label>Employee</label>
-                  </div>
-                  <div className="w-full max-w-[300px] ">
-                    <VideoPlayer
-                      src={Tgif1}
-                      // poster={TgifPoster}
-                      className="h-full shadow-lg"
-                      autoPlay={false}
-                      muted={true}
-                      loop={false}
-                      onEnded={() => console.log("Video finished")}
-                    />
-                    <label>Employee</label>
-                  </div>
-                  <div className="w-full max-w-[300px] ">
-                    <VideoPlayer
-                      src={Tgif1}
-                      // poster={TgifPoster}
-                      className="h-full shadow-lg"
-                      autoPlay={false}
-                      muted={true}
-                      loop={false}
-                      onEnded={() => console.log("Video finished")}
-                    />
-                    <label>Employee</label>
-                  </div> */}
-                  {/* <a href="/" className="w-full md:w-[246px]">
-                    <img src={BlogImg} alt="blog post" />
-                    <label>Samson Adegoke - IT</label>
-                  </a>
-                  <a href="/" className="w-full md:w-[246px]">
-                    <img src={BlogImg} alt="blog post" />
-                    <label>Samson Adegoke - IT</label>
-                  </a>
-                  <a href="/" className="w-full md:w-[246px]">
-                    <img src={BlogImg} alt="blog post" />
-                    <label>Samson Adegoke - IT</label>
-                  </a> */}
                 </div>
               </div>
             </div>
@@ -185,7 +166,7 @@ export const People = () => {
               <div className="hidden md:block w-2/5"></div>
               <div className="container mx-auto">
                 <h2 className="text-3xl md:text-5xl">
-                  Long Term Service Award.
+                  Long Term Service Award
                 </h2>
                 {/* <p className="mt-4 md:mt-8 mb-14 md:w-[877px]">
                   Hear directly from our MP.
@@ -207,9 +188,9 @@ export const People = () => {
             </div>
             <div className="flex mt-24 p-4">
               <div className="hidden md:block w-2/5"></div>
-              <div>
+              <div className="container mx-auto p-4">
                 <h2 className="text-3xl md:text-5xl">
-                  Staff Recognition/Awards
+                  Staff Recognition/<br className="md:hidden"/>Awards
                 </h2>
                 <p className="mt-4 md:mt-8 mb-14 md:w-[877px]">
                   Excellence deserves to be celebrated. Our recognition culture
@@ -238,20 +219,30 @@ export const People = () => {
                       className="opacity-10"
                     />
                     <p className="text-sm">
-                      Some short copy about socials... Despite Nigeria’s
-                      abundant extractive wealth, local communities encounter
-                      significant challenges, such as human suffering
+                      “When I started, I never imagined I would spend 10 years
+                      here, but I can boldly say it has been a continuous
+                      learning journey. Over the years, I have gained invaluable
+                      experience and built strong, meaningful relationships.”
                     </p>
                     <hr className="opacity-10 my-3" />
-                    <div className="flex gap-2">
-                      <img src={EX} alt="zenera ex employee" />
+                    <div className="flex gap-2 items-start">
+                      <img
+                        src={EX}
+                        alt="zenera ex employee"
+                        width={54}
+                        height={10}
+                      />
                       <div>
-                        <h2 className="font-semibold">Samson Adegoke</h2>
-                        <p className="text-sm opacity-60">Ex Zenera</p>
+                        <h2 className="text-sm font-semibold">
+                          Dare Ayanfeso, Creative Director
+                        </h2>
+                        <p className="text-xs opacity-60">
+                          Alumni, Zenera consulting
+                        </p>
                       </div>
                     </div>
                   </div>
-                  <div className="w-full md:w-[260px] shadow-lg p-5">
+                  {/* <div className="w-full md:w-[260px] shadow-lg p-5">
                     <img
                       src={Quote}
                       alt="zenera ex employee"
@@ -290,7 +281,7 @@ export const People = () => {
                         <p className="text-sm opacity-60">Ex Zenera</p>
                       </div>
                     </div>
-                  </div>
+                  </div> */}
                 </div>
               </div>
             </div>

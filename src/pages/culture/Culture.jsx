@@ -36,7 +36,7 @@ export const Culture = () => {
               every team member is empowered to deliver their best.
             </p>
           </div>
-          <div className="lg:col-span-5 text-start">
+          {/* <div className="lg:col-span-5 text-start">
             <h2 className="font-bold text-4xl text-primary">Where Passion Meets Purpose</h2>
             <p className="mt-3 text-lg">
               At <span className="font-bold">The Excel Place</span>, every team member is more than an employee,
@@ -44,7 +44,7 @@ export const Culture = () => {
               an atmosphere where ambition is nurtured, and excellence is the
               only acceptable outcome.
             </p>
-          </div>
+          </div> */}
         </div>
 
         <div className="my-16 md:my-32 flex flex-wrap text-primary">

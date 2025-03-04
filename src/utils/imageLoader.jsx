@@ -17,6 +17,7 @@ const IMAGE_CATEGORIES = {
     STAFF: 'staff',
     REQ: 'req',
     SOCIALS: 'socials',
+    VDFR: 'vdfr',
   };
   
   export const importImagesFromContext = (context) => {
