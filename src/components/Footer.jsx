@@ -54,7 +54,7 @@ const Footer = () => {
           <div className="flex items-center p-4">
             <div className="text-white p-0 md:p-8 mt-8">
               <h2 className="text-2xl md:text-4xl font-bold">
-                Sign up for Newsletter
+                Sign up for Our Newsletter
               </h2>
               {/* <p className="mt-4 text-base">
                 Sign up today for hints, tips and the latest product news

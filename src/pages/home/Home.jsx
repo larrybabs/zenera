@@ -21,8 +21,8 @@ export const Home = () => {
         <div>
           <div className="zen-hero2 w-screen h-[280px] md:h-[520px] lg:h-screen bg-contain bg-no-repeat lg:bg-cover flex flex-col justify-center ">
             <div className="text-start p-2 md:p-14 text-white ">
-              <h1 className="font-bold text-2xl md:text-4xl lg:text-5xl w-full lg:w-[860px] mb-12 lg:leading-normal">
-              Impacting Communities
+              <h1 className="font-bold text-2xl md:text-4xl lg:text-6xl w-full lg:w-[860px] mb-12 lg:leading-normal">
+              Impacting <br/> Communities
               </h1>
 
               <a href="/reports" className="uppercase text-primary bg-white py-3 px-10 text-xl hover:bg-gray">
@@ -111,7 +111,7 @@ export const Home = () => {
         <img src={Group} alt="zenera group" className="md:my-24" />
       </section> */}
 
-      <section className="text-center my-32">
+      <section className="text-center md:my-32">
         <h2 className="text-primary text-3xl md:text-6xl md:w-3/5 mx-auto my-10">
           Our Core Services
         </h2>

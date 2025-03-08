@@ -27,7 +27,7 @@ const ServiceCard = ({ title, image, className = '' }) => (
 const ServiceCards = () => {
   const services = [
     {
-      title: 'Communications Advisory & Change Management',
+      title: 'Communications Advisory and Change Management',
       image: Service1
     },
     {
@@ -42,7 +42,7 @@ const ServiceCards = () => {
 
   return (
     <div className="container mx-auto px-4 py-12 ">
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 ">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 place-items-center">
         {services.map((service, index) => (
           <ServiceCard
             key={index}

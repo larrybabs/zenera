@@ -6,6 +6,7 @@ import Service3 from "../../assets/img/COMMUNITY-ENGAGEMENT.jpg";
 import Service4 from "../../assets/img/ADVERTISING.jpg";
 import Service5 from "../../assets/img/PUBLIC-RELATIONS.jpg";
 import Service6 from "../../assets/img/COMMUNICATION-ADVISORY.jpg";
+import ServiceBg from "../../assets/img/Our-Services.jpg";
 // import Accordion from "../../components/Accordion";
 
 // Array of service data
@@ -59,10 +60,18 @@ export const Services = () => {
     <div>
       <Navbar />
       <div className="hidden md:block bg-[#F7F7F7] h-[80px]"></div>
-      <div className="bg-service h-[80px] md:h-[300px] bg-contain bg-no-repeat md:bg-cover flex flex-col justify-center items-center">
-        <h2 className="text-center mx-auto text-white text-2xl md:text-6xl ">
+      <div className="relative w-full h-[200px] md:h-[480px] overflow-hidden group ">
+        <img
+          src={ServiceBg}
+          alt="Background"
+          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+        />
+
+        <div className="absolute inset-0 flex bg-primary bg-opacity-60 items-center justify-center  duration-500">
+          <h1 className="text-white text-4xl md:text-6xl font-bold text-center duration-500">
           Our Services
-        </h2>
+          </h1>
+        </div>
       </div>
       <section>
         <h2 className="px-2 text-primary text-center capitalize text-2xl md:text-4xl md:w-3/5 mx-auto md:my-28 leading-normal">

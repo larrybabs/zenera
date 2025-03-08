@@ -2,9 +2,12 @@ import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 import SideNavigation from "../../components/SideNav";
 import VisionImg from "../../assets/img/zeneragr.png";
-import Logos from "../../assets/img/zenLogo.svg";
 import Logo from "../../assets/img/LogoCe.png";
-import Logop from "../../assets/img/zenLogop.svg";
+import ZeneraFlat from "../../assets/img/ZENERA-FLAT-LOGO.png";
+import ZeneraPrimary from "../../assets/img/ZENERA-PRIMARY-LOGO.png";
+import ZeneraFlatInverted from "../../assets/img/ZENERA-FLAT-INVERTED-LOGO.png";
+import ZeneraInverted from "../../assets/img/ZENERA-INVERTED-LOGO.png";
+import BrandBg from "../../assets/img/Our-Brand.jpg";
 import Download from "../../assets/img/download.svg";
 
 export const Brand = () => {
@@ -12,10 +15,18 @@ export const Brand = () => {
     <div>
       <Navbar />
       <div className="hidden md:block bg-[#F7F7F7] h-[80px]"></div>
-      <div className="bg-service h-[80px] md:h-[300px] bg-contain bg-no-repeat md:bg-cover flex flex-col justify-center items-center">
-        <h2 className="text-center mx-auto text-white text-2xl md:text-6xl ">
-          Our Brand
-        </h2>
+      <div className="relative w-full h-[200px] md:h-[480px] overflow-hidden group ">
+        <img
+          src={BrandBg}
+          alt="Background"
+          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+        />
+
+        <div className="absolute inset-0 flex bg-primary bg-opacity-60 items-center justify-center  duration-500">
+          <h1 className="text-white text-4xl md:text-6xl font-bold text-center duration-500">
+            Our Brand
+          </h1>
+        </div>
       </div>
       <section>
         <div className="relative min-h-screen container mx-auto ">
@@ -48,7 +59,7 @@ export const Brand = () => {
                 <div className="text-white flex flex-wrap md:flex-row gap-3 md:justify-between w-full max-w-[877px]">
                   <div className="group bg-primary shadow-lg w-[168px] h-[147px] flex flex-col items-center justify-center duration-500 hover:shadow-2xl">
                     <svg
-                    className="group-hover:scale-125 group-hover:rotate-6 transition-transform duration-500 ease-in-out"
+                      className="group-hover:scale-125 group-hover:rotate-6 transition-transform duration-500 ease-in-out"
                       width="70"
                       height="70"
                       viewBox="0 0 70 70"
@@ -72,7 +83,7 @@ export const Brand = () => {
                   </div>
                   <div className="group bg-primary shadow-lg w-[168px] h-[147px] flex flex-col items-center justify-center duration-500 hover:shadow-2xl">
                     <svg
-                    className="group-hover:scale-125 group-hover:-rotate-6 transition-transform duration-500 ease-in-out"
+                      className="group-hover:scale-125 group-hover:-rotate-6 transition-transform duration-500 ease-in-out"
                       width="60"
                       height="60"
                       viewBox="0 0 60 60"
@@ -93,7 +104,7 @@ export const Brand = () => {
                   </div>
                   <div className="group bg-primary shadow-lg w-[168px] h-[147px] flex flex-col items-center justify-center duration-500 hover:shadow-2xl">
                     <svg
-                    className="group-hover:scale-125 group-hover:rotate-6 transition-transform duration-500 ease-in-out"
+                      className="group-hover:scale-125 group-hover:rotate-6 transition-transform duration-500 ease-in-out"
                       width="70"
                       height="70"
                       viewBox="0 0 70 70"
@@ -110,7 +121,7 @@ export const Brand = () => {
                   </div>
                   <div className="group bg-primary shadow-lg w-[168px] h-[147px] flex flex-col items-center justify-center duration-500 hover:shadow-2xl">
                     <svg
-                    className="group-hover:scale-125 group-hover:-rotate-6 transition-transform duration-500 ease-in-out"
+                      className="group-hover:scale-125 group-hover:-rotate-6 transition-transform duration-500 ease-in-out"
                       width="60"
                       height="60"
                       viewBox="0 0 60 60"
@@ -130,7 +141,7 @@ export const Brand = () => {
                 <div className="text-white mt-3 md:mt-14 flex flex-wrap md:flex-row gap-3 md:justify-between w-full max-w-[877px]">
                   <div className="group bg-primary shadow-lg w-[168px] h-[147px] flex flex-col items-center justify-center duration-500 hover:shadow-2xl">
                     <svg
-                    className="group-hover:scale-125 group-hover:rotate-6 transition-transform duration-500 ease-in-out"
+                      className="group-hover:scale-125 group-hover:rotate-6 transition-transform duration-500 ease-in-out"
                       width="60"
                       height="60"
                       viewBox="0 0 60 60"
@@ -147,7 +158,7 @@ export const Brand = () => {
                   </div>
                   <div className="group bg-primary shadow-lg w-[168px] h-[147px] flex flex-col items-center justify-center duration-500 hover:shadow-2xl">
                     <svg
-                    className="group-hover:scale-125 group-hover:rotate-6 transition-transform duration-500 ease-in-out"
+                      className="group-hover:scale-125 group-hover:rotate-6 transition-transform duration-500 ease-in-out"
                       width="70"
                       height="70"
                       viewBox="0 0 70 70"
@@ -164,7 +175,7 @@ export const Brand = () => {
                   </div>
                   <div className="group bg-primary shadow-lg w-[168px] h-[147px] flex flex-col items-center justify-center duration-500 hover:shadow-2xl">
                     <svg
-                    className="group-hover:scale-125  transition-transform duration-500 ease-in-out"
+                      className="group-hover:scale-125  transition-transform duration-500 ease-in-out"
                       width="60"
                       height="60"
                       viewBox="0 0 60 60"
@@ -193,9 +204,8 @@ export const Brand = () => {
                   to precision, influence, and transformative storytelling that
                   positions our clients as industry leaders.
                 </p>
-                <div className="text-white flex flex-col gap-3 md:flex-row justify-between w-full max-w-[877px]">
-    
-                  <div className="shadow-lg w-full md:w-[258px] h-[194px] flex flex-col items-center justify-center">
+                <div className="text-white flex flex-wrap  gap-12  w-full max-w-[877px]">
+                  {/* <div className="shadow-lg w-full md:w-[258px] h-[194px] flex flex-col items-center justify-center">
                     <a href={Logo} download="zenera-logo.png">
                       <img
                         src={Logos}
@@ -213,21 +223,82 @@ export const Brand = () => {
                         className="w-[230px] cursor-pointer"
                       />
                     </a>
-                  </div>
+                  </div> */}
 
-                  <div className="relative shadow-lg gap-3 w-full md:w-[258px] h-[194px] flex flex-col items-center justify-center">
-                    <img src={Logo} alt="zenera logo" className="w-[340px]" />
-                    <a
-                      href={Logo}
-                      download="zenera-logo.png"
-                      className="absolute top-2 right-2"
-                    >
-                      <img
-                        src={Download}
-                        alt="zenera logo"
-                        className="w-[26px] cursor-pointer"
-                      />
-                    </a>
+                  <div className="group">
+                    <div className="relative shadow-lg gap-3 w-full md:w-[258px] h-[194px] flex flex-col items-center justify-center">
+                      <img src={ZeneraPrimary} alt="zenera logo" className="group-hover:scale-105 duration-500" />
+                    </div>
+                    <div className="flex justify-between mt-2">
+                      <p className="text-primary font-medium">Primary Logo</p>
+                      <a href={ZeneraPrimary} download="zenera-logo.png" className="hover:scale-110 duration-500">
+                        <img
+                          src={Download}
+                          alt="zenera logo"
+                          className="w-[24px] cursor-pointer"
+                        />
+                      </a>
+                    </div>
+                  </div>
+                  <div className="group">
+                    <div className="shadow-lg gap-3 bg-[#000000] w-full md:w-[258px] h-[194px] flex flex-col items-center justify-center">
+                      <img src={ZeneraInverted} alt="zenera logo" className="group-hover:scale-105 duration-500" />
+                    </div>
+                    <div className="flex justify-between mt-2">
+                      <p className="text-primary font-medium">Inverted Logo</p>
+                      <a href={ZeneraInverted} download="zenera-logo.png" className="hover:scale-110 duration-500">
+                        <img
+                          src={Download}
+                          alt="zenera logo"
+                          className="w-[24px] cursor-pointer"
+                        />
+                      </a>
+                    </div>
+                  </div>
+                  <div className="group">
+                    <div className="relative shadow-lg gap-3 w-full md:w-[258px] h-[194px] flex flex-col items-center justify-center">
+                      <img src={ZeneraFlat} alt="zenera logo" className="group-hover:scale-105 duration-500" />
+                    </div>
+                    <div className="flex justify-between mt-2">
+                      <p className="text-primary font-medium">Flat Logo</p>
+                      <a href={ZeneraFlat} download="zenera-logo.png" className="hover:scale-110 duration-500">
+                        <img
+                          src={Download}
+                          alt="zenera logo"
+                          className="w-[24px] cursor-pointer"
+                        />
+                      </a>
+                    </div>
+                  </div>
+                  <div className="group">
+                    <div className="shadow-lg gap-3 bg-[#000000] w-full md:w-[258px] h-[194px] flex flex-col items-center justify-center">
+                      <img src={ZeneraFlatInverted} alt="zenera logo" className="group-hover:scale-105 duration-500" />
+                    </div>
+                    <div className="flex justify-between mt-2">
+                      <p className="text-primary font-medium">Flat Inverted Logo</p>
+                      <a href={ZeneraFlatInverted} download="zenera-logo.png" className="hover:scale-110 duration-500">
+                        <img
+                          src={Download}
+                          alt="zenera logo"
+                          className="w-[24px] cursor-pointer"
+                        />
+                      </a>
+                    </div>
+                  </div>
+                  <div className="group">
+                    <div className="relative shadow-lg gap-3 w-full md:w-[258px] h-[194px] flex flex-col items-center justify-center">
+                      <img src={Logo} alt="zenera logo" className="group-hover:scale-105 duration-500" />
+                    </div>
+                    <div className="flex justify-between mt-2">
+                      <p className="text-primary font-medium">Anniversary Logo</p>
+                      <a href={Logo} download="zenera-logo.png" className="hover:scale-110 duration-500">
+                        <img
+                          src={Download}
+                          alt="zenera logo"
+                          className="w-[24px] cursor-pointer"
+                        />
+                      </a>
+                    </div>
                   </div>
                 </div>
 

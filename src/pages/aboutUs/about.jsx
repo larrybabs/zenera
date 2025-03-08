@@ -6,7 +6,7 @@ import Instagram from "../../assets/img/instagram.svg";
 import Linkedin from "../../assets/img/linkedin.svg";
 import Download from "../../assets/img/download.svg";
 import X from "../../assets/img/twitter.svg";
-import RecognitionBg from "../../assets/img/RecognitionHeader.jpeg";
+import RecognitionBg from "../../assets/img/Our-recognitions.jpg";
 
 export const About = () => {
  
@@ -19,7 +19,7 @@ export const About = () => {
 
   const profiles = [
     {
-      name: "Abridged Profile",
+      name: "Zenera Abridged Profile",
       url: "https://drive.google.com/file/d/1_m9OhHtjuu-Neam394VhZ79Mh9-srg9O/view?usp=drive_link",
     },
     {
@@ -75,7 +75,7 @@ export const About = () => {
     <div>
       <Navbar />
       <div className="hidden md:block bg-[#F7F7F7] h-[80px]"></div>
-       <div className="relative w-full h-[200px] md:h-[350px] overflow-hidden group ">
+       <div className="relative w-full h-[200px] md:h-[480px] overflow-hidden group ">
         <img
           src={RecognitionBg}
           alt="Background"
@@ -202,7 +202,7 @@ export const About = () => {
                   />
                 </svg>
 
-                <span className="text-2xl mt-4">IMPACT REPORT</span>
+                <span className="text-2xl mt-4">IMPACTZ REPORT</span>
               </div>
             </a>
             <a

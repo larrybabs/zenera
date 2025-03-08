@@ -2,7 +2,7 @@ import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 import SideNavigation from "../../components/SideNav";
 import EX from "../../assets/img/ex.png";
-import PeopleBg from "../../assets/img/PeopleBg.jpg";
+import PeopleBg from "../../assets/img/Zenera-people.jpg";
 import Quote from "../../assets/img/Quote.svg";
 import ImageSlider from "../../components/ImageSlider";
 import { importImagesFromContext } from "../../utils/imageLoader";
@@ -18,7 +18,7 @@ export const People = () => {
   return (
     <div>
       <Navbar />
-      <div className="hidden md:block bg-[#FFF] h-[90px]"></div>
+      <div className="hidden md:block bg-[#FFF] h-[80px]"></div>
       <div className="relative w-full h-[200px] md:h-[480px] overflow-hidden group ">
         <img
           src={PeopleBg}
@@ -164,13 +164,18 @@ export const People = () => {
             </div>
             <div className="flex mt-24 p-4">
               <div className="hidden md:block w-2/5"></div>
-              <div className="container mx-auto">
+              <div className="container mx-auto p-4">
                 <h2 className="text-3xl md:text-5xl">
-                  Long Term Service Award
+                  Staff Recognition/<br className="md:hidden"/>Awards
                 </h2>
-                {/* <p className="mt-4 md:mt-8 mb-14 md:w-[877px]">
-                  Hear directly from our MP.
-                </p> */}
+                <p className="mt-4 md:mt-8 mb-14 md:w-[877px]">
+                  Excellence deserves to be celebrated. Our recognition culture
+                  ensures that outstanding contributions never go unnoticed,
+                  inspiring a relentless pursuit of greatness.
+                </p>
+                <div className=" max-w-[877px]">
+                  <ImageSlider images={images2.req} />
+                </div>
                 <div className="text-white flex justify-between w-full max-w-[877px] ">
                   <div className="container mx-auto mt-12 w-full md:max-w-1xl">
                     <iframe
@@ -183,22 +188,6 @@ export const People = () => {
                       allowfullscreen
                     ></iframe>
                   </div>
-                </div>
-              </div>
-            </div>
-            <div className="flex mt-24 p-4">
-              <div className="hidden md:block w-2/5"></div>
-              <div className="container mx-auto p-4">
-                <h2 className="text-3xl md:text-5xl">
-                  Staff Recognition/<br className="md:hidden"/>Awards
-                </h2>
-                <p className="mt-4 md:mt-8 mb-14 md:w-[877px]">
-                  Excellence deserves to be celebrated. Our recognition culture
-                  ensures that outstanding contributions never go unnoticed,
-                  inspiring a relentless pursuit of greatness.
-                </p>
-                <div className=" max-w-[877px]">
-                  <ImageSlider images={images2.req} />
                 </div>
               </div>
             </div>

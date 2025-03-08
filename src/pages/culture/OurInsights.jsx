@@ -3,6 +3,7 @@ import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 import SideNavigation from "../../components/SideNav";
 import BlogImg from "../../assets/img/zenBlog.png";
+import InsightBg from "../../assets/img/InsightsBg.jpg";
 import { useNavigate } from "react-router-dom";
 
 export const Insights = () => {
@@ -23,10 +24,18 @@ export const Insights = () => {
     <div>
       <Navbar />
       <div className="hidden md:block bg-[#F7F7F7] h-[80px]"></div>
-      <div className="bg-service h-[80px] md:h-[300px] bg-contain bg-no-repeat md:bg-cover flex flex-col justify-center items-center">
-        <h2 className="text-center mx-auto text-white text-2xl md:text-6xl ">
+      <div className="relative w-full h-[200px] md:h-[480px] overflow-hidden group ">
+        <img
+          src={InsightBg}
+          alt="Background"
+          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+        />
+
+        <div className="absolute inset-0 flex bg-primary bg-opacity-60 items-center justify-center duration-500">
+          <h1 className="text-white text-4xl md:text-6xl font-bold text-center">
           Our Insights
-        </h2>
+          </h1>
+        </div>
       </div>
       <section>
         <div className="relative min-h-screen container mx-auto ">

@@ -18,7 +18,7 @@ export const Press = () => {
         />
 
         <div className="absolute inset-0 flex bg-primary bg-opacity-40 items-center justify-center group-hover:bg-opacity-15 duration-500">
-          <h1 className="text-white text-4xl md:text-6xl font-bold text-center group-hover:text-primary duration-500">
+          <h1 className="text-white text-4xl md:text-6xl font-bold text-center">
           Press Releases
           </h1>
         </div>

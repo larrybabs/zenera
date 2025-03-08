@@ -3,7 +3,7 @@ import Footer from "../../components/Footer";
 import SideNavigation from "../../components/SideNav";
 import ImageSlider from "../../components/ImageSlider";
 import { importImagesFromContext } from "../../utils/imageLoader";
-import RecognitionBg from "../../assets/img/RecognitionHeader.jpeg";
+import RecognitionBg from "../../assets/img/Our-recognitions.jpg";
 
 export const Recognitions = () => {
   const images = importImagesFromContext(
@@ -19,7 +19,7 @@ export const Recognitions = () => {
         </h2>
       </div> */}
 
-      <div className="relative w-full h-[200px] md:h-[350px] overflow-hidden group ">
+      <div className="relative w-full h-[200px] md:h-[480px] overflow-hidden group ">
         <img
           src={RecognitionBg}
           alt="Background"
