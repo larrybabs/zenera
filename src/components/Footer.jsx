@@ -77,7 +77,7 @@ const Footer = () => {
       </div>
 
       {/* Desktop and Tablet Layout */}
-      <div className="pt-52 container mx-auto hidden md:block px-4 md:px-0">
+      <div className="pt-52 container mx-auto hidden md:block px-4 xl:px-8 md:px-0">
         <div className="grid lg:grid-cols-12 gap-8 py-20">
           {/* Company Info Section */}
           <div className="lg:col-span-6">

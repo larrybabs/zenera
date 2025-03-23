@@ -91,10 +91,15 @@ const PostDetailsComponent = () => {
         <h2 className="text-primary capitalize text-2xl md:text-5xl md:w-4/5 md:my-28 leading-normal">
           {post.title.rendered}
         </h2>
-        <div
-          className="leading-loose mt-6"
-          dangerouslySetInnerHTML={{ __html: post.content.rendered }}
-        />
+        <div className="prose max-w-none">
+        <div className="text-lg mb-8 leading-relaxed">
+          <div 
+            dangerouslySetInnerHTML={{ __html: post?.content?.rendered }} 
+            className="space-y-6"
+          />
+        </div>
+        </div>
+      <hr className="mt-12"/>
       </div>
 
       {/* Comments Section */}

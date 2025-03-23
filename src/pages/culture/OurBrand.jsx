@@ -31,12 +31,12 @@ export const Brand = () => {
       <section>
         <div className="relative min-h-screen container mx-auto ">
           <SideNavigation />
-          <div className="md:-mt-80">
+          <div className="xl:-mt-80">
             <div className="flex p-4">
-              <div className="hidden md:block w-2/5"></div>
+              <div className="hidden xl:block w-2/5"></div>
               <div>
                 <h2 className="text-5xl">Vision & Mission</h2>
-                <p className="mt-8 mb-14 md:w-[877px]">
+                <p className="mt-8 mb-14 lg:w-[877px]">
                   At Zenera Consulting, our vision is to redefine excellence in
                   strategic communications, creating impactful narratives that
                   shape industries and inspire progress. Our mission is to
@@ -48,10 +48,10 @@ export const Brand = () => {
             </div>
 
             <div className="flex mt-24 p-4">
-              <div className="hidden md:block w-2/5"></div>
+              <div className="hidden xl:block w-2/5"></div>
               <div>
                 <h2 className="text-5xl">Core Values</h2>
-                <p className="mt-8 mb-14 md:w-[877px]">
+                <p className="mt-8 mb-14 lg:w-[877px]">
                   We are anchored on a <b>BOLD SPIRIT</b> which shape our work
                   ethic, fuel our creativity, and ensure we consistently exceed
                   expectations.
@@ -195,38 +195,18 @@ export const Brand = () => {
               </div>
             </div>
             <div className="flex mt-24 p-4">
-              <div className="hidden md:block w-2/5"></div>
+              <div className="hidden xl:block w-2/5"></div>
               <div>
                 <h2 className="text-5xl">Logo</h2>
-                <p className="mt-8 mb-14 md:w-[877px]">
+                <p className="mt-8 mb-14 lg:w-[877px]">
                   Our brand identity is a symbol of trust, expertise, and
                   distinction. Every element of our logo reflects our commitment
                   to precision, influence, and transformative storytelling that
                   positions our clients as industry leaders.
                 </p>
                 <div className="text-white flex flex-wrap  gap-12  w-full max-w-[877px]">
-                  {/* <div className="shadow-lg w-full md:w-[258px] h-[194px] flex flex-col items-center justify-center">
-                    <a href={Logo} download="zenera-logo.png">
-                      <img
-                        src={Logos}
-                        alt="zenera logo"
-                        className="w-[230px] cursor-pointer"
-                      />
-                    </a>
-                  </div>
-
-                  <div className="bg-primary shadow-lg w-full md:w-[258px] h-[194px] flex flex-col items-center justify-center">
-                    <a href={Logop} download="zenera-logo-primary.png">
-                      <img
-                        src={Logop}
-                        alt="zenera logo"
-                        className="w-[230px] cursor-pointer"
-                      />
-                    </a>
-                  </div> */}
-
                   <div className="group">
-                    <div className="relative shadow-lg gap-3 w-full md:w-[258px] h-[194px] flex flex-col items-center justify-center">
+                    <div className="relative shadow-lg gap-3 w-full md:w-[210px] lg:w-[258px] h-[194px] flex flex-col items-center justify-center">
                       <img src={ZeneraPrimary} alt="zenera logo" className="group-hover:scale-105 duration-500" />
                     </div>
                     <div className="flex justify-between mt-2">
@@ -241,7 +221,7 @@ export const Brand = () => {
                     </div>
                   </div>
                   <div className="group">
-                    <div className="shadow-lg gap-3 bg-[#000000] w-full md:w-[258px] h-[194px] flex flex-col items-center justify-center">
+                    <div className="shadow-lg gap-3 bg-[#000000] w-full md:w-[210px] lg:w-[258px] h-[194px] flex flex-col items-center justify-center">
                       <img src={ZeneraInverted} alt="zenera logo" className="group-hover:scale-105 duration-500" />
                     </div>
                     <div className="flex justify-between mt-2">
@@ -256,7 +236,7 @@ export const Brand = () => {
                     </div>
                   </div>
                   <div className="group">
-                    <div className="relative shadow-lg gap-3 w-full md:w-[258px] h-[194px] flex flex-col items-center justify-center">
+                    <div className="relative shadow-lg gap-3 w-full md:w-[210px] lg:w-[258px] h-[194px] flex flex-col items-center justify-center">
                       <img src={ZeneraFlat} alt="zenera logo" className="group-hover:scale-105 duration-500" />
                     </div>
                     <div className="flex justify-between mt-2">
@@ -271,7 +251,7 @@ export const Brand = () => {
                     </div>
                   </div>
                   <div className="group">
-                    <div className="shadow-lg gap-3 bg-[#000000] w-full md:w-[258px] h-[194px] flex flex-col items-center justify-center">
+                    <div className="shadow-lg gap-3 bg-[#000000] w-full md:w-[210px] lg:w-[258px] h-[194px] flex flex-col items-center justify-center">
                       <img src={ZeneraFlatInverted} alt="zenera logo" className="group-hover:scale-105 duration-500" />
                     </div>
                     <div className="flex justify-between mt-2">
@@ -286,7 +266,7 @@ export const Brand = () => {
                     </div>
                   </div>
                   <div className="group">
-                    <div className="relative shadow-lg gap-3 w-full md:w-[258px] h-[194px] flex flex-col items-center justify-center">
+                    <div className="relative shadow-lg gap-3 w-full md:w-[210px] lg:w-[258px] h-[194px] flex flex-col items-center justify-center">
                       <img src={Logo} alt="zenera logo" className="group-hover:scale-105 duration-500" />
                     </div>
                     <div className="flex justify-between mt-2">
@@ -302,16 +282,13 @@ export const Brand = () => {
                   </div>
                 </div>
 
-                {/* <div className="bg-[#666662] shadow-lg w-full h-[194px] flex flex-col items-center justify-center">
-                  <span className="mt-4 text-white">Video/Image on brand story</span>
-                </div> */}
               </div>
             </div>
             <div className="flex mt-24 p-4">
-              <div className="hidden md:block w-2/5"></div>
+              <div className="hidden xl:block w-2/5"></div>
               <div>
                 <h2 className="text-5xl">Social Responsibility</h2>
-                <p className="my-12 md:w-[877px]">
+                <p className="my-12 lg:w-[877px]">
                   Beyond business, we are committed to building a better world
                   through sustainability-driven initiatives that empower
                   communities, drive social impact, and foster inclusive growth.{" "}

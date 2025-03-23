@@ -74,7 +74,7 @@ export const Services = () => {
         </div>
       </div>
       <section>
-        <h2 className="px-2 text-primary text-center capitalize text-2xl md:text-4xl md:w-3/5 mx-auto md:my-28 leading-normal">
+        <h2 className="px-2 text-primary text-center capitalize text-2xl my-8 md:text-4xl md:w-3/5 mx-auto md:my-28 leading-normal">
           Driving business growth through strategic branding and stakeholder
           engagement.
         </h2>

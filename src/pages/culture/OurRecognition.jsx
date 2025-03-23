@@ -13,12 +13,6 @@ export const Recognitions = () => {
     <div>
       <Navbar />
       <div className="hidden md:block bg-[#FFFFFF] h-[80px]"></div>
-      {/* <div className="bg-service h-[80px] md:h-[300px] bg-contain bg-no-repeat md:bg-cover flex flex-col justify-center items-center">
-        <h2 className="text-center mx-auto text-white text-2xl md:text-6xl ">
-          Our Recognitions
-        </h2>
-      </div> */}
-
       <div className="relative w-full h-[200px] md:h-[480px] overflow-hidden group ">
         <img
           src={RecognitionBg}
@@ -36,9 +30,9 @@ export const Recognitions = () => {
       <section>
         <div className="relative min-h-screen container mx-auto ">
           <SideNavigation />
-          <div className="mt-6 md:-mt-80">
+          <div className="mt-6 xl:-mt-80">
             <div className="flex">
-              <div className="hidden md:block w-2/5"></div>
+              <div className="hidden xl:block w-2/5"></div>
               <div className="container mx-auto p-4">
                 <h2 className="text-3xl md:text-5xl">
                   Awards and Recognitions
@@ -50,15 +44,6 @@ export const Recognitions = () => {
                 </p>
                 <div className="md:max-w-[877px]">
                   <ImageSlider images={images.awd} />
-                  {/* <div className="bg-[#666662] shadow-lg w-[258px] h-[194px] flex flex-col items-center justify-center">
-                  <span className="mt-4">placeholder</span>
-                </div>
-                <div className="bg-[#666662] shadow-lg w-[258px] h-[194px] flex flex-col items-center justify-center">
-                  <span className="mt-4">placeholder</span>
-                </div>
-                <div className="bg-[#666662] shadow-lg w-[258px] h-[194px] flex flex-col items-center justify-center">
-                  <span className="mt-4">placeholder</span>
-                </div> */}
                 </div>
                 <p className="my-14 md:w-[877px]">
                   Despite Nigeria’s abundant extractive wealth, local
@@ -80,7 +65,7 @@ export const Recognitions = () => {
               </div>
             </div>
             <div className="flex mt-24">
-              <div className="hidden md:block w-2/5"></div>
+              <div className="hidden xl:block w-2/5"></div>
               <div className="container mx-auto p-4">
                 <h2 className="text-3xl md:text-5xl">Media Mentions</h2>
                 <p className="my-4 md:my-12 md:w-[877px]">

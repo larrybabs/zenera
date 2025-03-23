@@ -83,14 +83,11 @@ export const About = () => {
         />
 
         <div className="absolute inset-0 flex items-center justify-center">
-          {/* <h1 className="text-white text-4xl md:text-6xl font-bold text-center">
-           About Us
-            </h1> */}
         </div>
       </div>
       <div className="">
         <div className="px-4 mt-8 md:m-24 flex flex-col md:flex-row justify-between md:items-end gap-12">
-          <h2 className="font-bold text-4xl md:text-6xl md:w-2/5 text-primary">
+          <h2 className="font-bold text-4xl sm:w-2/4 md:text-6xl lg:w-2/5  text-primary">
             We are a sustainability-focused
             <span className="text-primary/40"> agency.</span>{" "}
           </h2>
@@ -101,12 +98,12 @@ export const About = () => {
 
         <div className="text-center mt-14 md:my-32">
           {/* <h2 className="text-2xl md:text-5xl mb-4">Industry We Serve</h2> */}
-          <div className="md:my-32 flex flex-wrap justify-around gap-20 px-14 md:pb-36 text-primary">
+          <div className="md:my-32  flex flex-wrap justify-center gap-6 md:gap-20 px-4 md:pb-36 text-primary">
             <div className="relative inline-block" ref={profileDropdownRef}>
               {/* Main Button */}
               <div
                 onClick={() => setIsProfileOpen(!isProfileOpen)}
-                className="border border-gray shadow-lg w-[279px] h-[238px] mx-auto flex flex-col items-center justify-center hover:scale-105 duration-500 cursor-pointer"
+                className="border border-gray shadow-lg w-[230px] md:w-[279px] h-[238px] mx-auto flex flex-col items-center justify-center hover:scale-105 duration-500 cursor-pointer"
               >
                  <svg
                   width="70"
@@ -146,7 +143,7 @@ export const About = () => {
 
               {/* Dropdown Menu */}
               {isProfileOpen && (
-                <div className="absolute left-0 -mt-2 w-[279px] bg-white border border-gray shadow-lg z-10">
+                <div className="absolute left-0 -mt-2 w-[230px] md:w-[279px] bg-white border border-gray shadow-lg z-10">
                   {profiles.map((profile, index) => (
                     <a
                       key={index}
@@ -162,7 +159,7 @@ export const About = () => {
               )}
             </div>
             <a href="/gallery">
-              <div className="border border-gray shadow-lg w-[279px] h-[238px] mx-auto flex flex-col items-center justify-center hover:scale-105 duration-500">
+              <div className="border border-gray shadow-lg w-[230px] md:w-[279px] h-[238px] mx-auto flex flex-col items-center justify-center hover:scale-105 duration-500">
                 <svg
                   width="70"
                   height="70"
@@ -188,7 +185,7 @@ export const About = () => {
               </div>
             </a>
             <a href="/reports">
-              <div className="border border-gray shadow-lg w-[279px] h-[238px] mx-auto flex flex-col items-center justify-center hover:scale-105 duration-500">
+              <div className="border border-gray shadow-lg w-[230px] md:w-[279px] h-[238px] mx-auto flex flex-col items-center justify-center hover:scale-105 duration-500">
                 <svg
                   width="70"
                   height="70"
@@ -210,7 +207,7 @@ export const About = () => {
               target="_blank"
               rel="noreferrer"
             >
-              <div className="border border-gray shadow-lg w-[279px] h-[238px] mx-auto flex flex-col items-center justify-center hover:scale-105 duration-500">
+              <div className="border border-gray shadow-lg w-[230px] md:w-[279px] h-[238px] mx-auto flex flex-col items-center justify-center hover:scale-105 duration-500">
                 <svg
                   width="70"
                   height="70"
@@ -228,7 +225,7 @@ export const About = () => {
               </div>
             </a>
             <a href="/press-releases">
-              <div className="border border-gray shadow-lg w-[279px] h-[238px] mx-auto flex flex-col items-center justify-center hover:scale-105 duration-500">
+              <div className="border border-gray shadow-lg w-[230px] md:w-[279px] h-[238px] mx-auto flex flex-col items-center justify-center hover:scale-105 duration-500">
                 <svg
                   width="70"
                   height="70"
@@ -246,7 +243,7 @@ export const About = () => {
               </div>
             </a>
             <a href="/our-insights">
-              <div className="border border-gray shadow-lg w-[279px] h-[238px] mx-auto flex flex-col items-center justify-center hover:scale-105 duration-500">
+              <div className="border border-gray shadow-lg w-[230px] md:w-[279px] h-[238px] mx-auto flex flex-col items-center justify-center hover:scale-105 duration-500">
                 <svg
                   width="70"
                   height="70"
@@ -271,7 +268,7 @@ export const About = () => {
               {/* Main Button */}
               <div
                 onClick={() => setIsSocialOpen(!isSocialOpen)}
-                className="border border-gray shadow-lg w-[279px] h-[238px] mx-auto flex flex-col items-center justify-center hover:scale-105 duration-500 cursor-pointer"
+                className="border border-gray shadow-lg w-[230px] md:w-[279px] h-[238px] mx-auto flex flex-col items-center justify-center hover:scale-105 duration-500 cursor-pointer"
               >
                 <svg
                   width="70"

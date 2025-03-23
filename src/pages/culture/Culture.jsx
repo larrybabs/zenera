@@ -20,11 +20,7 @@ export const Culture = () => {
           </h1>
         </div>
       </div>
-      <div className="text-center my-8 md:my-32">
-        {/* <h2 className="text-2xl md:text-5xl mb-4">
-          Learn about our culture and the people
-        </h2> */}
-
+      <div className="text-center my-8 md:my-32 p-4">
         <div className="grid lg:grid-cols-10 gap-12 px-4 container mx-auto justify-between">
           <div className="lg:col-span-5 text-start">
             <h2 className="font-bold text-4xl text-primary">The Excel Place</h2>
@@ -36,21 +32,13 @@ export const Culture = () => {
               every team member is empowered to deliver their best.
             </p>
           </div>
-          {/* <div className="lg:col-span-5 text-start">
-            <h2 className="font-bold text-4xl text-primary">Where Passion Meets Purpose</h2>
-            <p className="mt-3 text-lg">
-              At <span className="font-bold">The Excel Place</span>, every team member is more than an employee,
-              they are <span className="font-bold">a visionary, a trailblazer, a force for change</span>. We create
-              an atmosphere where ambition is nurtured, and excellence is the
-              only acceptable outcome.
-            </p>
-          </div> */}
+        
         </div>
 
-        <div className="my-16 md:my-32 flex flex-wrap text-primary">
+        <div className="mt-4 lg:my-32 flex flex-wrap text-primary">
           <a
             href="/our-people"
-            className="hover:bg-primary hover:text-white group duration-500 shadow-lg w-[279px] h-[238px] mx-auto flex flex-col items-center justify-center"
+            className="mb-4 hover:bg-primary hover:text-white group duration-500 shadow-lg w-[279px] h-[238px] mx-auto flex flex-col items-center justify-center"
           >
             <svg
               width="70"
@@ -70,7 +58,7 @@ export const Culture = () => {
           </a>
           <a
             href="/our-brand"
-            className="hover:bg-primary hover:text-white group duration-500 shadow-lg w-[279px] h-[238px] mx-auto flex flex-col items-center justify-center"
+            className="mb-4 hover:bg-primary hover:text-white group duration-500 shadow-lg w-[279px] h-[238px] mx-auto flex flex-col items-center justify-center"
           >
             <svg
               width="70"
@@ -92,7 +80,7 @@ export const Culture = () => {
 
           <a
             href="/our-lifestyle"
-            className="hover:bg-primary hover:text-white group duration-500 shadow-lg w-[279px] h-[238px] mx-auto flex flex-col items-center justify-center"
+            className="mb-4 hover:bg-primary hover:text-white group duration-500 shadow-lg w-[279px] h-[238px] mx-auto flex flex-col items-center justify-center"
           >
             <svg
               width="70"
@@ -121,10 +109,10 @@ export const Culture = () => {
             <span className="text-2xl mt-4">Our Lifestyle</span>
           </a>
         </div>
-        <div className="md:my-32 flex flex-wrap text-primary">
+        <div className="lg:my-32 flex flex-wrap text-primary">
           <a
             href="/our-recognitions"
-            className="hover:bg-primary hover:text-white group duration-500 shadow-lg w-[279px] h-[238px] mx-auto flex flex-col items-center justify-center"
+            className="mb-4 hover:bg-primary hover:text-white group duration-500 shadow-lg w-[279px] h-[238px] mx-auto flex flex-col items-center justify-center"
           >
             <svg
               width="70"
@@ -149,7 +137,7 @@ export const Culture = () => {
           </a>
           <a
             href="/our-insights"
-            className="hover:bg-primary hover:text-white group duration-500 shadow-lg w-[279px] h-[238px] mx-auto flex flex-col items-center justify-center"
+            className="mb-4 hover:bg-primary hover:text-white group duration-500 shadow-lg w-[279px] h-[238px] mx-auto flex flex-col items-center justify-center"
           >
             <svg
               width="70"

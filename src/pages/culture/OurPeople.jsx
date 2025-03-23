@@ -35,17 +35,17 @@ export const People = () => {
       <section>
         <div className="relative min-h-screen container mx-auto ">
           <SideNavigation />
-          <div className="mt-10 md:-mt-80">
+          <div className="mt-10 xl:-mt-80">
             <div className="flex">
-              <div className="hidden md:block w-2/5"></div>
+              <div className="hidden xl:block w-2/5"></div>
               <div className="container mx-auto p-4">
                 <h2 className="text-3xl md:text-5xl">Socials</h2>
-                <p className="mt-4 md:mt-8 mb-14 md:w-[877px]">
+                <p className="mt-4 md:mt-8 mb-14 xl:w-[877px]">
                   We believe that great work stems from strong connections. Our
                   vibrant social culture fosters camaraderie, teamwork, and a
                   shared spirit of excellence beyond the boardroom.
                 </p>
-                <div className=" max-w-[877px]">
+                <div className=" xl:max-w-[877px]">
                   <ImageSlider images={images.socials} />
                 </div>
                 <div className="container mx-auto mt-12 w-full md:max-w-1xl">
@@ -59,41 +59,18 @@ export const People = () => {
                     allowfullscreen
                   ></iframe>
                 </div>
-                {/* <div className="text-center flex flex-col md:flex-row gap-2  justify-between  w-full max-w-[877px]">
-                  
-                  <div className="w-full max-w-[300px]">
-                    <VideoPlayer
-                      src={Tgif1}
-                      // poster={TgifPoster}
-                      className="h-full shadow-lg"
-                      autoPlay={false}
-                      muted={true}
-                      loop={false}
-                      onEnded={() => console.log("Video finished")}
-                    />
-                    <label>TGIF</label>
-                  </div>
-                  <a href="/" className="w-full md:w-[276px]">
-                    <img src={BlogImg} alt="blog post" loading="lazy" />
-                    <label>TGIF</label>
-                  </a>
-
-                  <a href="/" className="mb-4 underline flex">
-                    View more
-                  </a>
-                </div> */}
               </div>
             </div>
             <div className="flex mt-24">
-              <div className="hidden md:block w-2/5"></div>
+              <div className="hidden xl:block w-2/5"></div>
               <div className="container mx-auto p-4">
                 <h2 className="text-3xl md:text-5xl">Manpower Development</h2>
-                <p className="mt-4 md:mt-8 mb-14 md:w-[877px]">
+                <p className="mt-4 md:mt-8 mb-14 xl:w-[877px]">
                   At Zenera, growth is intentional. We invest in continuous
                   learning, equipping our people with cutting-edge skills to
                   lead, innovate, and excel in an evolving business landscape.
                 </p>
-                <div className=" max-w-[877px]">
+                <div className=" xl:max-w-[877px]">
                   <ImageSlider images={images.vdfr} />
                 </div>
                 <div className="flex flex-col md:flex-row justify-between items-start w-full max-w-[877px]">
@@ -112,10 +89,10 @@ export const People = () => {
               </div>
             </div>
             <div className="flex mt-24 p-4">
-              <div className="hidden md:block w-2/5"></div>
+              <div className="hidden xl:block w-2/5"></div>
               <div className="container mx-auto p-4">
                 <h2 className="text-3xl md:text-5xl">Employee Stories</h2>
-                <p className="mt-8 mb-14 md:w-[877px]">
+                <p className="mt-8 mb-14 xl:w-[877px]">
                   Every Zenera journey is a story of passion, resilience, and
                   achievement. We celebrate the unique experiences that shape
                   our people and drive our collective success.
@@ -163,17 +140,17 @@ export const People = () => {
               </div>
             </div>
             <div className="flex mt-24 p-4">
-              <div className="hidden md:block w-2/5"></div>
+              <div className="hidden xl:block w-2/5"></div>
               <div className="container mx-auto p-4">
                 <h2 className="text-3xl md:text-5xl">
                   Staff Recognition/<br className="md:hidden"/>Awards
                 </h2>
-                <p className="mt-4 md:mt-8 mb-14 md:w-[877px]">
+                <p className="mt-4 md:mt-8 mb-14 xl:w-[877px]">
                   Excellence deserves to be celebrated. Our recognition culture
                   ensures that outstanding contributions never go unnoticed,
                   inspiring a relentless pursuit of greatness.
                 </p>
-                <div className=" max-w-[877px]">
+                <div className=" xl:max-w-[877px]">
                   <ImageSlider images={images2.req} />
                 </div>
                 <div className="text-white flex justify-between w-full max-w-[877px] ">
@@ -192,10 +169,10 @@ export const People = () => {
               </div>
             </div>
             <div className="flex mt-24 p-4">
-              <div className="hidden md:block w-2/5"></div>
+              <div className="hidden xl:block w-2/5"></div>
               <div>
                 <h2 className="text-3xl md:text-5xl">Alumni</h2>
-                <p className="mt-4 md:mt-8 mb-14 md:w-[877px]">
+                <p className="mt-4 md:mt-8 mb-14 xl:w-[877px]">
                   Once Zenera, always Zenera. Our alumni network is a testament
                   to the enduring impact of our culture, fostering lifelong
                   connections and professional growth.

@@ -14,7 +14,7 @@ const SideNavigation = () => {
   ];
 
   return (
-    <div className=" md:sticky left-0 top-28 md:w-72 p-4 mt-8">
+    <div className=" xl:sticky left-0 top-28 xl:w-72 p-4 mt-8">
       <div className="text-gray-700 mb-4">Menu</div>
       <nav className="flex flex-col space-y-2">
         {menuItems.map(item => (

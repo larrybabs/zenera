@@ -40,12 +40,12 @@ export const Insights = () => {
       <section>
         <div className="relative min-h-screen container mx-auto ">
           <SideNavigation />
-          <div className="mt-6 md:-mt-80">
+          <div className="mt-6 xl:-mt-80">
           <div className="flex">
-              <div className="hidden md:block w-2/5"></div>
+              <div className="hidden xl:block w-2/5"></div>
               <div className="container mx-auto p-4">
                 <h2 className="text-5xl">Thought Leadership</h2>
-                <p className="mt-8 mb-14 md:w-[877px]">
+                <p className="mt-8 mb-14 xl:w-[877px]">
                 We don’t just follow trends—we set them. Through cutting-edge insights and strategic perspectives, we drive conversations that shape industries and redefine possibilities.
                 </p>
                 <div className="text-white flex justify-between w-full max-w-[877px] ">
@@ -65,10 +65,10 @@ export const Insights = () => {
               </div>
             </div>
             <div className="flex mt-24">
-              <div className="hidden md:block w-2/5"></div>
+              <div className="hidden xl:block w-2/5"></div>
               <div className="container mx-auto p-4">
                 <h2 className="text-5xl">Blogs</h2>
-                <p className="mt-8 mb-14 md:w-[877px]">
+                <p className="mt-8 mb-14 xl:w-[877px]">
                 A hub of knowledge, offering valuable perspectives, industry trends, and expert analyses to keep you informed and ahead of the curve.
                 </p>
                 <div className=" flex justify-between w-full max-w-[877px]">

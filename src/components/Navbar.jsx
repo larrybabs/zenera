@@ -80,7 +80,7 @@ const Navbar = () => {
     <div>
       {/* Desktop Navigation */}
       <div className="hidden md:block fixed z-20 drop-shadow-md w-full py-2 bg-white duration-300">
-        <nav className="hidden md:flex justify-between items-center py-3 container mx-auto text-black">
+        <nav className="hidden md:flex justify-between items-center py-3 xl:px-8 container mx-auto text-black">
           <div>
             <a href="/" className="font-bold text-3xl">
               <img src={Logo} alt="Zenera Logo" />
